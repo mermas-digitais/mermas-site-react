@@ -1,10 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useCallback, useRef } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
 import './index.css';
 export const Navbar = () => {
   const [show, setShow] = React.useState(false);
   const navRef = useRef(null);
+  const headerRef = useRef(null);
+  const navHeight = navRef.current?.offsetHeight;
   const showMenu = () => {
     setShow(!show);
   };
@@ -14,13 +16,31 @@ export const Navbar = () => {
       : navRef?.current?.classList.remove('show');
   };
 
+  const changeColorHeader = useCallback(() => {
+    const header = headerRef?.current;
+    if (window.scrollY >= 1) {
+      header?.classList.add('scroll');
+    } else {
+      header?.classList.remove('scroll');
+    }
+  }, [navHeight]);
+
+  React.useEffect(() => {
+    console.log('iii');
+    window.addEventListener('scroll', changeColorHeader);
+    return () => {
+      window.removeEventListener('scroll', changeColorHeader);
+    };
+  }, [changeColorHeader]);
+
   React.useEffect(() => {
     showNav();
   }, [show]);
 
   return (
     <>
-      <header className="header">
+      <div className="elipse1" />
+      <header className="header" ref={headerRef}>
         <nav className="container delay_500" ref={navRef}>
           <a className="logo" href="#">
             Mermãs Digitais
@@ -53,11 +73,23 @@ export const Navbar = () => {
           {/* menu-mobile */}
           {!show ? (
             <div className="toggle icon-menu" onClick={() => showMenu()}>
-              <AiOutlineMenu size={40} />
+              <AiOutlineMenu
+                size={40}
+                style={{
+                  color: '#A688FF',
+                  cursor: 'pointer',
+                }}
+              />
             </div>
           ) : (
             <div className="toggle icon-close" onClick={() => showMenu()}>
-              <AiOutlineClose size={40} />
+              <AiOutlineClose
+                size={40}
+                style={{
+                  color: '#A688FF',
+                  cursor: 'pointer',
+                }}
+              />
             </div>
           )}
         </nav>
