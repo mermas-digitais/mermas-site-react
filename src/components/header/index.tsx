@@ -26,7 +26,6 @@ export const Navbar = () => {
   }, [navHeight]);
 
   React.useEffect(() => {
-    console.log('iii');
     window.addEventListener('scroll', changeColorHeader);
     return () => {
       window.removeEventListener('scroll', changeColorHeader);
