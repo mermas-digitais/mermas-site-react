@@ -1,0 +1,52 @@
+:root {
+  --header-height: 4.5rem;
+
+  /* colors */
+  --base-color: #a688ff;
+  --base-color-light: #ddc7f8;
+  --base-color-dark: #330043;
+  --yellow-color: #ffcd34;
+  --salmon-color: #fc8370;
+  --pink-color: #ff4a97;
+  --pink-color-light: #fbeefe;
+  --white-color: #ffffff;
+  --gray--color: rgba(217, 217, 217, 0.5);
+
+  /* fonts */
+  --logo-font: 'Paytone One', sans-serif;
+  --body-font: 'Quicksand', sans-serif;
+  --body2-font: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline-block;
+}
+
+/* Language: css */
+/* Path: mermas-react-site/src/components/About.css */
+.body_complete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh;
+  width: 100vw; */
+  background-color: #ffffff;
+}
