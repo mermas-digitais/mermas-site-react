@@ -1,7 +1,12 @@
-#home {
-  padding-top: 9.5rem;
-  position: relative;
+.container {
   width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+#home {
+  padding-top: 15rem;
+  position: relative;
+  width: 100vw;
 }
 
 #home .elipse1 {
@@ -19,16 +24,16 @@
   z-index: -1;
 }
 
-#home .elipse2 {
+.elipse2 {
   background: url('./image/Ellipse 7.svg') no-repeat center;
   background-size: contain;
   display: block;
   position: absolute;
   width: 603.92px;
   height: 632.94px;
-  right: -278.76px;
+  right: 100px;
   top: -59.06px;
-  z-index: -2;
+  z-index: -1;
 }
 
 #home .home-shape3 {
@@ -46,7 +51,7 @@
   font-weight: bold;
 }
 #home .home-shape4 {
-  background: url('./imagehome-shape4.svg') no-repeat center;
+  background: url('./image/home-shape4.svg') no-repeat center;
   background-size: contain;
   display: block;
   position: absolute;
@@ -56,6 +61,13 @@
   bottom: -85.32px;
   z-index: -2;
 }
+/* .container_text {
+  position: absolute;
+  width: 599.94px;
+  height: 372px;
+  left: 93px;
+  top: 173.06px;
+} */
 
 #home .home-container {
   display: flex;
@@ -68,23 +80,23 @@
   max-width: 25rem;
 }
 
-#home .home-text {
+#home .home-text .container_text {
   position: relative;
   max-width: 37.5rem;
 }
 
-#home .home-text h1 {
+#home .home-text .container_text h1 {
   margin-bottom: 1rem;
   font-size: 3.125rem;
   font-family: var(--body2-font);
   line-height: 65px;
 }
 
-#home .home-text h1 span {
+#home .home-text .container_text h1 span {
   font-size: 3.75rem;
 }
 
-#home .home-text p {
+#home .home-text .container_text p {
   margin-bottom: 2rem;
   font: 400 1rem var(--body2-font);
 }
@@ -105,4 +117,73 @@
 
 #home .home-info-event span:first-child {
   border-right: 1px solid var(--base-color-dark);
+}
+
+@media (max-width: 768px) {
+  #home {
+    min-height: 41.875rem;
+    /* height: 100vh; */
+    /* padding: 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #home .home-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #home .home-text .container_text {
+    text-align: center;
+  }
+
+  #home .home-text .container_text h1 {
+    font-size: 1.25rem;
+    line-height: normal;
+  }
+
+  #home .home-text .container_text h1 span {
+    font-size: 1.5rem;
+  }
+
+  #home .home-info-event {
+    font-size: 0.875rem;
+  }
+
+  #home .home-info-event span {
+    padding: 0 0.75rem;
+  }
+
+  #home .elipse1 {
+    width: 250.26px;
+    height: 262.28px;
+    left: -42px;
+    top: -103px;
+  }
+
+  .elipse2 {
+    width: 344px;
+    height: 328px;
+    right: -131px;
+    top: 255px;
+  }
+
+  #home .home-image {
+    width: 13.5rem;
+  }
+
+  #home .home-shape3 {
+    width: 73.35px;
+    height: 68.79px;
+    left: 46px;
+    top: -60px;
+  }
+
+  #home .home-shape4 {
+    width: 123px;
+    height: 134px;
+    right: 0px;
+    top: -220px;
+  }
 }

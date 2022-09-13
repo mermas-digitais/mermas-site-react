@@ -1,6 +1,13 @@
+.container {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+}
 #course {
   position: relative;
   padding: 4rem 0;
+  width: 100%;
+  z-index: 1;
 }
 
 #course .course-image {
