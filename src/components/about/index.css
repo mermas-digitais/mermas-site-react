@@ -44,21 +44,11 @@
 @media (max-width: 768px) {
   #about {
     padding-top: 3.5rem;
-    padding-bottom: 11rem;
+    /* padding-bottom: 11rem; */
   }
 
   #about .about-text {
     max-width: 100%;
-  }
-
-  /* course */
-  #course .course-grid {
-    grid-template-areas:
-      '1'
-      '2'
-      '3'
-      '4';
-    gap: 2.875rem;
   }
 }
 @media (max-width: 1225px) {
