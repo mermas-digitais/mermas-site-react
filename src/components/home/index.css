@@ -1,11 +1,12 @@
-.container {
+/* .container {
   width: 100%;
   max-width: 75rem;
   margin: 0 auto;
-}
+} */
 #home {
   padding-top: 15rem;
-  width: 100%;
+  position: relative;
+  width: 100vw;
 }
 
 #home .elipse1 {
@@ -60,17 +61,19 @@
   bottom: -85.32px;
   z-index: -2;
 }
-.container_text {
-  width: 500px;
-  height: 100%;
-}
+/* .container_text {
+  position: absolute;
+  width: 599.94px;
+  height: 372px;
+  left: 93px;
+  top: 173.06px;
+} */
 
 #home .home-container {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 
 #home .home-image {

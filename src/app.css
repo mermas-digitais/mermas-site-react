@@ -56,7 +56,7 @@ li {
   height: 100vh;
   width: 100%;
   background-color: #ffffff;
-  padding: 0 22rem;
+  /* padding: 0 22rem; */
 }
 .container-home {
   z-index: 2;
