@@ -5,7 +5,7 @@
 }
 #course {
   position: relative;
-  padding: 0rem 0;
+  padding: 4rem 0;
   width: 100%;
   z-index: 1;
 }
@@ -13,7 +13,7 @@
 #course .course-image {
   width: 100%;
   position: absolute;
-  top: -4px;
+  top: -11px;
   left: 0;
   z-index: -1;
 }
@@ -76,4 +76,37 @@
 
 #course span {
   color: var(--body2-font);
+}
+
+@media (max-width: 1200px){
+  .container {
+    width: auto;
+    margin: 0 2rem;
+  }
+  #course .course-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #course .course-text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px){
+  .container {
+    width: auto;
+    margin: 0 1.5rem;
+  }
+  #course .course-grid {
+    grid-template-areas:
+      '1'
+      '2'
+      '3'
+      '4';
+      gap: 2.875rem;
+  }
+  #course .course-image {
+    top: -6px;
+  }
 }
