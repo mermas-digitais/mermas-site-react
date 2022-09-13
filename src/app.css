@@ -62,7 +62,16 @@ li {
   z-index: 2;
   width: 100%;
 }
-
+@media (max-width: 1166px) {
+  .container-home {
+    margin-top: 20rem;
+  }
+}
+@media (max-width: 899px) {
+  .container-home {
+    margin-top: 25rem;
+  }
+}
 @media (max-width: 1200px) {
   .body_complete {
     width: auto;
