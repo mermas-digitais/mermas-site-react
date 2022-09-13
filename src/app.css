@@ -53,25 +53,21 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   background-color: #ffffff;
   /* padding: 0 22rem; */
+  margin-top: 10rem;
+  overflow: hidden;
 }
 .container-home {
+  position: relative;
+
   z-index: 2;
-  width: 100%;
+
+  overflow: hidden;
 }
-@media (max-width: 1166px) {
-  .container-home {
-    margin-top: 20rem;
-  }
-}
-@media (max-width: 899px) {
-  .container-home {
-    margin-top: 25rem;
-  }
-}
+
 @media (max-width: 1200px) {
   .body_complete {
     width: auto;
