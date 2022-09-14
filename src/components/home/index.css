@@ -23,18 +23,6 @@
   z-index: -1;
 }
 
-.elipse2 {
-  background: url('./image/Ellipse 7.svg') no-repeat center;
-  background-size: contain;
-  display: block;
-  position: absolute;
-  width: 603.92px;
-  height: 632.94px;
-  right: 100px;
-  top: -59.06px;
-  z-index: -1;
-}
-
 #home .home-shape3 {
   background: url('./image/home-shape3.svg') no-repeat center;
   background-size: contain;

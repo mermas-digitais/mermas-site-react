@@ -39,6 +39,7 @@ export const Navbar = () => {
   return (
     <>
       <div className="elipse1" />
+      <div className="elipse2" />
       <header className="header" ref={headerRef}>
         <nav className="container delay_500" ref={navRef}>
           <a className="logo" href="#">
