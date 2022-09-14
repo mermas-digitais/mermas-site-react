@@ -161,3 +161,27 @@
   width: 5rem;
   height: auto;
 }
+
+@media (max-width: 768px) {
+  #form .container__form {
+    gap: 1.5rem;
+  }
+
+  #form .form__title p {
+    font-size: 1rem;
+  }
+
+  #form .form__title span {
+    font-size: 0.75rem;
+  }
+
+  .form-shape1 {
+    left: -391px;
+    top: 108px;
+  }
+
+  .form-shape2 {
+    right: -391px;
+    top: 51px;
+  }
+}

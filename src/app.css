@@ -34,7 +34,6 @@ img {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
 }
 a {
   text-decoration: none;
@@ -46,6 +45,39 @@ ul {
 }
 li {
   display: inline-block;
+}
+
+.container {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.title {
+  font: 500 1.875rem var(--logo-font);
+  color: var(--base-color-dark);
+  margin-bottom: 1.5rem;
+  -webkit-font-smoothing: auto;
+}
+
+.button {
+  background-color: var(--base-color);
+  color: var(--text-color-light);
+  font: 500 1rem var(--body-font);
+
+  height: 3.5rem;
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: var(--base-color-alt);
 }
 
 .body_complete {
