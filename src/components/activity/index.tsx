@@ -2,9 +2,9 @@ import styles from './index.module.css';
 
 export function Activity() {
   return (
-    <section className={styles.section} id={styles['activity']}>
+    <section id={styles['activity']}>
       <div className={styles.container}>
-        <div className={(styles.activity_head, styles.easing_title)}>
+        <div className={`${styles.activity_head} ${styles.easing_title}`}>
           <div className={styles.head_title}>
             <i className={styles.icon}>
               <img src="./image/Group 29.svg" alt="Ícone de foguete" />
@@ -14,13 +14,13 @@ export function Activity() {
             </h2>
           </div>
           <div className={styles.head_button}>
-            <button className={(styles.icon, styles.button_next)}>
+            <button className={`${styles.icon} ${styles.button_next}`}>
               <img src="./image/arrow.svg" alt="Ícone de foguete" />
             </button>
           </div>
         </div>
 
-        <div className={(styles.activity_box, styles.delay_distance)}>
+        <div className={`${styles.activity_box} ${styles.delay_distance}`}>
           <div className={styles.box}>
             <div className={styles.box_head}>
               <i>

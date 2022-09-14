@@ -4,8 +4,16 @@
   margin: 0 auto;
 }
 
+.title {
+  font: 500 1.875rem var(--logo-font);
+  color: var(--base-color-dark);
+  margin-bottom: 1.5rem;
+  -webkit-font-smoothing: auto;
+}
+
 #activity {
   padding: 4rem 0;
+  z-index: 1;
 }
 
 #activity .container{
