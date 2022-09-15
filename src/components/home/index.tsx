@@ -3,7 +3,6 @@ import './index.css';
 export const Home = () => {
   return (
     <>
-      {/* <div className="elipse2" /> */}
       <section id="home" className="container delay">
         <div className="home-container">
           <div className="home-image delay_500">

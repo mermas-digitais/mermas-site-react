@@ -6,7 +6,7 @@ export const Navbar = () => {
   const [show, setShow] = React.useState(false);
   const navRef = useRef(null);
   const headerRef = useRef(null);
-  const navHeight = navRef.current?.offsetHeight;
+
   const showMenu = () => {
     setShow(!show);
   };
@@ -23,7 +23,7 @@ export const Navbar = () => {
     } else {
       header?.classList.remove('scroll');
     }
-  }, [navHeight]);
+  }, []);
 
   React.useEffect(() => {
     window.addEventListener('scroll', changeColorHeader);

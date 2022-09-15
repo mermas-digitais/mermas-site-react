@@ -2,6 +2,7 @@ import './app.css';
 import { About } from './components/about';
 import { Activity } from './components/activity';
 import Course from './components/course';
+import { Form } from './components/form';
 import { Navbar } from './components/header';
 import { Home } from './components/home';
 import { Register } from './components/register';
@@ -17,6 +18,7 @@ function App() {
       <Course />
       <Activity />
       <Register />
+      <Form />
     </div>
   );
 }
