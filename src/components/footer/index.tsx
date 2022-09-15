@@ -1,3 +1,6 @@
+import { AiOutlineInstagram } from 'react-icons/ai';
+
+import { BsFacebook, BsTwitter } from 'react-icons/bs';
 import './index.css';
 
 export const Footer = () => {
@@ -68,7 +71,7 @@ export const Footer = () => {
             <ul>
               <li>
                 <a href="https://www.facebook.com/mermasdigitais">
-                  <i className="ph-facebook-logo-fill"></i>
+                  <BsFacebook size={22} color="#9854cb" />
                 </a>
               </li>
               <li>
@@ -77,12 +80,12 @@ export const Footer = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <i className="ph-instagram-logo"></i>
+                  <AiOutlineInstagram size={22} color="#9854cb" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="ph-twitter-logo-fill"></i>
+                  <BsTwitter size={22} color="#9854cb" />
                 </a>
               </li>
             </ul>

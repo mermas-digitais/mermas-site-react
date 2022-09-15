@@ -51,6 +51,17 @@
     max-width: 100%;
   }
 }
+@media (max-width: 1200px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  #about .about-text {
+    max-width: 68%;
+  }
+  #about .about-text p {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 1225px) {
   #about {
     display: flex;
@@ -71,5 +82,20 @@
   }
   #about .about-text {
     margin-left: 0;
+  }
+}
+@media (min-width: 1600px) {
+  #about {
+    padding-bottom: 8rem;
+  }
+  /*
+  #about .about-image {
+    display: none;
+  } */
+}
+
+@media (min-width: 1440px) {
+  #about {
+    padding-bottom: 24rem;
   }
 }

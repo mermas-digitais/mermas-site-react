@@ -99,17 +99,3 @@ li {
 
   overflow: hidden;
 }
-
-@media (max-width: 1200px) {
-  .body_complete {
-    width: auto;
-    padding: 0 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .body_complete {
-    width: auto;
-    padding: 0 2rem;
-  }
-}
