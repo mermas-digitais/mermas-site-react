@@ -21,7 +21,7 @@
   padding-top: 12rem;
 }
 #about .about-image {
-  width: 100%;
+  width: 100vw;
 
   object-fit: contain;
   z-index: -1;
@@ -62,7 +62,7 @@
     font-size: 1rem;
   }
 }
-@media (max-width: 1225px) {
+@media (max-width: 1281px) {
   #about {
     display: flex;
     flex-direction: column-reverse;
@@ -85,17 +85,8 @@
   }
 }
 @media (min-width: 1600px) {
-  #about {
-    padding-bottom: 8rem;
-  }
   /*
   #about .about-image {
     display: none;
   } */
-}
-
-@media (min-width: 1440px) {
-  #about {
-    padding-bottom: 24rem;
-  }
 }
