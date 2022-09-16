@@ -70,7 +70,6 @@ export const Navbar = () => {
             </ul>
           </div>
 
-          {/* menu-mobile */}
           {!show ? (
             <div className="toggle icon-menu" onClick={() => showMenu()}>
               <AiOutlineMenu
