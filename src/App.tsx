@@ -7,6 +7,7 @@ import { Form } from './components/form';
 import { Navbar } from './components/header';
 import { Home } from './components/home';
 import { Register } from './components/register';
+import { Fade } from 'react-awesome-reveal';
 function App() {
   return (
     <div className="body_complete">
@@ -15,11 +16,22 @@ function App() {
       <div className="container-home">
         <Home />
       </div>
-      <About />
-      <Course />
-      <Activity />
-      <Register />
-      <Form />
+      <Fade triggerOnce direction="up" delay={100}>
+        <About />
+      </Fade>
+
+      <Fade triggerOnce direction="up" delay={100}>
+        <Course />
+      </Fade>
+      <Fade triggerOnce direction="up" delay={100}>
+        <Activity />
+      </Fade>
+      <Fade triggerOnce direction="up" delay={100}>
+        <Register />
+      </Fade>
+      <Fade triggerOnce direction="up" delay={100}>
+        <Form />
+      </Fade>
       <Footer />
     </div>
   );

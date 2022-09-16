@@ -123,6 +123,32 @@
 .header.scroll .logo::after {
   background: var(--base-color);
 }
+
+@media (max-width: 1025px) {
+  .elipse1 {
+    width: 503.92px;
+    height: 532.94px;
+  }
+  .elipse2 {
+    width: 503.92px;
+    height: 532.94px;
+  }
+}
+
+@media (max-width: 915px) {
+  .elipse2 {
+    top: 40.06px;
+  }
+}
+
+@media (max-width: 1290px) {
+  .elipse1 {
+    left: 0px;
+  }
+  .elipse2 {
+    right: 0px;
+  }
+}
 @media (max-width: 1200px) {
   .header nav.show .menu ul {
     gap: 0.25rem;
@@ -218,5 +244,26 @@
     height: 262.28px;
     left: -42px;
     top: -103px;
+  }
+  .elipse2 {
+    width: 350.26px;
+    height: 362.28px;
+    right: 82px;
+    top: 103px;
+  }
+}
+
+@media (max-width: 420px) {
+  .elipse1 {
+    width: 400.92px;
+    height: 302.94px;
+    right: 200px;
+    left: -100px;
+  }
+  .elipse2 {
+    width: 250.26px;
+    height: 262.28px;
+    top: 190px;
+    left: 90px;
   }
 }
