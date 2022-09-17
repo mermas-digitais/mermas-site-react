@@ -1,27 +1,24 @@
+import { CardPatronize } from '../../individualComponent/cardPatronize';
 import './index.css';
 
 export const Patronize = () => {
   return (
     <section id="patronize" className="container delay">
       <ul>
-        <li>
-          <img
-            src="image/ifma.png"
-            alt="Logo do Instituto Federal do Maranhão, Campus Imperatriz"
-          />
-        </li>
-        <li>
-          <img
-            src="image/mermasdigitais.png"
-            alt="Logo do Programa Meninas Digitais"
-          />
-        </li>
-        <li>
-          <img
-            src="image/sbc.png"
-            alt="Logo da Sociedade Brasileira de Computação"
-          />
-        </li>
+        <CardPatronize
+          image="image/ifma.png"
+          alt="Logo do Instituto Federal do Maranhão, Campus Imperatriz"
+        />
+
+        <CardPatronize
+          image="image/mermasdigitais.png"
+          alt="Logo do Programa Meninas Digitais"
+        />
+
+        <CardPatronize
+          image="image/sbc.png"
+          alt="Logo da Sociedade Brasileira de Computação"
+        />
       </ul>
     </section>
   );
