@@ -1,27 +1,27 @@
 import { CardActivity } from '../../individualComponent/cardActivity';
-import styles from './index.module.css';
+import './index.css';
 
 export function Activity() {
   return (
-    <section id={styles['activity']}>
-      <div className={styles.container}>
-        <div className={`${styles.activity_head} ${styles.easing_title}`}>
-          <div className={styles.head_title}>
-            <i className={styles.icon}>
+    <section id="activity">
+      <div className="container">
+        <div className="activity_head easing_title">
+          <div className="head_title">
+            <i className="icon">
               <img src="./image/Group 29.svg" alt="Ícone de foguete" />
             </i>
-            <h2 className={styles.title}>
+            <h2 className="title">
               Nem te conto, olha o que as Mermãs prepararam
             </h2>
           </div>
-          <div className={styles.head_button}>
-            <button className={`${styles.icon} ${styles.button_next}`}>
+          <div className="head_button">
+            <button className="icon button_next">
               <img src="./image/arrow.svg" alt="Ícone de foguete" />
             </button>
           </div>
         </div>
 
-        <div className={`${styles.activity_box} ${styles.delay_distance}`}>
+        <div className="activity_box delay_distance">
           <CardActivity
             image="./image/Group 29.svg"
             alt="Ícone de foguete"
