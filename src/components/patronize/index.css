@@ -31,3 +31,14 @@
   width: auto;
   height: 4rem;
 }
+
+@media (max-width: 768px) {
+  #patronize ul {
+    flex-direction: column;
+  }
+
+  #patronize ul li:not(:last-child) {
+    border-bottom: 0.09rem solid var(--gray--color);
+    border-right: none;
+  }
+}

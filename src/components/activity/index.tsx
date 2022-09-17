@@ -1,3 +1,4 @@
+import { CardActivity } from '../../individualComponent/cardActivity';
 import styles from './index.module.css';
 
 export function Activity() {
@@ -21,79 +22,37 @@ export function Activity() {
         </div>
 
         <div className={`${styles.activity_box} ${styles.delay_distance}`}>
-          <div className={styles.box}>
-            <div className={styles.box_head}>
-              <i>
-                <img src="./image/Group 29.svg" alt="Ícone de foguete" />
-              </i>
-              <h4>Palestras</h4>
-            </div>
-            <div className={styles.box_body}>
-              <p>
-                Serão compartilhadas experiências pessoais sobre a atuação e
-                importância das mulheres na área de STREM.
-              </p>
-            </div>
-            <div className={styles.box_button}>
-              <button>4 Palestras</button>
-            </div>
-          </div>
+          <CardActivity
+            image="./image/Group 29.svg"
+            alt="Ícone de foguete"
+            title="Palestras"
+            description="Serão compartilhadas experiências pessoais sobre a atuação e importância das mulheres na área de STREM."
+            button="4 Palestras"
+          />
 
-          <div className={styles.box}>
-            <div className={styles.box_head}>
-              <i>
-                <img src="./image/Group 29.svg" alt="Ícone de foguete" />
-              </i>
-              <h4>Mesa Redonda</h4>
-            </div>
-            <div className={styles.box_body}>
-              <p>
-                Em parceria com outras mulheres incríveis ocorrerá um debate
-                sobre a participação de mulheres nas ciências exatas ao longo do
-                tempo.
-              </p>
-            </div>
-            <div className={styles.box_button}>
-              <button>1 Mesa redonda</button>
-            </div>
-          </div>
+          <CardActivity
+            image="./image/Group 29.svg"
+            alt="Ícone de foguete"
+            title="Mesa Redonda"
+            description="Em parceria com outras mulheres incríveis ocorrerá um debate sobre a participação de mulheres nas ciências exatas ao longo do tempo."
+            button="1 Mesa redonda"
+          />
 
-          <div className={styles.box}>
-            <div className={styles.box_head}>
-              <i>
-                <img src="./image/Group 29.svg" alt="Ícone de foguete" />
-              </i>
-              <h4>Minicursos</h4>
-            </div>
-            <div className={styles.box_body}>
-              <p>
-                Serão apresentados conceitos e ferramentas básicos do universo
-                tecnologico como introdução a programação, modelagem 3D e
-                hardware.
-              </p>
-            </div>
-            <div className={styles.box_button}>
-              <button>8 Minicursos</button>
-            </div>
-          </div>
+          <CardActivity
+            image="./image/Group 29.svg"
+            alt="Ícone de foguete"
+            title="Minicursos"
+            description="Serão apresentados conceitos e ferramentas básicos do universo tecnologico como introdução a programação, modelagem 3D e hardware."
+            button="8 Minicursos"
+          />
 
-          <div className={styles.box}>
-            <div className={styles.box_head}>
-              <i>
-                <img src="./image/Group 29.svg" alt="Ícone de foguete" />
-              </i>
-              <h4>Oficinas</h4>
-            </div>
-            <div className={styles.box_body}>
-              <p>
-                Com aulas dinâmicas e introdutorias sobre programação, serão
-                produzidos sites, jogos, robótica e podcast.
-              </p>
-            </div>
-            <div className={styles.box_button}>
-              <button>3 Oficinas</button>
-            </div>
-          </div>
+          <CardActivity
+            image="./image/Group 29.svg"
+            alt="Ícone de foguete"
+            title="Oficinas"
+            description="Com aulas dinâmicas e introdutorias sobre programação, serão produzidos sites, jogos, robótica e podcast."
+            button="3 Oficinas"
+          />
         </div>
       </div>
     </section>
