@@ -6,7 +6,7 @@
 #course {
   position: relative;
   padding: 4rem 0;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
 }
 
@@ -78,7 +78,7 @@
   color: var(--body2-font);
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   .container {
     width: auto;
     margin: 0 2rem;
@@ -93,7 +93,7 @@
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .container {
     width: auto;
     margin: 0 1.5rem;
@@ -104,7 +104,7 @@
       '2'
       '3'
       '4';
-      gap: 2.875rem;
+    gap: 2.875rem;
   }
   #course .course-image {
     top: -8px;
