@@ -31,7 +31,7 @@
   width: 177px;
   height: 166px;
   left: 0px;
-  bottom: -75px;
+  bottom: 0px;
   z-index: -2;
 }
 .delay_500 {
@@ -44,9 +44,9 @@
   position: absolute;
   width: 296px;
   height: 324px;
-  right: -14px;
-  bottom: -85.32px;
-  z-index: -2;
+  left: 200px;
+  bottom: -45.32px;
+  z-index: -1;
 }
 /* .container_text {
   position: absolute;
