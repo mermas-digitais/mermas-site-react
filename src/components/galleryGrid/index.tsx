@@ -6,8 +6,10 @@ export default function GalleryGrid() {
       <div className="containerBoxSearch">
         <div className="boxSearchColor">
           <div className="textParts">
-            <h1 className="blackPart">Galeria das</h1>{' '}
-            <h1 className="pinkPart">Mermãs Digitais </h1>
+            <p>
+              <span className="blackPart">Galeria das</span>
+              <span className="pinkPart"> Mermãs Digitais </span>
+            </p>
           </div>
           <p>
             Diga Xis! E vem ver pra galeria das Mermãs Veja o que nás anda
@@ -28,7 +30,112 @@ export default function GalleryGrid() {
         </div>
       </div>
 
-      <div className="gallery_grid"></div>
+      <div className="gallery_grid">
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+          <div className="overlay">
+            <div className="content">
+              <h3>Abertura da oficinas das Mermãs</h3>
+              <button>
+                <p>Ver mais</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+        <div className="gallery_grid_item">
+          <img
+            src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
+            alt="Ícone de foguete"
+          />
+        </div>
+      </div>
     </div>
   );
 }
