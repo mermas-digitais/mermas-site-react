@@ -1,10 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import './index.css';
 
-interface GalleryGridProps {
-  fnShowGallery: () => void;
-}
-
-export default function Gallery({ fnShowGallery }: GalleryGridProps) {
+export default function Gallery() {
+  const navigate = useNavigate();
   return (
     <section id="gallery">
       <div className="container_gallery">
@@ -16,7 +14,7 @@ export default function Gallery({ fnShowGallery }: GalleryGridProps) {
           <div className="head_buttonGallery">
             <button
               className="iconGallery button_nextGallery"
-              onClick={() => fnShowGallery()}
+              onClick={() => navigate('/galeria')}
             >
               <img src="./image/arrow.svg" alt="Ícone de foguete" />
             </button>

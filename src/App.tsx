@@ -10,11 +10,31 @@ import { Register } from './components/register';
 import { Fade } from 'react-awesome-reveal';
 import { Patronize } from './components/patronize';
 import Gallery from './components/gallery';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import GalleryGrid from './components/galleryGrid';
+import { Routes, Route } from 'react-router-dom';
+import GalleryPage from './components/gallerylPage';
 
 function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomeScreen />} />
+      <Route path="galeria" element={<GalleryPage />} />
+      <Route
+        path="galeria/:id"
+        element={
+          <div>
+            <h1>Gallery</h1>
+          </div>
+        }
+      />
+    </Routes>
+  );
+}
+
+function HomeScreen() {
   const [showGallery, setshowGallery] = useState(false);
+
   return (
     <div className="body_complete">
       <Navbar showGallery={showGallery} />
@@ -41,7 +61,7 @@ function App() {
             <Form />
           </Fade>
           <Fade>
-            <Gallery fnShowGallery={() => setshowGallery(!showGallery)} />
+            <Gallery />
           </Fade>
           <Fade triggerOnce direction="up" delay={100}>
             <Patronize />
@@ -49,7 +69,6 @@ function App() {
         </>
       )}
 
-      {showGallery && <GalleryGrid />}
       <Footer />
     </div>
   );

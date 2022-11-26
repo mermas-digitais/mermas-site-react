@@ -29,7 +29,6 @@ export default function GalleryGrid() {
           </div>
         </div>
       </div>
-
       <div className="gallery_grid">
         <div className="gallery_grid_item">
           <img
@@ -135,6 +134,24 @@ export default function GalleryGrid() {
             alt="Ícone de foguete"
           />
         </div>
+      </div>
+
+      {/*
+      <div className="pagination"> */}
+      <div className="pagination">
+        <button className="buttonPagination">
+          <img src="./image/arrowL.png" alt="Ícone de foguete" />
+        </button>
+
+        <span className="numberPagination">1</span>
+        <span className="numberPagination">2</span>
+        <span className="numberPagination">3</span>
+        <span className="numberPagination">...</span>
+        <span className="numberPagination">10</span>
+
+        <button className="buttonPagination">
+          <img src="./image/arrowR.png" alt="Ícone de foguete" />
+        </button>
       </div>
     </div>
   );
