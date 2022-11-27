@@ -9,13 +9,8 @@ export default function GalerryId() {
   return (
     <>
       <div className="containerAllGallery">
-        <div
-          style={{
-            zIndex: 1,
-          }}
-        >
-          <Navbar showGallery={false} showGalleryEllipse={true} />
-        </div>
+        <Navbar showGallery={false} showGalleryEllipse={true} />
+
         <div className="containerRowGalleryId">
           <div className="containerColumnContentL">
             <div className="dateGallery">

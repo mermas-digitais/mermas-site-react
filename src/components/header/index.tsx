@@ -79,6 +79,9 @@ export const Navbar = ({
               <li>
                 <a href="#form">Contato</a>
               </li>
+              <li>
+                <a href="#gallery">Galeria</a>
+              </li>
             </ul>
           </div>
 

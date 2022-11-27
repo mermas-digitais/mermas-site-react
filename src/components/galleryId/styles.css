@@ -170,6 +170,7 @@
   > .containerRowGalleryId
   > .containerColumnContentR
   > .containerImageGallery {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -201,6 +202,7 @@
   -webkit-transition: all 0.3s ease-in-out;
 
   -moz-transition: all 0.3s ease-in-out;
+  z-index: 1;
 }
 
 .containerAllGallery
