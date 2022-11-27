@@ -57,6 +57,17 @@
   z-index: 1;
 }
 
+.elipse3 {
+  background: url('../../../public/image/EllipseGallery.svg') no-repeat center;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  width: 822.41px;
+  height: 850.19px;
+  right: 0px;
+  top: -59.06px;
+  z-index: 1;
+}
 .header nav {
   display: flex;
   justify-content: space-between;
@@ -111,7 +122,8 @@
 }
 .logo {
   font: 400 1rem var(--logo-font);
-  color: var(--white-color);
+  color: #330043;
+  transition: 0.3s;
 
   text-transform: uppercase;
   position: relative;
@@ -122,7 +134,8 @@
   content: '';
   width: 125%;
   height: 1px;
-  background: var(--white-color);
+  background: #330043;
+  transition: 0.3s;
 
   position: absolute;
   left: 0;

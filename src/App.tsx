@@ -14,60 +14,52 @@ import { useEffect, useState } from 'react';
 import GalleryGrid from './components/galleryGrid';
 import { Routes, Route } from 'react-router-dom';
 import GalleryPage from './components/gallerylPage';
+import GalerryId from './components/galleryId';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<HomeScreen />} />
       <Route path="galeria" element={<GalleryPage />} />
-      <Route
-        path="galeria/:id"
-        element={
-          <div>
-            <h1>Gallery</h1>
-          </div>
-        }
-      />
+      <Route path="galeria/:id" element={<GalerryId />} />
     </Routes>
   );
 }
 
 function HomeScreen() {
-  const [showGallery, setshowGallery] = useState(false);
+  const [showGallery] = useState(true);
 
   return (
     <div className="body_complete">
       <Navbar showGallery={showGallery} />
 
-      {!showGallery && (
-        <>
-          <div className="container-home">
-            <Home />
-          </div>
-          <Fade triggerOnce direction="up" delay={100}>
-            <About />
-          </Fade>
+      <>
+        <div className="container-home">
+          <Home />
+        </div>
+        <Fade triggerOnce direction="up" delay={100}>
+          <About />
+        </Fade>
 
-          <Fade triggerOnce direction="up" delay={100}>
-            <Course />
-          </Fade>
-          <Fade triggerOnce direction="up" delay={100}>
-            <Activity />
-          </Fade>
-          <Fade triggerOnce direction="up" delay={100}>
-            <Register />
-          </Fade>
-          <Fade triggerOnce direction="up" delay={100}>
-            <Form />
-          </Fade>
-          <Fade>
-            <Gallery />
-          </Fade>
-          <Fade triggerOnce direction="up" delay={100}>
-            <Patronize />
-          </Fade>
-        </>
-      )}
+        <Fade triggerOnce direction="up" delay={100}>
+          <Course />
+        </Fade>
+        <Fade triggerOnce direction="up" delay={100}>
+          <Activity />
+        </Fade>
+        <Fade triggerOnce direction="up" delay={100}>
+          <Register />
+        </Fade>
+        <Fade triggerOnce direction="up" delay={100}>
+          <Form />
+        </Fade>
+        <Fade>
+          <Gallery />
+        </Fade>
+        <Fade triggerOnce direction="up" delay={100}>
+          <Patronize />
+        </Fade>
+      </>
 
       <Footer />
     </div>
