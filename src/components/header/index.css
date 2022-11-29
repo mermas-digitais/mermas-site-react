@@ -100,6 +100,7 @@
   border-radius: 2rem;
   -webkit-font-smoothing: antialiased;
   transition: 0.3s;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
 }
 .header nav .menu ul li a.title.active {
   font-weight: bold;
@@ -119,6 +120,16 @@
 .header nav ul li a:hover,
 .header nav ul li a.active {
   background-color: var(--base-color-light);
+}
+.header .container .containerLogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 20rem;
+  margin: 0 auto;
+
+  background: transparent;
 }
 .logo {
   font: 400 1rem var(--logo-font);

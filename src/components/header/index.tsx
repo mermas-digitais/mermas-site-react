@@ -54,9 +54,11 @@ export const Navbar = ({
       {showGalleryEllipse && <div className="elipse3" />}
       <header className="header" ref={headerRef}>
         <nav className="container delay_500" ref={navRef}>
-          <a className="logo" href="#">
-            Mermãs Digitais
-          </a>
+          <div className="containerLogo">
+            <a className="logo" href="#">
+              Mermãs Digitais
+            </a>
+          </div>
           <div className="menu">
             <ul className="group_button">
               <li>
