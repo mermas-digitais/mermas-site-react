@@ -53,8 +53,13 @@ export const Navbar = ({
       )}
       {showGalleryEllipse && <div className="elipse3" />}
       <header className="header" ref={headerRef}>
-        <nav className="container delay_500" ref={navRef}>
+        <nav className="containerNavbar delay_500" ref={navRef}>
           <div className="containerLogo">
+            <img
+              src="image/sideLogo.png"
+              alt="logo side"
+              className="sideLogo"
+            />
             <a className="logo" href="#">
               Mermãs Digitais
             </a>
