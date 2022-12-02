@@ -1,0 +1,541 @@
+#team {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.container__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.container__wrapper > .column__gallery__team > .clip__path__wave {
+  position: absolute;
+  bottom: 10%;
+  width: calc(100% + 2rem);
+  height: 20%;
+
+  z-index: 1;
+  background-color: rgb(255, 255, 255, 1);
+  /* make a clip path with a wave effect */
+  clip-path: polygon(
+    100% 0%,
+    0% 0%,
+    0% 65%,
+    1% 64.95%,
+    2% 64.8%,
+    3% 64.6%,
+    4% 64.3%,
+    5% 63.9%,
+    6% 63.45%,
+    7% 62.9%,
+    8% 62.25%,
+    9% 61.55%,
+    10% 60.8%,
+    11% 59.95%,
+    12% 59.05%,
+    13% 58.1%,
+    14% 57.1%,
+    15% 56.05%,
+    16% 55%,
+    17% 53.9%,
+    18% 52.8%,
+    19% 51.65%,
+    20% 50.5%,
+    21% 49.35%,
+    22% 48.2%,
+    23% 47.05%,
+    24% 45.9%,
+    25% 44.8%,
+    26% 43.75%,
+    27% 42.75%,
+    28% 41.75%,
+    29% 40.8%,
+    30% 39.9%,
+    31% 39.1%,
+    32% 38.35%,
+    33% 37.65%,
+    34% 37.05%,
+    35% 36.5%,
+    36% 36.05%,
+    37% 35.65%,
+    38% 35.35%,
+    39% 35.15%,
+    40% 35.05%,
+    41% 35%,
+    42% 35.05%,
+    43% 35.2%,
+    44% 35.45%,
+    45% 35.75%,
+    46% 36.15%,
+    47% 36.65%,
+    48% 37.2%,
+    49% 37.85%,
+    50% 38.55%,
+    51% 39.35%,
+    52% 40.2%,
+    53% 41.1%,
+    54% 42.05%,
+    55% 43.05%,
+    56% 44.1%,
+    57% 45.15%,
+    58% 46.3%,
+    59% 47.4%,
+    60% 48.55%,
+    61% 49.7%,
+    62% 50.85%,
+    63% 52%,
+    64% 53.15%,
+    65% 54.25%,
+    66% 55.35%,
+    67% 56.4%,
+    68% 57.45%,
+    69% 58.4%,
+    70% 59.35%,
+    71% 60.2%,
+    72% 61.05%,
+    73% 61.8%,
+    74% 62.45%,
+    75% 63.05%,
+    76% 63.6%,
+    77% 64.05%,
+    78% 64.4%,
+    79% 64.7%,
+    80% 64.85%,
+    81% 65%,
+    82% 65%,
+    83% 64.9%,
+    84% 64.75%,
+    85% 64.5%,
+    86% 64.2%,
+    87% 63.75%,
+    88% 63.25%,
+    89% 62.7%,
+    90% 62.05%,
+    91% 61.3%,
+    92% 60.5%,
+    93% 59.65%,
+    94% 58.75%,
+    95% 57.8%,
+    96% 56.8%,
+    97% 55.75%,
+    98% 54.65%,
+    99% 53.55%,
+    100% 52.4%
+  );
+
+  /*invert this polygon*/
+  transform: rotate(180deg);
+}
+
+#team > .container__wrapper > .containerChat {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#team
+  > .container__wrapper
+  > .containerChat
+  > .containerChat__title
+  > .text__complete {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 0.5rem;
+}
+.textBlackChat {
+  font-family: 'Paytone One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  color: #000000;
+}
+.textPinkChat {
+  font-family: 'Paytone One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  color: var(--pink-color);
+}
+
+#team > .container__wrapper > .containerChat > .containerChat__describe > p {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  /* purple/900 */
+
+  color: #330043;
+}
+
+#team > .container__wrapper > .containerChat > .container__roll__down {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+  margin-top: 3rem;
+}
+
+#team
+  > .container__wrapper
+  > .containerChat
+  > .container__roll__down
+  > .container__roll__down__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+#team
+  > .container__wrapper
+  > .containerChat
+  > .container__roll__down
+  > .container__roll__down__item
+  > p {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: flex;
+  color: #545454;
+}
+
+#team
+  > .container__wrapper
+  > .containerChat
+  > .container__roll__down
+  > .container__roll__down__item
+  > img {
+  width: 16px;
+  height: 16px;
+
+  object-fit: contain;
+}
+
+#team > .container__wrapper > .containerChat > .chat__message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+#team
+  > .container__wrapper
+  > .containerChat
+  > .chat__message
+  > .chat__message__left {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+  align-self: flex-start;
+}
+
+#team
+  > .container__wrapper
+  > .containerChat
+  > .chat__message
+  > .chat__message__left
+  > .chat__message__item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+  padding: 1rem;
+
+  /* border-radius: 0.5rem; */
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  background: #fef0ed;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 13% 86%, 0 100%, 0 75%, 0 65%);
+}
+#team
+  > .container__wrapper
+  > .containerChat
+  > .chat__message
+  > .chat__message__left
+  > .chat__message__item
+  > img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  object-fit: contain;
+}
+
+#team
+  > .container__wrapper
+  > .containerChat
+  > .chat__message
+  > .chat__message__left
+  > .chat__message__item
+  > p {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: flex;
+  color: #545454;
+}
+
+#team
+  > .container__wrapper
+  > .containerChat
+  > .chat__message
+  > .chat__message__right {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+  align-self: flex-end;
+}
+
+#team
+  > .container__wrapper
+  > .containerChat
+  > .chat__message
+  > .chat__message__right
+  > .chat__message__item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  background: #fef0ed;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    100% 85%,
+    100% 100%,
+    85% 84%,
+    0 84%
+  );
+}
+
+#team
+  > .container__wrapper
+  > .containerChat
+  > .chat__message
+  > .chat__message__right
+  > .chat__message__item
+  > img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  object-fit: contain;
+}
+
+#team
+  > .container__wrapper
+  > .containerChat
+  > .chat__message
+  > .chat__message__right
+  > .chat__message__item
+  > p {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: flex;
+  color: #545454;
+}
+#team > .container__wrapper > .column__gallery__team {
+  display: grid;
+
+  grid-template-rows: repeat(3, 28%);
+  grid-auto-flow: column;
+
+  grid-gap: 1rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* card */
+#team
+  > .container__wrapper
+  > .column__gallery__team
+  > .gallery_grid_item_team_column_one
+  > .card__profile {
+  width: 15rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* create a yellow embroidery */
+}
+
+#team
+  > .container__wrapper
+  > .column__gallery__team
+  > .gallery_grid_item_team_column_one
+  > .card__profile
+  > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+
+  border-radius: 0.5rem;
+}
+#team
+  > .container__wrapper
+  > .column__gallery__team
+  > .gallery_grid_item_team_column_one
+  > .card__profile
+  > img.with__border__color {
+  border: 0.5rem solid #f9d56e;
+}
+#team
+  > .container__wrapper
+  > .column__gallery__team
+  > .gallery_grid_item_team_column_one
+  > .card__profile
+  > .column__profile__info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+#team
+  > .container__wrapper
+  > .column__gallery__team
+  > .gallery_grid_item_team_column_one
+  > .card__profile
+  > .column__profile__info
+  > .name__profile {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.7rem;
+  line-height: 1.5rem;
+  display: flex;
+  color: #ffffff;
+}
+
+#team
+  > .container__wrapper
+  > .column__gallery__team
+  > .gallery_grid_item_team_column_one
+  > .card__profile
+  > .column__profile__info
+  > .last__name__profile {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.7rem;
+  line-height: 1.5rem;
+  display: flex;
+  color: #ffffff;
+}
+
+#team
+  > .container__wrapper
+  > .column__gallery__team
+  > .gallery_grid_item_team_column_one
+  > .card__profile
+  > .column__profile__info
+  > .role__profile {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  display: flex;
+  color: #ffffff;
+}
+#team
+  > .container__wrapper
+  > .column__gallery__team
+  > .gallery_grid_item_team_column_one
+  > .card__profile
+  > .column__profile__info
+  > .email__profile {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: flex;
+  color: #ffffff;
+}
+/* endCard */
+
+#team
+  > .container__wrapper
+  > .column__gallery__team
+  > .gallery_grid_item_team_column_one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+#team
+  > .container__wrapper
+  > .column__gallery__team
+  > .gallery_grid_item_team_column_one.column__gallery__team__margin__top {
+  margin-top: 5rem;
+}
+
+#team
+  > .container__wrapper
+  > .column__gallery__team
+  > .gallery_grid_item_team_column_one
+  > img {
+  width: 10rem;
+  height: 20rem;
+  object-fit: cover;
+}
+
+/* .containerChat .containerChat__title h2 {
+
+} */

@@ -15,6 +15,7 @@ import GalleryGrid from './components/galleryGrid';
 import { Routes, Route } from 'react-router-dom';
 import GalleryPage from './components/gallerylPage';
 import GalerryId from './components/galleryId';
+import Team from './components/Team';
 
 function App() {
   return (
@@ -55,6 +56,9 @@ function HomeScreen() {
         </Fade>
         <Fade>
           <Gallery />
+        </Fade>
+        <Fade triggerOnce direction="up" delay={100}>
+          <Team />
         </Fade>
         <Fade triggerOnce direction="up" delay={100}>
           <Patronize />
