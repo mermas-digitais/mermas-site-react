@@ -17,7 +17,7 @@
 
   z-index: 1;
   background-color: rgb(255, 255, 255, 1);
-  /* make a clip path with a wave effect */
+
   clip-path: polygon(
     100% 0%,
     0% 0%,
@@ -123,8 +123,6 @@
     99% 53.55%,
     100% 52.4%
   );
-
-  /*invert this polygon*/
   transform: rotate(180deg);
 }
 
