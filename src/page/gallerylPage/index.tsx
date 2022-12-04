@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Footer } from '../footer';
-import GalleryGrid from '../galleryGrid';
-import { Navbar } from '../header';
+import { Footer } from '../../components/footer';
+import GalleryGrid from '../../components/galleryGrid';
+import { Navbar } from '../../components/header';
 
 export default function GalleryPage() {
   const [showGallery, setShowGallery] = React.useState(false);

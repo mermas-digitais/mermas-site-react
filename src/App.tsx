@@ -13,8 +13,8 @@ import Gallery from './components/gallery';
 import { useEffect, useState } from 'react';
 import GalleryGrid from './components/galleryGrid';
 import { Routes, Route } from 'react-router-dom';
-import GalleryPage from './components/gallerylPage';
-import GalerryId from './components/galleryId';
+import GalleryPage from './page/gallerylPage';
+import GalerryId from './page/gallerylPage/galleryId';
 import Team from './components/Team';
 import TeamPage from './page/teamPage';
 
