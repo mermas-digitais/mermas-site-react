@@ -75,6 +75,7 @@ export const Navbar = ({
               <li>
                 <a href="#about">Sobre</a>
               </li>
+
               <li>
                 <a href="#course">Projeto</a>
               </li>

@@ -17,12 +17,14 @@ import GalleryPage from './page/gallerylPage';
 import GalerryId from './page/gallerylPage/galleryId';
 import Team from './components/Team';
 import TeamPage from './page/teamPage';
+import ActivitiesPage from './page/activities';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<HomeScreen />} />
       <Route path="galeria" element={<GalleryPage />} />
+      <Route path="atividades" element={<ActivitiesPage />} />
       <Route path="time" element={<TeamPage />} />
       <Route path="galeria/:id" element={<GalerryId />} />
     </Routes>
