@@ -12,8 +12,14 @@ export const Navbar = ({
   showGalleryEllipse = false,
 }: NavbarProps) => {
   const [show, setShow] = React.useState(false);
-  const navRef = useRef(null);
-  const headerRef = useRef(null);
+  const navRef = useRef<
+    HTMLDivElement & {
+      style: {
+        transform: string;
+      };
+    }
+  >(null);
+  const headerRef = useRef<HTMLHeadElement>(null);
 
   const showMenu = () => {
     setShow(!show);
@@ -42,6 +48,7 @@ export const Navbar = ({
 
   React.useEffect(() => {
     showNav();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [show]);
 
   return (
