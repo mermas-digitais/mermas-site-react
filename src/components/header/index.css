@@ -96,6 +96,7 @@
   align-items: center;
   gap: 1rem;
 }
+
 .header nav .menu ul li a {
   font: 400 0.75rem var(--body-font);
   color: var(--base-color-dark);
@@ -122,6 +123,7 @@
   color: var(--base-color-dark);
 }
 
+.header nav .menu ul li .link:hover,
 .header nav ul li a:hover,
 .header nav ul li a.active {
   background-color: var(--base-color-light);

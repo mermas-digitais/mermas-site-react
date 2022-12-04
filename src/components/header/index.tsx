@@ -1,10 +1,11 @@
 import React, { useCallback, useRef } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import './index.css';
 interface NavbarProps {
-  showGallery: boolean;
-  showGalleryEllipse: boolean;
+  showGallery?: boolean;
+  showGalleryEllipse?: boolean;
 }
 export const Navbar = ({
   showGallery = false,
@@ -82,6 +83,11 @@ export const Navbar = ({
               </li>
               <li>
                 <a href="#register">Como participar?</a>
+              </li>
+              <li>
+                <Link className="link" to="/time">
+                  Equipe
+                </Link>
               </li>
               <li>
                 <a href="#form">Contato</a>

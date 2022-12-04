@@ -16,12 +16,14 @@ import { Routes, Route } from 'react-router-dom';
 import GalleryPage from './components/gallerylPage';
 import GalerryId from './components/galleryId';
 import Team from './components/Team';
+import TeamPage from './page/teamPage';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<HomeScreen />} />
       <Route path="galeria" element={<GalleryPage />} />
+      <Route path="time" element={<TeamPage />} />
       <Route path="galeria/:id" element={<GalerryId />} />
     </Routes>
   );
@@ -57,9 +59,9 @@ function HomeScreen() {
         <Fade>
           <Gallery />
         </Fade>
-        <Fade triggerOnce direction="up" delay={100}>
+        {/* <Fade triggerOnce direction="up" delay={100}>
           <Team />
-        </Fade>
+        </Fade> */}
         <Fade triggerOnce direction="up" delay={100}>
           <Patronize />
         </Fade>

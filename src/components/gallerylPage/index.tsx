@@ -32,7 +32,6 @@ export default function GalleryPage() {
       setShowGallery(false);
     };
   }, []);
-  console.log(showGallery);
 
   return (
     <div ref={refMount}>
