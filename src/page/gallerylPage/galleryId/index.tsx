@@ -113,8 +113,9 @@ export default function GalerryId() {
             </div>
           </div>
         </div>
-
-        <Footer />
+        <div className="containerFooterGallery">
+          <Footer />
+        </div>
         {showPopup && (
           <>
             <div className="popupContainer">

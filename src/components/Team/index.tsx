@@ -1,6 +1,19 @@
+import { useRef } from 'react';
 import styles from './styles.module.css';
 
 export default function Team() {
+  const scrollDowwn = useRef(null);
+
+  const handleScroll = () => {
+    //roll down
+    scrollDowwn.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+
+      // inline: 'nearest',
+    });
+  };
+
   return (
     <section id={styles['team']}>
       <div className={styles.container__wrapper}>
@@ -17,7 +30,7 @@ export default function Team() {
             </p>
           </div>
 
-          <div className={styles.container__roll__down}>
+          <div className={styles.container__roll__down} onClick={handleScroll}>
             <div className={styles.container__roll__down__item}>
               <p className={styles.text__down}>rola para baixo</p>
               <img src="/image/arrowDown.png" alt="arrowDown" />
@@ -45,7 +58,7 @@ export default function Team() {
             </div>
           </div>
         </div>
-        <div className={styles.column__gallery__team}>
+        <div className={styles.column__gallery__team} ref={scrollDowwn}>
           <div
             className={`${styles.gallery_grid_item_team_column_one} ${styles.column__gallery__team__margin__top}`}
           >

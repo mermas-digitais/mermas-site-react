@@ -1,4 +1,4 @@
-.containerTeamPage {
+/*.containerTeamPage {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,15 +7,19 @@
   height: 100%;
   position: relative;
 }
-
-.containerTeamPage > .container__content__team__page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/*
+.containerTeamPage > .footer__team {
   width: 100%;
   height: 100%;
-  position: relative;
+}
+
+
+@media (max-width: 1290px) {
+  .containerTeamPage > .container__content__team__page {
+    margin-top: 12rem;
+  }
+} */
+
+.containerTeamPage > .container__content__team__page {
   margin-top: 8rem;
-  padding: 0 5rem;
 }

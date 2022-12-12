@@ -1,18 +1,17 @@
-#team {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
 .container__wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 2rem;
+  justify-content: space-around;
+  position: relative;
+}
+
+.container__wrapper > .column__gallery__team {
+  padding-bottom: 2rem;
 }
 .container__wrapper > .column__gallery__team > .clip__path__wave {
   position: absolute;
-  bottom: 10%;
-  width: calc(100% + 2rem);
+  bottom: -4%;
+  width: 100%;
   height: 20%;
 
   z-index: 1;
@@ -127,7 +126,7 @@
 }
 
 #team > .container__wrapper > .containerChat {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -176,8 +175,6 @@
   font-size: 1rem;
   line-height: 1.5rem;
 
-  /* purple/900 */
-
   color: #330043;
 }
 
@@ -198,8 +195,9 @@
   > .container__roll__down__item {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+
   cursor: pointer;
+  align-self: flex-end;
 }
 
 #team
@@ -230,7 +228,7 @@
 }
 
 #team > .container__wrapper > .containerChat > .chat__message {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -244,7 +242,6 @@
   > .containerChat
   > .chat__message
   > .chat__message__left {
-  width: 80%;
   display: flex;
   flex-direction: row;
 
@@ -261,7 +258,6 @@
   > .chat__message
   > .chat__message__left
   > .chat__message__item {
-  width: 100%;
   display: flex;
   flex-direction: row;
 
@@ -269,7 +265,7 @@
   align-items: center;
   align-content: center;
   gap: 1rem;
-  padding: 1rem;
+  /* padding: 1rem; */
 
   /* border-radius: 0.5rem; */
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
@@ -335,7 +331,7 @@
   align-items: center;
   align-content: center;
   gap: 1rem;
-  padding: 1rem;
+  /* padding: 1rem; */
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   background: #fef0ed;
   clip-path: polygon(
@@ -379,14 +375,28 @@
 }
 #team > .container__wrapper > .column__gallery__team {
   display: grid;
-
-  grid-template-rows: repeat(3, 28%);
+  grid-template-rows: repeat(3, 33.33%);
   grid-auto-flow: column;
-
   grid-gap: 1rem;
-  width: 100%;
-  height: 100%;
   position: relative;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#team > .container__wrapper > .column__gallery__team::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+#team > .container__wrapper > .column__gallery__team::-webkit-scrollbar-thumb {
+  background: #f5f5f5;
+  border-radius: 0.5rem;
+}
+
+#team > .container__wrapper > .column__gallery__team::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 0.5rem;
 }
 
 /* card */
@@ -397,6 +407,7 @@
   > .card__profile {
   width: 15rem;
   height: 20rem;
+
   display: flex;
   flex-direction: column;
   position: relative;
@@ -439,7 +450,9 @@
   align-items: flex-start;
   align-content: center;
   gap: 0.5rem;
-  padding: 1rem 1rem 2rem 1rem;
+  padding-left: 0.8rem;
+  padding-bottom: 0.8rem;
+  /* padding: 1rem 1rem 2rem 1rem; */
 }
 
 #team
@@ -537,3 +550,180 @@
 /* .containerChat .containerChat__title h2 {
 
 } */
+@media (max-width: 1290px) {
+  #team > .container__wrapper > .column__gallery__team {
+    grid-template-rows: repeat(6, 16.66%);
+    /* gap: 1rem;
+    row-gap: 3rem; */
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one.column__gallery__team__margin__top {
+    margin-top: 0rem;
+  }
+}
+
+@media (max-width: 1175px) {
+  .container__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #team > .container__wrapper > .column__gallery__team {
+    grid-template-rows: repeat(4, 25%);
+    /* gap: 1rem;
+    row-gap: 3rem; */
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one.column__gallery__team__margin__top {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 760px) {
+  #team > .container__wrapper > .column__gallery__team {
+    grid-template-rows: repeat(6, 16.66%);
+    /* gap: 1rem;
+    row-gap: 3rem; */
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one.column__gallery__team__margin__top {
+    margin-top: 0rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #team > .container__wrapper > .column__gallery__team {
+    grid-template-rows: repeat(6, 16.66%);
+    /* gap: 1rem;
+    row-gap: 3rem; */
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one
+    > .card__profile {
+    width: 12rem;
+    height: 15rem;
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one
+    > .card__profile
+    > .column__profile__info
+    > .name__profile {
+    font-size: 1.5rem;
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one
+    > .card__profile
+    > .column__profile__info
+    > .last__name__profile {
+    font-size: 1.5rem;
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one
+    > .card__profile
+    > .column__profile__info
+    > .role__profile {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 407px) {
+  #team > .container__wrapper > .column__gallery__team {
+    grid-template-rows: repeat(6, 16.66%);
+    /* gap: 1rem;
+    row-gap: 3rem; */
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one
+    > .card__profile {
+    width: 11rem;
+    height: 15rem;
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one
+    > .card__profile
+    > .column__profile__info
+    > .name__profile {
+    font-size: 1.3rem;
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one
+    > .card__profile
+    > .column__profile__info
+    > .last__name__profile {
+    font-size: 1.3rem;
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one
+    > .card__profile
+    > .column__profile__info
+    > .role__profile {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 371px) {
+  #team > .container__wrapper > .column__gallery__team {
+    grid-template-rows: repeat(6, 16.66%);
+    /* gap: 1rem;
+    row-gap: 3rem; */
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one
+    > .card__profile {
+    width: 10rem;
+    height: 15rem;
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one
+    > .card__profile
+    > .column__profile__info
+    > .name__profile {
+    font-size: 1.3rem;
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one
+    > .card__profile
+    > .column__profile__info
+    > .last__name__profile {
+    font-size: 1.3rem;
+  }
+  #team
+    > .container__wrapper
+    > .column__gallery__team
+    > .gallery_grid_item_team_column_one
+    > .card__profile
+    > .column__profile__info
+    > .role__profile {
+    font-size: 1.1rem;
+  }
+}

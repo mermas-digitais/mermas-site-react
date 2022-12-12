@@ -100,3 +100,6 @@ li {
 
   overflow: hidden;
 }
+.body_complete > .containerFooter {
+  width: 100%;
+}

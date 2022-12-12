@@ -51,9 +51,35 @@ export const Navbar = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [show]);
 
+  const redirectCorrect = (section: string) => {
+    if (
+      window.location.href.split('/').length < 5 &&
+      window.location.href.split('/')[3] !== '#'
+    ) {
+      window.location.href = window.location.href.replace(
+        window.location.href.split('/')[3],
+        `#${section}`,
+      );
+    } else if (
+      window.location.href.split('/').length === 5 &&
+      window.location.href.split('/')[3] !== '#'
+    ) {
+      const firstReplace = window.location.href.replace(
+        window.location.href.split('/')[3],
+        `#${section}`,
+      );
+
+      const secondReplace = firstReplace.replace(
+        `/${firstReplace.split('/')[4]}`,
+        '',
+      );
+      window.location.href = secondReplace;
+    }
+  };
+
   return (
     <>
-      {showGallery && (
+      {showGalleryEllipse && (
         <>
           <div className="elipse1" />
           <div className="elipse2" />
@@ -80,17 +106,19 @@ export const Navbar = ({
                 </a>
               </li>
               <li>
-                <a href="#about">Sobre</a>
+                <a onClick={() => redirectCorrect('about')}>Sobre</a>
               </li>
 
               <li>
-                <a href="#course">Projeto</a>
+                <a onClick={() => redirectCorrect('course')}>Projeto</a>
               </li>
               <li>
-                <a href="#activity">Atividades</a>
+                <a onClick={() => redirectCorrect('activity')}>Atividades</a>
               </li>
               <li>
-                <a href="#register">Como participar?</a>
+                <a onClick={() => redirectCorrect('register')}>
+                  Como participar?
+                </a>
               </li>
               <li>
                 <Link className="link" to="/time">
@@ -98,10 +126,10 @@ export const Navbar = ({
                 </Link>
               </li>
               <li>
-                <a href="#form">Contato</a>
+                <a onClick={() => redirectCorrect('form')}>Contato</a>
               </li>
               <li>
-                <a href="#gallery">Galeria</a>
+                <a onClick={() => redirectCorrect('gallery')}>Galeria</a>
               </li>
             </ul>
           </div>

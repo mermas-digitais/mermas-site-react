@@ -10,7 +10,9 @@ export default function TeamPage() {
       <div className="container__content__team__page">
         <Team />
       </div>
-      <Footer />
+      <div className="footer__team">
+        <Footer />
+      </div>
     </div>
   );
 }

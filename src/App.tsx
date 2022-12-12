@@ -36,7 +36,7 @@ function HomeScreen() {
 
   return (
     <div className="body_complete">
-      <Navbar showGallery={showGallery} />
+      <Navbar showGallery={showGallery} showGalleryEllipse={true} />
 
       <>
         <div className="container-home">
@@ -61,15 +61,13 @@ function HomeScreen() {
         <Fade>
           <Gallery />
         </Fade>
-        {/* <Fade triggerOnce direction="up" delay={100}>
-          <Team />
-        </Fade> */}
         <Fade triggerOnce direction="up" delay={100}>
           <Patronize />
         </Fade>
       </>
-
-      <Footer />
+      <div className="containerFooter">
+        <Footer />
+      </div>
     </div>
   );
 }
