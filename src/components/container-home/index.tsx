@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-export const Home = () => {
+export const ContainerHome = () => {
   return (
     <>
       <section id="home" className="container delay">
