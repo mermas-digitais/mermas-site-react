@@ -90,7 +90,7 @@ export const Navbar = ({
         <nav className="containerNavbar delay_500" ref={navRef}>
           <div className="containerLogo">
             <img
-              src="../../../public/image/sideLogo.png"
+              src="../../../public/image/logo132.png"
               alt="logo side"
               className="sideLogo"
             />

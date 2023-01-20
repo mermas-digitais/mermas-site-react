@@ -6,7 +6,7 @@ export const Home = () => {
       <section id="home" className="container delay">
         <div className="home-container">
           <div className="home-image delay_500">
-            <img src="./image/girls.png" alt="Desenho de 4 meninas" />
+            <img src="./image/logo132.png" alt="Desenho de 4 meninas" />
           </div>
           <div className="home-text">
             <div className="container_text">
