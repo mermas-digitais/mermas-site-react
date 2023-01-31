@@ -101,19 +101,19 @@ export const Navbar = ({
           <div className="menu">
             <ul className="group_button">
               <li>
-                <a className="button_click" href="#home">
+                <a className="button_click" href="#">
                   Página Inicial
                 </a>
               </li>
               <li>
-                <a onClick={() => redirectCorrect('about')}>Sobre</a>
+                <a href="#about">Sobre</a>
               </li>
 
               <li>
                 <a onClick={() => redirectCorrect('course')}>Projeto</a>
               </li>
               <li>
-                <a onClick={() => redirectCorrect('activity')}>Atividades</a>
+                <Link to="atividades">Atividades</Link>
               </li>
               <li>
                 <a onClick={() => redirectCorrect('register')}>
@@ -121,9 +121,9 @@ export const Navbar = ({
                 </a>
               </li>
               <li>
-                <Link className="link" to="/time">
+                <a className="link" onClick={() => redirectCorrect('time')}>
                   Equipe
-                </Link>
+                </a>
               </li>
               <li>
                 <a onClick={() => redirectCorrect('form')}>Contato</a>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { CardActivity } from '../../individualComponent/cardActivity';
 import './index.css';
 
@@ -15,9 +16,11 @@ export function Activity() {
             </h2>
           </div>
           <div className="head_button">
-            <button className="icon button_next">
-              <img src="./image/arrow.svg" alt="Ícone de foguete" />
-            </button>
+            <Link to="/atividades">
+              <button className="icon button_next">
+                <img src="./image/arrow.svg" alt="Ícone de foguete" />
+              </button>
+            </Link>
           </div>
         </div>
 
