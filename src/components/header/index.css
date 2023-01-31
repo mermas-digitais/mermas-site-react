@@ -107,6 +107,7 @@
   -webkit-font-smoothing: antialiased;
   transition: 0.3s;
   box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 .header nav .menu ul li a.title.active {
   font-weight: bold;

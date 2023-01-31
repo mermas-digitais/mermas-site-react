@@ -10,12 +10,11 @@ import { Register } from './components/register';
 import { Fade } from 'react-awesome-reveal';
 import { Patronize } from './components/patronize';
 import Gallery from './components/gallery';
-import { useEffect, useState } from 'react';
-import GalleryGrid from './components/galleryGrid';
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import GalleryPage from './page/gallerylPage';
 import GalerryId from './page/gallerylPage/galleryId';
-import Team from './components/Team';
+
 import TeamPage from './page/teamPage';
 import ActivitiesPage from './page/activities';
 

@@ -97,7 +97,7 @@ export const Footer = ({ pathImage = './image/girls.png' }: FooterProps) => {
         </div>
       </div>
       <div id="copyright">
-        @2022 MERMÃS DIGITAIS | Desenvolvido por Mermãs Digitais
+        @2023 MERMÃS DIGITAIS | Desenvolvido por Mermãs Digitais
       </div>
     </footer>
   );
