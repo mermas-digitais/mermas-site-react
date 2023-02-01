@@ -1,0 +1,27 @@
+:root {
+  --header-height: 4.5rem;
+
+  /* colors */
+  --base-color: #a688ff;
+  --base-color-light: #ddc7f8;
+  --base-color-dark: #330043;
+  --yellow-color: #ffcd34;
+  --salmon-color: #fc8370;
+  --pink-color: #ff4a97;
+  --pink-color-light: #fbeefe;
+  --white-color: #ffffff;
+  --gray--color: rgba(217, 217, 217, 0.5);
+
+  /* fonts */
+  --logo-font: 'Paytone One', sans-serif;
+  --body-font: 'Quicksand', sans-serif;
+  --body2-font: 'Poppins', sans-serif;
+}
+body {
+  color: var(--base-color-dark);
+  font-family: var(--body-font);
+  -webkit-font-smoothing: antialiased;
+}
+html {
+  scroll-behavior: smooth;
+}
