@@ -143,26 +143,6 @@ export default function GalerryId() {
           </>
         )}
       </div>
-      {/* <div
-        className="popupContainer"
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-
-          width: '100%',
-
-          height: '100%',
-
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          zIndex: 999,
-        }}
-      >
-        <img
-          src="https://i0.wp.com/blog.portaleducacao.com.br/wp-content/uploads/2022/03/Estrategias-Genericas.jpg"
-          alt="Imagem da Galeria"
-        />
-      </div> */}
     </>
   );
 }

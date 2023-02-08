@@ -2,23 +2,30 @@ import rocktLogo from '../../../public/image/Group 29.svg';
 
 import './index.css';
 
-export const CardActivitys = () => {
+type CardActivitysProps = {
+  title: string;
+  description: string;
+  borderColor: string;
+};
+
+export const CardActivitys = ({
+  title,
+  description,
+  borderColor,
+}: CardActivitysProps) => {
   return (
-    <div className="Container_Card">
+    <div className="Container_Card" style={{ borderColor: `${borderColor}` }}>
       <div className="Content_Top">
         <div className="Container_img">
           <img className="img_rockt" src={rocktLogo} alt="logo foguete" />
         </div>
         <div className="Container_title">
           <div className="Container_title_card">
-            <h2 className="title_card">Desenvolvimento de jogos</h2>
+            <h2 className="title_card">{title}</h2>
             <span>3 dias</span>
           </div>
 
-          <p className="span_card">
-            Trilha de conhecimento para primeiro contato com o desenvolvimento
-            web
-          </p>
+          <p className="span_card">{description}</p>
         </div>
       </div>
 

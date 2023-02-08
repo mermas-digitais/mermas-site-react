@@ -17,8 +17,12 @@
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
+  margin-bottom: 48px;
 }
 
+.cards:last-child {
+  margin-bottom: 100px;
+}
 .title_oficinas {
   font-family: 'Quicksand';
   font-style: normal;
@@ -101,5 +105,9 @@
 
   .Content_span > span {
     font-size: 1rem;
+  }
+
+  .cards:last-child {
+    margin-bottom: 0;
   }
 }

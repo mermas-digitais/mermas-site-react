@@ -1,4 +1,4 @@
-import { CardPatronize } from '../../individualComponent/cardPatronize';
+import { CardPatronize } from '../cardPatronize';
 import './index.css';
 
 export const Patronize = () => {

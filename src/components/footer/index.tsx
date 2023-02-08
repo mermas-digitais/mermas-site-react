@@ -2,6 +2,7 @@ import { AiOutlineInstagram } from 'react-icons/ai';
 
 import { BsFacebook, BsTwitter } from 'react-icons/bs';
 import './index.css';
+import { HiOutlineMail } from 'react-icons/hi';
 
 interface FooterProps {
   pathImage?: string;
@@ -59,13 +60,8 @@ export const Footer = ({ pathImage = './image/girls.png' }: FooterProps) => {
             <ul>
               <li>
                 <a href="mailto:mermasdigitaisifma@gmail.com">
-                  <i className="ph-envelope-simple"></i>
+                  <HiOutlineMail size={22} color="#9854cb" />
                   mermasdigitaisifma@gmail.com
-                </a>
-              </li>
-              <li>
-                <a href="tel:">
-                  <i className="ph-whatsapp-logo"></i>(99) 99999-9999
                 </a>
               </li>
             </ul>
