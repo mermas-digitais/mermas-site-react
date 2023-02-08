@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CardActivity } from '../../individualComponent/cardActivity';
+import { CardActivity } from '../cardActivity';
 import './index.css';
 
 export function Activity() {

@@ -2,6 +2,7 @@ import React, { useCallback, useRef } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import './index.css';
 interface NavbarProps {
   showGallery?: boolean;
@@ -51,31 +52,7 @@ export const Navbar = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [show]);
 
-  const redirectCorrect = (section: string) => {
-    if (
-      window.location.href.split('/').length < 5 &&
-      window.location.href.split('/')[3] !== '#'
-    ) {
-      window.location.href = window.location.href.replace(
-        window.location.href.split('/')[3],
-        `#${section}`,
-      );
-    } else if (
-      window.location.href.split('/').length === 5 &&
-      window.location.href.split('/')[3] !== '#'
-    ) {
-      const firstReplace = window.location.href.replace(
-        window.location.href.split('/')[3],
-        `#${section}`,
-      );
-
-      const secondReplace = firstReplace.replace(
-        `/${firstReplace.split('/')[4]}`,
-        '',
-      );
-      window.location.href = secondReplace;
-    }
-  };
+  const { pathname } = useLocation();
 
   return (
     <>
@@ -94,42 +71,41 @@ export const Navbar = ({
               alt="logo side"
               className="sideLogo"
             />
-            <a className="logo" href="#">
-              Mermãs Digitais
-            </a>
+            <Link to="/">Mermãs Digitais</Link>
           </div>
           <div className="menu">
             <ul className="group_button">
               <li>
-                <a className="button_click" href="#">
+                <a href="/" className={`${pathname === '/' && 'button_click'}`}>
                   Página Inicial
                 </a>
               </li>
+
               <li>
-                <a href="#about">Sobre</a>
+                <Link
+                  className={`${pathname === '/atividades' && 'button_click'}`}
+                  to="/atividades"
+                >
+                  Atividades
+                </Link>
               </li>
 
               <li>
-                <a onClick={() => redirectCorrect('course')}>Projeto</a>
-              </li>
-              <li>
-                <Link to="atividades">Atividades</Link>
-              </li>
-              <li>
-                <a onClick={() => redirectCorrect('register')}>
-                  Como participar?
-                </a>
-              </li>
-              <li>
-                <a className="link" onClick={() => redirectCorrect('time')}>
+                <Link
+                  className={`${pathname === '/time' && 'button_click'}`}
+                  to="/time"
+                >
                   Equipe
-                </a>
+                </Link>
               </li>
+
               <li>
-                <a onClick={() => redirectCorrect('form')}>Contato</a>
-              </li>
-              <li>
-                <a onClick={() => redirectCorrect('gallery')}>Galeria</a>
+                <Link
+                  className={`${pathname === '/galeria' && 'button_click'}`}
+                  to="/galeria"
+                >
+                  Galeria
+                </Link>
               </li>
             </ul>
           </div>
