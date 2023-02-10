@@ -63,13 +63,13 @@ export const Navbar = ({
         </>
       )}
       {showGalleryEllipse && <div className="elipse3" />}
-      <header className="header" ref={headerRef}>
-        <nav className="containerNavbar delay_500" ref={navRef}>
-          <div className="containerLogo">
+      <header className="flex justify-center items-center fixed top-0 left-0 w-full px-6 py-0 z-50 bg-transparent" ref={headerRef}>
+        <nav className="w-full min-w-full items-center justify-evenly delay_500" ref={navRef}>
+          <div className="flex justify-center items-center w-full gap-6 m-0 max-w-xs bg-transparent">
             <img
               src="../../../public/image/logo132.png"
               alt="logo side"
-              className="sideLogo"
+              className="w-10 h-auto object-contain"
             />
             <Link to="/">Mermãs Digitais</Link>
           </div>
