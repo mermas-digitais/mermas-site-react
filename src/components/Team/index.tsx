@@ -1,3 +1,4 @@
+import { SortAscending } from '@phosphor-icons/react';
 import { useRef } from 'react';
 import styles from './styles.module.css';
 
@@ -6,247 +7,107 @@ export default function Team() {
 
   const handleScroll = () => {
     //roll down
-    scrollDowwn.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-
-      // inline: 'nearest',
-    });
+    // scrollDowwn.current.scrollIntoView({
+    //   behavior: 'smooth',
+    //   block: 'start',
+    //   // inline: 'nearest',
+    // });
   };
 
   return (
-    <section id={styles['team']}>
-      <div className={styles.container__wrapper}>
-        <div className={styles.containerChat}>
-          <div className={styles.containerChat__title}>
-            <div className={styles.text__complete}>
-              <p className={styles.textBlackChat}>Equipe das</p>
-              <p className={styles.textPinkChat}>Mermãs Digitais</p>
-            </div>
-          </div>
-          <div className={styles.containerChat__describe}>
-            <p className={styles.describe__chat}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            </p>
+    <section id={styles['team']} className="w-[100vw]">
+      <div className="container flex justify-between items-start gap-16">
+        <div className="w-[35%]">
+          <div>
+            <h3 className="w-72">
+              Equipe das{' '}
+              <i className="not-italic text-pink-500">Mermãs Digitais</i>
+            </h3>
+            <span>
+              Vem conhecer as mermãs e os mermãos que fazem isso acontecer
+            </span>
           </div>
 
-          <div className={styles.container__roll__down} onClick={handleScroll}>
-            <div className={styles.container__roll__down__item}>
-              <p className={styles.text__down}>rola para baixo</p>
-              <img src="/image/arrowDown.png" alt="arrowDown" />
-            </div>
+          <div
+            className="flex items-center justify-end gap-2 my-8 opacity-50 hover:opacity-80  transform duration-300 cursor-pointer"
+            onClick={handleScroll}
+          >
+            <span className="text-sm">Rola para baixo</span>
+            <SortAscending size={20} color="#545454" />
           </div>
 
-          <div className={styles.chat__message}>
-            <div className={styles.chat__message__left}>
-              <div className={styles.chat__message__item}>
-                <img src="/image/imageProfile.jpeg" alt="arrowDown" />
-                <p className={styles.chat__message__item__text}>
-                  Olá, eu sou Simone, Coordenadora do projeto, venha falar
-                  comigo por aqui!
-                </p>
+          <div className="flex flex-col gap-4 w-full">
+            <div className="flex justify-start w-full cursor-pointer hover:-translate-y-1 transition-all duration-300">
+              <div
+                className="w-[80%] bg-pink-100 py-3 px-5 rounded-r-2xl rounded-t-2xl relative
+            before:w-2 before:h-4 before:absolute before:bottom-[-18px] before:left-0 
+            before:border-r-[30px] before:border-r-transparent
+            before:border-t-pink-100 before:border-t-[20px]
+            hover:shadow-md hover:shadow-gray-50
+           "
+              >
+                <div className="flex gap-4 items-center">
+                  <div>
+                    <img
+                      className="rounded-full w-10 h-10 object-cover"
+                      src="./image/imageProfile.jpeg"
+                      alt=""
+                    />
+                  </div>
+                  <span className="text-xs w-[75%]">
+                    Olá! Sou <strong>Simone</strong>, a coordenadora do projeto.
+                    Vem conversar comigo aqui!
+                  </span>
+                </div>
               </div>
             </div>
-            <div className={styles.chat__message__right}>
-              <div className={styles.chat__message__item}>
-                <p className={styles.chat__message__item__text}>
-                  E eu sou o Thiago! Coordenador do projeto, venha falar comigo
-                  por aqui!
-                </p>
-                <img src="/image/imageProfile.jpeg" alt="arrowDown" />
+
+            <div className="w-full flex justify-end cursor-pointer hover:-translate-y-1 transition-all duration-300">
+              <div
+                className="w-[80%] bg-pink-100 py-3 px-5 rounded-l-2xl rounded-t-2xl relative
+            before:w-2 before:h-4 before:absolute before:bottom-[-18px] before:right-0 
+            before:border-l-[30px] before:border-l-transparent
+            before:border-t-pink-100 before:border-t-[20px]
+            hover:shadow-md hover:shadow-gray-50"
+              >
+                <div className="flex gap-4 items-center">
+                  <span className="text-xs w-[75%] text-end">
+                    E eu sou <strong>Thiago</strong>, o coordenador do projeto.
+                    Vem conversar comigo aqui!
+                  </span>
+                  <div>
+                    <img
+                      className="rounded-full w-10 h-10 object-cover"
+                      src="./image/imageProfile.jpeg"
+                      alt=""
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className={styles.column__gallery__team} ref={scrollDowwn}>
+        
+        <div className="w-[75%]" ref={scrollDowwn}>
           <div
-            className={`${styles.gallery_grid_item_team_column_one} ${styles.column__gallery__team__margin__top}`}
+            className=""
           >
-            <div className={styles.card__profile}>
+            <div className="relative bg-purple-300 w-fit">
               <img
-                className={styles.with__border__color}
+                className="object-cover w-44 h-52 rounded-xl"                
                 src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
-                alt="Ícone de foguete"
+                alt="Ímagem de um membro da equipe"
               />
-              <div className={styles.column__profile__info}>
-                <p className={styles.name__profile}>Nome</p>
-                <p className={styles.last__name__profile}>Sobrenome</p>
-                <p className={styles.role__profile}>Coordenadora</p>
-                <p className={styles.email__profile}>test@gmail.com</p>
-              </div>
+              <address className="flex flex-col
+              absolute bottom-0 m-2 leading-3
+              text-[10px] font-poppins not-italic text-white">
+                <b>Nome</b>
+                <b>Sobrenome</b>
+                <strong className="font-normal">Coordenadora</strong>
+                <a href="mailto:webmaster@example.com" className="">test@gmail.com</a>
+              </address>
             </div>
           </div>
-
-          <div
-            className={`${styles.gallery_grid_item_team_column_one} ${styles.column__gallery__team__margin__top}`}
-          >
-            <div className={styles.card__profile}>
-              <img
-                src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
-                alt="Ícone de foguete"
-              />
-              <div className={styles.column__profile__info}>
-                <p className={styles.name__profile}>Nome</p>
-                <p className={styles.last__name__profile}>Sobrenome</p>
-                <p className={styles.role__profile}>Coordenadora</p>
-                <p className={styles.email__profile}>test@gmail.com</p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className={`${styles.gallery_grid_item_team_column_one} ${styles.column__gallery__team__margin__top}`}
-          >
-            <div className={styles.card__profile}>
-              <img
-                src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
-                alt="Ícone de foguete"
-              />
-              <div className={styles.column__profile__info}>
-                <p className={styles.name__profile}>Nome</p>
-                <p className={styles.last__name__profile}>Sobrenome</p>
-                <p className={styles.role__profile}>Coordenadora</p>
-                <p className={styles.email__profile}>test@gmail.com</p>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.gallery_grid_item_team_column_one}>
-            <div className={styles.card__profile}>
-              <img
-                className={styles.with__border__color}
-                src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
-                alt="Ícone de foguete"
-              />
-              <div className={styles.column__profile__info}>
-                <p className={styles.name__profile}>Nome</p>
-                <p className={styles.last__name__profile}>Sobrenome</p>
-                <p className={styles.role__profile}>Coordenadora</p>
-                <p className={styles.email__profile}>test@gmail.com</p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.gallery_grid_item_team_column_one}>
-            <div className={styles.card__profile}>
-              <img
-                src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
-                alt="Ícone de foguete"
-              />
-              <div className={styles.column__profile__info}>
-                <p className={styles.name__profile}>Nome</p>
-                <p className={styles.last__name__profile}>Sobrenome</p>
-                <p className={styles.role__profile}>Coordenadora</p>
-                <p className={styles.email__profile}>test@gmail.com</p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.gallery_grid_item_team_column_one}>
-            <div className={styles.card__profile}>
-              <img
-                src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
-                alt="Ícone de foguete"
-              />
-              <div className={styles.column__profile__info}>
-                <p className={styles.name__profile}>Nome</p>
-                <p className={styles.last__name__profile}>Sobrenome</p>
-                <p className={styles.role__profile}>Coordenadora</p>
-                <p className={styles.email__profile}>test@gmail.com</p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className={`${styles.gallery_grid_item_team_column_one} ${styles.column__gallery__team__margin__top}`}
-          >
-            <div className={styles.card__profile}>
-              <img
-                src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
-                alt="Ícone de foguete"
-              />
-              <div className={styles.column__profile__info}>
-                <p className={styles.name__profile}>Nome</p>
-                <p className={styles.last__name__profile}>Sobrenome</p>
-                <p className={styles.role__profile}>Coordenadora</p>
-                <p className={styles.email__profile}>test@gmail.com</p>
-              </div>
-            </div>
-          </div>
-          <div
-            className={`${styles.gallery_grid_item_team_column_one} ${styles.column__gallery__team__margin__top}`}
-          >
-            <div className={styles.card__profile}>
-              <img
-                src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
-                alt="Ícone de foguete"
-              />
-              <div className={styles.column__profile__info}>
-                <p className={styles.name__profile}>Nome</p>
-                <p className={styles.last__name__profile}>Sobrenome</p>
-                <p className={styles.role__profile}>Coordenadora</p>
-                <p className={styles.email__profile}>test@gmail.com</p>
-              </div>
-            </div>
-          </div>
-          <div
-            className={`${styles.gallery_grid_item_team_column_one} ${styles.column__gallery__team__margin__top}`}
-          >
-            <div className={styles.card__profile}>
-              <img
-                src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
-                alt="Ícone de foguete"
-              />
-              <div className={styles.column__profile__info}>
-                <p className={styles.name__profile}>Nome</p>
-                <p className={styles.last__name__profile}>Sobrenome</p>
-                <p className={styles.role__profile}>Coordenadora</p>
-                <p className={styles.email__profile}>test@gmail.com</p>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.gallery_grid_item_team_column_one}>
-            <div className={styles.card__profile}>
-              <img
-                src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
-                alt="Ícone de foguete"
-              />
-              <div className={styles.column__profile__info}>
-                <p className={styles.name__profile}>Nome</p>
-                <p className={styles.last__name__profile}>Sobrenome</p>
-                <p className={styles.role__profile}>Coordenadora</p>
-                <p className={styles.email__profile}>test@gmail.com</p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.gallery_grid_item_team_column_one}>
-            <div className={styles.card__profile}>
-              <img
-                src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
-                alt="Ícone de foguete"
-              />
-              <div className={styles.column__profile__info}>
-                <p className={styles.name__profile}>Nome</p>
-                <p className={styles.last__name__profile}>Sobrenome</p>
-                <p className={styles.role__profile}>Coordenadora</p>
-                <p className={styles.email__profile}>test@gmail.com</p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.gallery_grid_item_team_column_one}>
-            <div className={styles.card__profile}>
-              <img
-                src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
-                alt="Ícone de foguete"
-              />
-              <div className={styles.column__profile__info}>
-                <p className={styles.name__profile}>Nome</p>
-                <p className={styles.last__name__profile}>Sobrenome</p>
-                <p className={styles.role__profile}>Coordenadora</p>
-                <p className={styles.email__profile}>test@gmail.com</p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.clip__path__wave} />
         </div>
       </div>
     </section>

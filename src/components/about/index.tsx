@@ -1,49 +1,43 @@
-import React from 'react';
-import './index.css';
+import { CaretCircleRight, CaretRight } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
+
 export const About = () => {
   return (
     <>
-      <section id="about">
-        <div className="about-image">
-          <img src="./image/astronauta.svg" alt="Astronauta" />
+      <section
+        className="relative w-[100vw] z-10 flex justify-center "
+      >
+        <div className="w-full absolute z-[-1]">
+          <img src="./image/ondas.svg" alt="Astronauta" />
         </div>
 
-        <div className="box">
-          <div className="container-about">
-            <div className="about-text distance_50">
-              <h2 className="title easing_title">Éguas, ainda não conhece?</h2>
-              <p className="easing_text">
-                O projeto surgiu em 2019 de forma remota, com o objetivo de
-                incentivar mais meninas do Ensino Médio da rede pública a
-                despertarem o interesse por cursos de Computação e suas
-                tecnologias na cidade de Imperatriz Maranhão.
+        <div className="w-full h-full padding flex container flex-row items-center justify-between">
+          <div className="w-full max-w-[30rem]">
+            <img
+              src="./image/logo.svg"
+              alt="Logo do Projeto: Uma menina mergulada na tecnologia"
+            />
+          </div>
+          <div className="ml-20">
+            <div className="w-[36rem] ml-auto text-left">
+              <h3>Éguas, ainda não conhece?</h3>
+              <p className="pb-6">
+                O Mermãs Digitais é um projeto de extensão do IFMA - Campus
+                Imperatriz, parceiro do Programa Meninas Digitais da Sociedade
+                Brasileira de Computação, que tem o objetivo incentivar e apoia
+                meninas do ensino médio da rede pública à despertar o interesse
+                nos cursos de Computação e tecnologias relacionadas.
               </p>
-              <p className="easing_text">
-                Atualmente é um projeto parceiro do Programa Meninas Digitais da
-                Sociedade Brasileira de Computação (SBC) e está na sua segunda
-                edição, ofertando palestras, mesa-redonda, minicursos e oficinas
-                às meninas que desejem participar.
-              </p>
+              <Link 
+                to="/about"
+                className="flex items-center gap-1 pb-6 w-80 border-b-[1px] border-purple-100 font-poppins font-semibold text-base text-pink-500"
+              >
+                Conheça nossa história
+                <CaretRight size={20} weight="bold"/>
+              </Link>
             </div>
           </div>
         </div>
-        {/* <div className="container">
-          <div className="about-text distance_50">
-            <h2 className="title easing_title">Éguas, ainda não conhece?</h2>
-            <p className="easing_text">
-              O projeto surgiu em 2019 de forma remota, com o objetivo de
-              incentivar mais meninas do Ensino Médio da rede pública a
-              despertarem o interesse por cursos de Computação e suas
-              tecnologias na cidade de Imperatriz Maranhão.
-            </p>
-            <p className="easing_text">
-              Atualmente é um projeto parceiro do Programa Meninas Digitais da
-              Sociedade Brasileira de Computação (SBC) e está na sua segunda
-              edição, ofertando palestras, mesa-redonda, minicursos e oficinas
-              às meninas que desejem participar.
-            </p>
-          </div>
-        </div> */}
       </section>
     </>
   );

@@ -2,3 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1{
+    @apply font-poppins font-bold text-purple-900 text-[3.5rem] leading-tight; 
+  }
+  h2 {
+    @apply font-paytone font-normal text-5xl text-purple-900 mb-8; 
+  }
+
+  h3{
+    @apply font-paytone font-normal text-[2rem] text-purple-900 leading-10 mb-8;
+  }
+  h4{
+    @apply font-poppins font-semibold uppercase text-pink-500 text-lg;
+  }
+  h5{
+    @apply font-poppins font-bold text-purple-900 text-xs;
+  }
+  p {
+    @apply text-lg font-quicksand font-normal text-gray-400; 
+  }
+  span{
+    @apply font-quicksand font-medium text-gray-400 text-base;
+  }
+  input, textarea{
+    @apply border-solid border-2 w-full border-purple-100 px-7 py-3 font-quicksand font-medium text-sm text-gray-400;
+  }
+  input{
+    @apply rounded-full;
+  }
+  textarea{
+    @apply rounded-2xl;
+  }
+
+  input::placeholder, textarea::placeholder{
+    @apply text-gray-200;
+  }
+
+
+}
+
+@layer components {
+  .padding{
+    @apply py-20;
+  }
+
+  .card{
+    @apply shadow-pop p-6 rounded-[2rem] bg-white border-white  border-solid border-2 transform duration-300;
+  }
+  .container {
+    @apply mx-auto max-w-[68rem] my-0;
+  }
+
+  .bg-pink-yellow{
+    color: #fff;
+    background: linear-gradient(to bottom right,#ff4a97, #FFD500);
+  }
+
+  .bg-purple-pink{
+    background: linear-gradient(to bottom right,#9747FF, #ff4a97);
+  }
+  .bg-purple-pink-hover{
+    background: linear-gradient(to top left,#9747FF, #ff4a97);
+  }
+
+  .border-gradient{
+    background: linear-gradient(to right, #ffff, #ffff),
+    linear-gradient(to bottom right,#9747FF, #ff4a97);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+  }
+
+  .border-gradient-hover {
+    background: linear-gradient(to right, #ffff, #ffff),
+    linear-gradient(to top left,#9747FF, #ff4a97);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+
+  }
+  .gradient-border-3 {
+    border: 3px solid transparent;
+  }
+
+  header.scroll {
+    @apply bg-white shadow-sm border-solid border-[1px] border-gray-100 px-4;
+  }
+  
+}

@@ -50,14 +50,7 @@
   gap: 1rem;
 }
 
-.title_first {
-  font-family: 'Paytone One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  color: #000;
-  text-align: center;
-}
+
 .Content_span {
   display: flex;
   justify-content: center;

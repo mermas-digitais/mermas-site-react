@@ -21,35 +21,34 @@ export const HomeScreen = () => {
       <Navbar showGallery={showGallery} showGalleryEllipse={true} />
 
       <>
-        <div className="container-home">
+        <Fade triggerOnce direction="up" delay={100}>
           <Home />
-        </div>
+        </Fade>
         <Fade triggerOnce direction="up" delay={100}>
           <About />
         </Fade>
-
+        <Fade triggerOnce direction="up" delay={100}>
+          <Patronize />
+        </Fade>
         <Fade triggerOnce direction="up" delay={100}>
           <Course />
         </Fade>
-        <Fade triggerOnce direction="up" delay={100}>
+        {/* <Fade triggerOnce direction="up" delay={100}>
           <Activity />
-        </Fade>
+        </Fade> */}
         <Fade triggerOnce direction="up" delay={100}>
           <Register />
         </Fade>
         <Fade triggerOnce direction="up" delay={100}>
           <Form />
         </Fade>
+        
 
-        <Fade triggerOnce direction="up" delay={100}>
-          <Patronize />
-        </Fade>
-
-        <Fade triggerOnce direction="up" delay={100}>
+        {/* <Fade triggerOnce direction="up" delay={100}>
           <Gallery />
-        </Fade>
+        </Fade> */}
       </>
-      <div className="containerFooter">
+      <div className="containerFooter z-10">
         <Footer />
       </div>
     </div>
