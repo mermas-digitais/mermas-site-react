@@ -1,35 +1,61 @@
-import React from 'react';
-import './index.css';
+import { Fade } from 'react-awesome-reveal';
+import ButtonPrimary from '../buttons/primary';
+
 export const Home = () => {
   return (
     <>
-      <section id="home" className="container delay">
-        <div className="home-container">
-          <div className="home-image delay_500">
-            <img src="./image/logo132.png" alt="Desenho de 4 meninas" />
+      <section
+        className="w-[100vw] flex justify-center mx-0 my-12"
+      >
+        <div className='flex flex-row container justify-between gap-8'>
+          <div className="w-full">
+            <h1>
+              Ei mermã, <br />
+              Vem ser digital!
+            </h1>
+            <p className="mt-4 mb-4 max-w-[28.5rem] text-base">
+              Incentivamos meninas a mergulharem no universo tecnologico e se
+              tornarem mestres do seu conhecimento
+            </p>
+            <ButtonPrimary to='/' name="Participar agora!" />
           </div>
-          <div className="home-text">
-            <div className="container_text">
-              <h1 className="delay_500">
-                <span>Ei Mermã!</span>
-                <br />
-                Vem conhecer as <br /> Mermãs Digitais
-              </h1>
-              <p className="easing_text">
-                Um projeto de extensão que incentiva a atuação de mais meninas
-                nas Ciências Exatas, Engenharias e Computação, para ampliar a
-                participação e liderança feminina.
-              </p>
-              <div className="home-info-event easing">
-                <span>Edição 2022.2</span>
-                <span>
-                  1 de Agosto de 2022 a <br />
-                  31 de Março de 2023
-                </span>
+
+          <div className="w-full">
+            <div className="min-w-[35rem] relative">
+              <div className="flex h-[26rem] justify-center items-center ml-8 bg-[url('./image/circulo.svg')] bg-center bg-contain bg-no-repeat w-full ">
+                <img
+                  className="h-[24rem]"
+                  src="./image/mapa.svg"
+                  alt="Mapa do Maranhão apontando para a cidade de Imperatriz"
+                />
               </div>
+
+              <Fade cascade damping={0.1} delay={100}>
+                <div className="absolute top-12 left-2 bg-white rounded-full shadow-pop p-2 flex flex-row items-center gap-2">
+                  <img
+                    className="w-10 h-10 rounded-full"
+                    src="./image/perfil.png"
+                  />
+                  <div className="flex flex-col mr-2">
+                    <h5>Ana Clara</h5>
+                    <span className="text-xs">
+                      Foi uma experiência incrivel!
+                    </span>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-12 right-2 bg-white rounded-full shadow-pop p-2 flex flex-row items-center gap-2">
+                  <img
+                    className="w-10 h-10 rounded-full"
+                    src="./image/perfil.png"
+                  />
+                  <div className="flex flex-col mr-2">
+                    <h5>Ana Clara</h5>
+                    <span className="text-xs">Ameii, sou digital!!</span>
+                  </div>
+                </div>
+              </Fade>
             </div>
-            <div className="home-shape3"></div>
-            <div className="home-shape4"></div>
           </div>
         </div>
       </section>

@@ -1,112 +1,56 @@
-import { Navbar } from '../../components/header';
 import { CardActivitys } from '../../components/cardActivitys';
-
-import './index.css';
-import { Footer } from '../../components/footer';
+import './ind ex.css';
 import { Fade } from 'react-awesome-reveal';
+import ButtonPrimary from '../../components/buttons/primary';
 
 export default function ActivitiesPage() {
   return (
-    <div className="Container">
-      <div className="Container__navbar">
-        <Navbar />
-      </div>
+    <section className="w-[100vw]">
+      <div className="container padding">
+        <Fade triggerOnce direction="up">
+        <div className="flex flex-col items-center content-center">
+          <h2>Desenvolvimento Web</h2>
+          <h3>Vem conhecer na prática o universo tecnologico</h3>
+          <p className="w-[30rem] text-center">
+            Você vai estudar, praticar e se aventurar no universo STEAM com as
+            Mermãs DIgitais
+          </p>
+          <ButtonPrimary to="/" name="Inscrever-se"></ButtonPrimary>
+        </div>
+        </Fade>
 
-      <section className="Container__Section">
-        <div className="Content_title_first">
-          <h2 className="title_first">
-            Vem conhecer na prática o universo tecnologico
-          </h2>
+        <Fade triggerOnce direction="up" delay={150}>
+          <div className="bg-slate-400 flex flex-row gap-4">
+            <div>
+              <h3>O que vocẽ aprenderá</h3>
+              <p>Conhece as etapas</p>
+            </div>
 
-          <div className="Content_span">
-            <span>
-              Você vai estudar, praticar e se aventurar no universo STEAM com as
-              Mermãs DIgitais
-            </span>
+            <div className="flex flex-col gap-4">
+              <CardActivitys
+                title="Desenvolvimento de Jogos"
+                description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
+                borderColor="#ff4a97"
+              />
+              <CardActivitys
+                title="Desenvolvimento de Jogos"
+                description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
+                borderColor="#ff4a97"
+              />
+              <CardActivitys
+                title="Desenvolvimento de Jogos"
+                description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
+                borderColor="#ff4a97"
+              />
+              <CardActivitys
+                title="Desenvolvimento de Jogos"
+                description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
+                borderColor="#ff4a97"
+              />
+            </div>
           </div>
-        </div>
-
-        <div className="cards">
-          <Fade triggerOnce direction="up" delay={150}>
-            <section className="Container_oficinas">
-              <div>
-                <h2 className="title_oficinas">Oficinas</h2>
-              </div>
-
-              <div className="Container_card_groups">
-                <CardActivitys
-                  title="Desenvolvimento de Jogos"
-                  description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
-                  borderColor="#ff4a97"
-                />
-                <CardActivitys
-                  title="Desenvolvimento de Jogos"
-                  description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
-                  borderColor="#ff4a97"
-                />
-                <CardActivitys
-                  title="Desenvolvimento de Jogos"
-                  description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
-                  borderColor="#ff4a97"
-                />
-                <CardActivitys
-                  title="Desenvolvimento de Jogos"
-                  description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
-                  borderColor="#ff4a97"
-                />
-              </div>
-            </section>
-          </Fade>
-          <Fade triggerOnce direction="up" delay={150}>
-            <section className="Container_oficinas">
-              <div>
-                <h2 className="title_oficinas">Minicursos</h2>
-              </div>
-
-              <div className="Container_card_groups">
-                <CardActivitys
-                  title="Introdução a Programação"
-                  description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
-                  borderColor="yellow"
-                />
-                <CardActivitys
-                  title="Introdução a Programação"
-                  description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
-                  borderColor="yellow"
-                />
-                <CardActivitys
-                  title="Introdução a Programação"
-                  description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
-                  borderColor="yellow"
-                />
-              </div>
-            </section>
-          </Fade>
-
-          <Fade triggerOnce direction="up" delay={150}>
-            <section className="Container_oficinas">
-              <div>
-                <h2 className="title_oficinas">Palestras</h2>
-              </div>
-
-              <div className="Container_card_groups">
-                <CardActivitys
-                  title="UI/UX"
-                  description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
-                  borderColor="#9854CB"
-                />
-                <CardActivitys
-                  title="Hacking"
-                  description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
-                  borderColor="#9854CB"
-                />
-              </div>
-            </section>
-          </Fade>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+        </Fade>
+      </div>
+    </section>
   );
 }

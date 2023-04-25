@@ -3,29 +3,6 @@
   position: relative;
 }
 
-.form-shape1 {
-  background: url('./image/form-shape1.svg') no-repeat center;
-  background-size: contain;
-  display: block;
-  position: absolute;
-  width: 571px;
-  height: 534px;
-  left: -651px;
-  top: 9px;
-  z-index: 1;
-}
-
-.form-shape2 {
-  background: url('./image/form-shape2.svg') no-repeat center;
-  background-size: contain;
-  display: block;
-  position: absolute;
-  width: 593px;
-  height: 647px;
-  right: -651px;
-  top: 48px;
-  z-index: 1;
-}
 
 #form .container__form {
   display: grid;

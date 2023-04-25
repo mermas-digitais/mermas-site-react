@@ -1,80 +1,41 @@
-import styles from './index.module.css';
+import { SealCheck } from '@phosphor-icons/react';
+import ButtonSecond from '../buttons/second';
 
 export function Register() {
   return (
-    <section className="delay_distance" id={styles['register']}>
-      <div className={styles.container}>
-        <div className={styles.register_container}>
-          <div className={styles.container_1}>
-            <div>
-              <h2 className={styles.title}>
-                Gostou?? Perde tempo não miga
-                <br />
-                Vem ver como participar
-              </h2>
-
-              <ul>
-                <li>
-                  <i>
-                    <img src="./image/check.svg" alt="Ícone de checagem" />
-                  </i>
-                  <p>Ser Menina</p>
-                </li>
-
-                <li>
-                  <i>
-                    <img src="./image/check.svg" alt="Ícone de checagem" />
-                  </i>
-                  <p>Ser Estudante da Rede Estadual</p>
-                </li>
-
-                <li>
-                  <i>
-                    <img src="./image/check.svg" alt="Ícone de checagem" />
-                  </i>
-                  <p>Ser Estudante do Ensino Médio</p>
-                </li>
-              </ul>
-            </div>
-            <img
-              src="./image/girlRegister.png"
-              alt="Imagem de uma menina com um notebook"
-              className={styles.girlRegister}
-            />
-          </div>
-          <div className={styles.container_2}>
-            <button className={styles.buttonRegister}>
-              <a href="#" target="_blank" rel="noreferrer">
-                Inscreva-se
-              </a>
-            </button>
-            <div className={styles.container_2_1}>
-              <img
-                src="./image/emble.svg"
-                alt="Ícone de emblema das inscriçoẽs confirmadas"
-              />
-              <h3>2° Etapa: Inscrições Abertas</h3>
-            </div>
-          </div>
+    <section className="delay_distance w-[100vw]">
+      <div className="flex container items-end justify-between padding">
+        <div>
+          <img
+            className="w-80"
+            src="../../../public/image/menina.svg"
+            alt="Menina anunciando os requisitos"
+          />
         </div>
+        <div>
+          <h3>
+            Gostou?? Perde tempo não miga
+            <br />
+            Vem ver como participar
+          </h3>
 
-        {/*
-        <div className={styles.register_qrcode}>
-          <button>Increva-se</button>
-          <div className={styles.line}>
-            <i>ou</i>
-          </div>
-          <div className={styles.qrcode}>
-            <img
-              src="./image/qrcode.svg"
-              alt="Imagem de QRCode para acessar as inscriçoẽs"
-            />
-          </div>
-          <p>
-            Basta scanear o QRCode com a câmera do seu celular ou clicar no
-            botão “Inscreva-se” para acessar o formulário de inscrição
-          </p>
-        </div> */}
+          <ul className="flex flex-col gap-2 pb-8">
+            <li className="flex flex-row gap-4">
+              <SealCheck size={24} weight="fill" color="#9854CB" />
+              <p>Ser Menina</p>
+            </li>
+
+            <li className="flex flex-row gap-4">
+              <SealCheck size={24} weight="fill" color="#9854CB" />
+              <p>Ser Estudante do Ensino Médio</p>
+            </li>
+            <li className="flex flex-row gap-4">
+              <SealCheck size={24} weight="fill" color="#9854CB" />
+              <p>Ser Estudante da Rede Estadual</p>
+            </li>
+          </ul>
+          <ButtonSecond to="/" name="Inscreva-se" />
+        </div>
       </div>
     </section>
   );

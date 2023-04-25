@@ -3,15 +3,39 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import './index.css';
+
 interface NavbarProps {
   showGallery?: boolean;
   showGalleryEllipse?: boolean;
 }
-export const Navbar = ({
-  showGallery = false,
-  showGalleryEllipse = false,
-}: NavbarProps) => {
+const menuItens = [
+  {
+    name: 'Página Inicial',
+    path: '/',
+    to: '/',
+  },
+  {
+    name: 'Atividades',
+    path: '/atividades',
+    to: '/atividades',
+  },
+  {
+    name: 'Equipe',
+    path: '/time',
+    to: '/time',
+  },
+  {
+    name: 'Galeria',
+    path: '/galeria',
+    to: '/galeria',
+  },
+  {
+    name: 'Artigos',
+    path: '/galeria',
+    to: '/galeria',
+  },
+];
+export const Navbar = ({ }: NavbarProps) => {
   const [show, setShow] = React.useState(false);
   const navRef = useRef<
     HTMLDivElement & {
@@ -49,69 +73,62 @@ export const Navbar = ({
 
   React.useEffect(() => {
     showNav();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [show]);
 
   const { pathname } = useLocation();
 
   return (
     <>
-      {showGalleryEllipse && (
-        <>
-          <div className="elipse1" />
-          <div className="elipse2" />
-        </>
-      )}
-      {showGalleryEllipse && <div className="elipse3" />}
-      <header className="header" ref={headerRef}>
-        <nav className="containerNavbar delay_500" ref={navRef}>
-          <div className="containerLogo">
+      <header
+        className="fixed top-0 left-0 w-full py-3 transition-all justify-center flex duration-500 ease-out z-50"
+        ref={headerRef}
+      >
+        <nav
+          className="flex container justify-between items-center bg-transparent"
+          ref={navRef}
+        >
+          <div className="flex flex-row gap-3 items-end">
             <img
-              src="../../../public/image/logo132.png"
+              src="../../../public/image/logo.png"
               alt="logo side"
-              className="sideLogo"
+              className="object-contain w-[3rem] h-auto"
             />
-            <Link to="/">Mermãs Digitais</Link>
+            <Link
+              className="font-paytone font-normal text-purple-900 border-b-[1px] border-purple-900 text-base h-fit pr-8
+              max-md:text-[0.875rem]"
+              to="/"
+            >
+              Mermãs Digitais
+            </Link>
           </div>
-          <div className="menu">
-            <ul className="group_button">
-              <li>
-                <a href="/" className={`${pathname === '/' && 'button_click'}`}>
-                  Página Inicial
-                </a>
-              </li>
 
-              <li>
-                <Link
-                  className={`${pathname === '/atividades' && 'button_click'}`}
-                  to="/atividades"
-                >
-                  Atividades
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className={`${pathname === '/time' && 'button_click'}`}
-                  to="/time"
-                >
-                  Equipe
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className={`${pathname === '/galeria' && 'button_click'}`}
-                  to="/galeria"
-                >
-                  Galeria
-                </Link>
-              </li>
+          <div className="max-md:invisible max-md:opacity-0 max-md:transition-all max-md:duration-500 ease-linear">
+            <ul className="flex flex-row gap-4  ">
+              {menuItens.map((item) => {
+                return (
+                  <li className="max-md:hidden">
+                    <Link
+                      className={`px-6 py-3 rounded-full cursor-pointer font-[500] font-quicksand text-xs  
+                        ${
+                          pathname === item.path
+                            ? 'bg-purple-300 text-white'
+                            : 'bg-white text-purple-900  transition-all duration-300 ease-in-out hover:bg-purple-300 hover:text-white'
+                        }`}
+                      to={item.to}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
           {!show ? (
-            <div className="toggle icon-menu" onClick={() => showMenu()}>
+            <div
+              className="hidden cursor-pointer max-md:inline-block max-md:text-purple-900 max-md:text-[1.875rem] icon-menu"
+              onClick={() => showMenu()}
+            >
               <AiOutlineMenu
                 size={40}
                 style={{
@@ -121,7 +138,10 @@ export const Navbar = ({
               />
             </div>
           ) : (
-            <div className="toggle icon-close" onClick={() => showMenu()}>
+            <div
+              className="hidden cursor-pointer max-md:inline-block icon-menu"
+              onClick={() => showMenu()}
+            >
               <AiOutlineClose
                 size={40}
                 style={{

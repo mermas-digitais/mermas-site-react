@@ -1,71 +1,63 @@
-import './index.css';
+import ButtonPrimaryRadius from '../buttons/primaryRadius';
+
 export const Form = () => {
   return (
     <>
-      <section id="form">
-        <div className="form-shape1" />
-
-        <div className="form-shape2" />
-        <div className="container__form container">
-          <div className="form__title easing_title">
-            <h2 className="title">
-              Não é estudante mas quer fazer parte dessa iniciativa?
-            </h2>
-            <p>Siacalma tem lugar pra você também ❤ </p>
-            <span>
-              Venha apoiar mais meninas nas ciências, nos envie uma mensagem e
-              vamos bater um papo, que tal?{' '}
-            </span>
+      <section className="w-[100vw] flex relative">
+      <div className="absolute w-[100vw] bottom-[-10px] z-[-10]">
+          <img src="../../../public/image/onda.svg" alt="" />
+        </div>
+        <div className="container padding flex flex-row justify-between items-start gap-12">
+          <div className="easing_title text-start w-[75%]">
+            <h3>Não é estudante mas quer fazer <br/>parte dessa iniciativa?</h3>
+            <p className="max-w-[500px]">
+              Siacalma tem lugar pra você também, nós envie uma mensagem e
+              vamos bater um papo, que tal?
+            </p>
           </div>
 
           <form
-            className="form__submit delay_distance"
+            className="delay_distance w-[50%] flex flex-col gap-4 justify-center items-center card p-10"
             action="https://formsubmit.co/mermasdigitaisifma@gmail.com"
             method="POST"
           >
-            <div className="form__input">
-              <input
-                type="text"
-                name="subject"
-                placeholder="Assunto:"
-                required
-              />
-              <div className="form_user">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Nome completo:"
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="E-mail:"
-                  required
-                />
-              </div>
+            <h4>Fale com a gente</h4> 
+
+            <input type="text" name="subject" placeholder="Assunto:" required />
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Nome completo:"
+              required
+            />
+
+            <input type="email" name="email" placeholder="E-mail:" required />
+
+            <textarea
+              className="w-full min-h-[150px]"
+              name="message"
+              placeholder="Escreva sua mensagem aqui"
+              required
+            ></textarea>
+
+            <div className="w-full items-end">
+              <ButtonPrimaryRadius name="Enviar" type="submit" />
             </div>
-            <div className="form_message">
-              <textarea
-                name="message"
-                cols={30}
-                rows={10}
-                placeholder="Escreva sua mensagem aqui"
-                required
-              ></textarea>
-              <button type="submit">Enviar</button>
-            </div>
+
             <input
               type="hidden"
               name="_autoresponse"
               value="Recebemos sua mensagem! Logo, logo responderemos ;)"
             />
+
             <input
               type="hidden"
               name="_next"
               value="https://mermasdigitais.netlify.app/message"
             />
             <input type="hidden" name="_template" value="table" />
+            
           </form>
         </div>
       </section>

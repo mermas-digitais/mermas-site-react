@@ -1,73 +1,61 @@
-import './index.css';
+import {
+  GraduationCap,
+  ShootingStar,
+  UsersThree,
+  Warehouse,
+} from '@phosphor-icons/react';
 
+const card = [
+  {
+    icon: <GraduationCap size={32} color="#ffff " />,
+    title: 'Aulas gratuitas',
+    description:
+      'Todas as atividades são gratuitas e ao final do curso, você receberá um certificado de conclusão.',
+  },
+  {
+    icon: <Warehouse size={32} color="#ffff" />,
+    title: 'Aulas presenciais',
+    description:
+      'As aulas teóricas e práticas são realizadas no Instituto Federal do Maranhão, Campus Imperatriz.',
+  },
+  {
+    icon: <ShootingStar size={32} color="#ffff" />,
+    title: 'Aprendendo do zero!',
+    description:
+      'Não é necessário ter qualquer conhecimento prévio, pois você aprenderá tudo do zero!',
+  },
+  {
+    icon: <UsersThree size={32} color="#ffff" />,
+    title: 'Aprendizado em grupo',
+    description:
+      'Turmas formadas com meninas que buscam aprender mais sobre o universo tecnológico.',
+  },
+];
 export default function Course() {
   return (
-    <section id="course">
-      <div className="course-image">
-        <img src="./image/Rectangle 78 (1).svg" alt="Imagem de fundo" />
+    <section className="padding z-10 container items-start gap-8 flex flex-col justify-center">
+      <div className="text-center w-full">
+        <h3>
+          Olha essa mega oportunidade, <br />
+          Não vai perder ein?
+        </h3>
       </div>
-
-      <div className="container course-container">
-        <div className="course-text">
-          <h2 className="title easing_title">
-            Olha essa mega oportunidade, Não vai perder ein?
-          </h2>
-
-          <p className="easing_text">
-            Em 4 etapas serão abertas duas turmas em turnos diferentes para
-            meninas do Ensino Médio que desejem aprender um pouco mais sobre
-            tecnologia. Cada turma terá duração de 2 meses, com aulas às
-            segundas, quartas e sextas.
-          </p>
-          <p className="easing_text">
-            As meninas que desejem participar poderão optar por ingressar na
-            turma Matutina (das 8 horas até as 11 horas) ou na turma Vespertino
-            (das 14 horas até as 17 horas).
-          </p>
-        </div>
-
-        <div className="course-grid">
-          <div className="course-card easing_card">
-            <h2>GRATUITO COM CERTIFICADO</h2>
-            <span>
-              Todas as atividades serão disponibilizadas de forma gratuita e com
-              recebimento de certificado ao final do curso.
-            </span>
-            <div className="course-card-image">
-              <img src="./image/stars.svg" alt="Ícone de estrela" />
+      <div className="course-grid grid gap-12 grid-rows-2 grid-flow-col">
+        {card.map((item, key) => {
+          return (
+            <div className="easing_card card hover:border-purple-100 shadow-pop flex flex-col">
+              <div className='flex gap-4 items-center'>
+                <div className="h-fit bg-purple-pink rounded-xl p-2">
+                  {item.icon}
+                </div>
+                <h4>{item.title}</h4>
+              </div>
+              <div className='pl-16'>
+                <span>{item.description}</span>
+              </div>
             </div>
-          </div>
-          <div className="course-card easing_card">
-            <h2>ESTRUTURA PREPARADA</h2>
-            <span>
-              As atividades teóricas e práticas serão realizadas nas salas e
-              laboratórios do Instituto Federal do Maranhão, Campus Imperatriz.
-            </span>
-            <div className="course-card-image">
-              <img src="./image/stars.svg" alt="Ícone de estrela" />
-            </div>
-          </div>
-          <div className="course-card easing_card">
-            <h2>APRENDENDO DO ZERO</h2>
-            <span>
-              Não precisa ter qualquer conhecimento prévio, você vai aprender
-              tudo do zero!
-            </span>
-            <div className="course-card-image">
-              <img src="./image/stars.svg" alt="Ícone de estrela" />
-            </div>
-          </div>
-          <div className="course-card easing_card">
-            <h2>APRENDIZADO EM GRUPO</h2>
-            <span>
-              As turmas serão compostas por meninas do Ensino Médio com o mesmo
-              interresse: aprender mais sobre o universo tecnológico.
-            </span>
-            <div className="course-card-image">
-              <img src="./image/stars.svg" alt="Ícone de estrela" />
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </section>
   );

@@ -1,14 +1,10 @@
-.container {
-  width: 100%;
-  max-width: 75rem;
-  margin: 0 auto;
-}
-#course {
+
+/* #course {
   position: relative;
   padding: 4rem 0;
   width: 100vw;
   z-index: 1;
-}
+} */
 
 #course .course-image {
   width: 100%;
