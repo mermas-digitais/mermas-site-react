@@ -1,21 +1,175 @@
 import { SortAscending } from '@phosphor-icons/react';
 import { useRef } from 'react';
-import styles from './styles.module.css';
 
 export default function Team() {
-  const scrollDowwn = useRef(null);
+  const scrollDown = useRef<HTMLDivElement>(null);
 
+  const members = [
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Monitor',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+    {
+      name: 'Lailla Galeno',
+      image: './assets/person1.png',
+      role: 'Coordenadora',
+      email: 'laillagalenoitz@gmail.com',
+    },
+  ];
+
+  //função para rolar somente uma div especifica
   const handleScroll = () => {
-    //roll down
-    // scrollDowwn.current.scrollIntoView({
-    //   behavior: 'smooth',
-    //   block: 'start',
-    //   // inline: 'nearest',
-    // });
+    // roll down
+    scrollDown.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+      // blockStart: 4,
+      // inline: 'nearest',
+    });
   };
 
   return (
-    <section id={styles['team']} className="w-[100vw]">
+    <section className="w-full">
       <div className="container flex justify-between items-start gap-16">
         <div className="w-[35%]">
           <div>
@@ -50,8 +204,8 @@ export default function Team() {
                   <div>
                     <img
                       className="rounded-full w-10 h-10 object-cover"
-                      src="./image/imageProfile.jpeg"
-                      alt=""
+                      src="./assets/imageProfile.jpeg"
+                      alt="Imagem de perfil do coordenador do projeto"
                     />
                   </div>
                   <span className="text-xs w-[75%]">
@@ -78,8 +232,8 @@ export default function Team() {
                   <div>
                     <img
                       className="rounded-full w-10 h-10 object-cover"
-                      src="./image/imageProfile.jpeg"
-                      alt=""
+                      src="./assets/imageProfile.jpeg"
+                      alt="Imagem de perfil do coordenador do projeto"
                     />
                   </div>
                 </div>
@@ -87,27 +241,48 @@ export default function Team() {
             </div>
           </div>
         </div>
-        
-        <div className="w-[75%]" ref={scrollDowwn}>
-          <div
-            className=""
-          >
-            <div className="relative bg-purple-300 w-fit">
-              <img
-                className="object-cover w-44 h-52 rounded-xl"                
-                src="https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1649110304012.jpg"
-                alt="Ímagem de um membro da equipe"
-              />
-              <address className="flex flex-col
+
+        <div className="w-[75%] h-[100vh] relative ">
+          <div className="w-full overflow-y-scroll scroller scroll-smooth h-full">
+            <div
+              className="mx-2 my-8 justify-center grid auto-rows-[0.7rem] grid-cols-auto
+          [&>*:nth-child(-n+4):nth-child(2n+1)]:row-start-4
+          [&>*:nth-child(-n+4):nth-child(2n)]:row-start-1 "
+            >
+              {members.map((member, index) => (
+                <div
+                  key={index}
+                  className="row-end-20
+            relative border-solid border-4 rounded-2xl 
+            border-transparent hover:border-purple-500 transform duration-300 cursor-pointer"
+                >
+                  <img
+                    className="object-cover w-full h-full rounded-xl"
+                    src={member.image}
+                    alt="Ímagem de um membro da equipe"
+                  />
+                  <address
+                    className="flex flex-col z-10
               absolute bottom-0 m-2 leading-3
-              text-[10px] font-poppins not-italic text-white">
-                <b>Nome</b>
-                <b>Sobrenome</b>
-                <strong className="font-normal">Coordenadora</strong>
-                <a href="mailto:webmaster@example.com" className="">test@gmail.com</a>
-              </address>
+              text-[10px] font-poppins not-italic text-white"
+                  >
+                    <b>{member.name}</b>
+                    <strong className="font-normal">{member.role}</strong>
+                    <a href="mailto:webmaster@example.com" className="">
+                      {member.email}
+                    </a>
+                  </address>
+                  <div
+                    className="rounded-xl absolute top-0 w-full h-full 
+                bg-gradient-to-b from-transparent to-[#22012c]"
+                  ></div>
+                </div>
+              ))}
             </div>
+            <div ref={scrollDown} className="opacity-0"></div>
           </div>
+          <div className="bg-[url('/assets/ondasTimer.svg')] mx-2 bg-no-repeat -top-8 z-10 w-full h-16 absolute right-0"></div>
+          <div className="bg-[url('/assets/ondasTimer.svg')] mx-2 bg-no-repeat rotate-180 -bottom-8 z-10 w-full h-16 absolute right-0"></div>
         </div>
       </div>
     </section>

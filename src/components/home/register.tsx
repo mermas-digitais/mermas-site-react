@@ -1,23 +1,21 @@
 import { SealCheck } from '@phosphor-icons/react';
-import ButtonSecond from '../buttons/second';
+import ButtonPrimary from '../buttons/primary';
+import imgMenina from '../../../public/assets/menina.svg';
 
 export function Register() {
   return (
     <section className="delay_distance w-[100vw]">
-      <div className="flex container items-end justify-between padding">
+      <div className="flex container items-center justify-center gap-16 padding">
         <div>
           <img
-            className="w-80"
-            src="../../../public/image/menina.svg"
+            className="w-[32rem]"
+            src={imgMenina}
             alt="Menina anunciando os requisitos"
           />
         </div>
-        <div>
-          <h3>
-            Gostou?? Perde tempo não miga
-            <br />
-            Vem ver como participar
-          </h3>
+        <div className="w-[50%]">
+          <h4>Perde tempo não, miga!</h4>
+          <h3>Se você gostou, confira os requisitos para participar:</h3>
 
           <ul className="flex flex-col gap-2 pb-8">
             <li className="flex flex-row gap-4">
@@ -34,7 +32,7 @@ export function Register() {
               <p>Ser Estudante da Rede Estadual</p>
             </li>
           </ul>
-          <ButtonSecond to="/" name="Inscreva-se" />
+          <ButtonPrimary to="/" name="Acessar edital" />
         </div>
       </div>
     </section>

@@ -1,5 +1,7 @@
-import { CaretCircleRight, CaretRight } from "@phosphor-icons/react";
+import { CaretRight } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
+import imgLogo from '../../../public/assets/logo.svg';
+import imgBackground from '../../../public/assets/ondas.svg';
 
 export const About = () => {
   return (
@@ -8,13 +10,13 @@ export const About = () => {
         className="relative w-[100vw] z-10 flex justify-center "
       >
         <div className="w-full absolute z-[-1]">
-          <img src="./image/ondas.svg" alt="Astronauta" />
+          <img className="object-cover w-full" src={imgBackground} alt="Astronauta" />
         </div>
 
         <div className="w-full h-full padding flex container flex-row items-center justify-between">
           <div className="w-full max-w-[30rem]">
             <img
-              src="./image/logo.svg"
+              src={imgLogo}
               alt="Logo do Projeto: Uma menina mergulada na tecnologia"
             />
           </div>
@@ -29,7 +31,7 @@ export const About = () => {
                 nos cursos de Computação e tecnologias relacionadas.
               </p>
               <Link 
-                to="/about"
+                to="/sobre"
                 className="flex items-center gap-1 pb-6 w-80 border-b-[1px] border-purple-100 font-poppins font-semibold text-base text-pink-500"
               >
                 Conheça nossa história

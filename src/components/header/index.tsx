@@ -3,7 +3,7 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-
+import imgLogo from '../../../public/assets/logo.png';
 interface NavbarProps {
   showGallery?: boolean;
   showGalleryEllipse?: boolean;
@@ -15,14 +15,14 @@ const menuItens = [
     to: '/',
   },
   {
-    name: 'Atividades',
-    path: '/atividades',
-    to: '/atividades',
+    name: 'Programa',
+    path: '/programa',
+    to: '/programa',
   },
   {
     name: 'Equipe',
-    path: '/time',
-    to: '/time',
+    path: '/equipe',
+    to: '/equipe',
   },
   {
     name: 'Galeria',
@@ -30,9 +30,9 @@ const menuItens = [
     to: '/galeria',
   },
   {
-    name: 'Artigos',
-    path: '/galeria',
-    to: '/galeria',
+    name: 'Sobre',
+    path: '/sobre',
+    to: '/sobre',
   },
 ];
 export const Navbar = ({ }: NavbarProps) => {
@@ -87,14 +87,14 @@ export const Navbar = ({ }: NavbarProps) => {
           className="flex container justify-between items-center bg-transparent"
           ref={navRef}
         >
-          <div className="flex flex-row gap-3 items-end">
+          <div className="flex flex-row gap-3 justify-center items-center">
             <img
-              src="../../../public/image/logo.png"
+              src={imgLogo}
               alt="logo side"
               className="object-contain w-[3rem] h-auto"
             />
             <Link
-              className="font-paytone font-normal text-purple-900 border-b-[1px] border-purple-900 text-base h-fit pr-8
+              className="font-paytone font-normal text-purple-900 text-base h-fit pr-8
               max-md:text-[0.875rem]"
               to="/"
             >
@@ -103,16 +103,16 @@ export const Navbar = ({ }: NavbarProps) => {
           </div>
 
           <div className="max-md:invisible max-md:opacity-0 max-md:transition-all max-md:duration-500 ease-linear">
-            <ul className="flex flex-row gap-4  ">
+            <ul className="flex flex-row gap-12  ">
               {menuItens.map((item) => {
                 return (
                   <li className="max-md:hidden">
                     <Link
-                      className={`px-6 py-3 rounded-full cursor-pointer font-[500] font-quicksand text-xs  
+                      className={`py-2 cursor-pointer font-quicksand text-xs  
                         ${
                           pathname === item.path
-                            ? 'bg-purple-300 text-white'
-                            : 'bg-white text-purple-900  transition-all duration-300 ease-in-out hover:bg-purple-300 hover:text-white'
+                            ? 'text-gray-400 font-semibold transition-all duration-300 ease-in-out'
+                            : ' text-gray-300 font-medium transition-all duration-300 ease-in-out hover:text-gray-400'
                         }`}
                       to={item.to}
                     >

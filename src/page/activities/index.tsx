@@ -1,54 +1,30 @@
-import { CardActivitys } from '../../components/cardActivitys';
-import './ind ex.css';
+import { useRef } from 'react';
+import { Attention } from '../../components/activities/attention';
+import { Informations } from '../../components/activities/informations';
+import { Course } from '../../components/activities/course';
+import { Certificate } from '../../components/activities/certificate';
 import { Fade } from 'react-awesome-reveal';
-import ButtonPrimary from '../../components/buttons/primary';
 
 export default function ActivitiesPage() {
+  const scrollDown = useRef<HTMLDivElement>(null);
+  const handleScroll = () => {
+    scrollDown.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="w-[100vw]">
-      <div className="container padding">
-        <Fade triggerOnce direction="up">
-        <div className="flex flex-col items-center content-center">
-          <h2>Desenvolvimento Web</h2>
-          <h3>Vem conhecer na prática o universo tecnologico</h3>
-          <p className="w-[30rem] text-center">
-            Você vai estudar, praticar e se aventurar no universo STEAM com as
-            Mermãs DIgitais
-          </p>
-          <ButtonPrimary to="/" name="Inscrever-se"></ButtonPrimary>
-        </div>
+      <div className="container">
+        <Fade triggerOnce direction="up" delay={100}>
+          <Attention clickScroll={handleScroll} />
         </Fade>
-
-        <Fade triggerOnce direction="up" delay={150}>
-          <div className="bg-slate-400 flex flex-row gap-4">
-            <div>
-              <h3>O que vocẽ aprenderá</h3>
-              <p>Conhece as etapas</p>
-            </div>
-
-            <div className="flex flex-col gap-4">
-              <CardActivitys
-                title="Desenvolvimento de Jogos"
-                description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
-                borderColor="#ff4a97"
-              />
-              <CardActivitys
-                title="Desenvolvimento de Jogos"
-                description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
-                borderColor="#ff4a97"
-              />
-              <CardActivitys
-                title="Desenvolvimento de Jogos"
-                description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
-                borderColor="#ff4a97"
-              />
-              <CardActivitys
-                title="Desenvolvimento de Jogos"
-                description="Trilha de conhecimento para primeiro contato com o desenvolvimento web"
-                borderColor="#ff4a97"
-              />
-            </div>
-          </div>
+        <Fade triggerOnce direction="up" delay={100}>
+          <Informations />
+        </Fade>
+        <Fade triggerOnce direction="up" delay={100}>
+          <Course refName={scrollDown} />
+        </Fade>
+        <Fade triggerOnce direction="up" delay={100}>
+          <Certificate />
         </Fade>
       </div>
     </section>

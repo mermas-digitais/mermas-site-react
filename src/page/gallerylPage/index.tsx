@@ -8,11 +8,9 @@ export default function GalleryPage() {
   const [showGallery, setShowGallery] = React.useState(false);
 
   return (
-    <div>
-      <Navbar showGallery={showGallery} />
+    <>
       <GalleryGrid />
-      <Outlet />
-      <Footer />
-    </div>
+      {/* <Outlet /> */}
+    </>
   );
 }
