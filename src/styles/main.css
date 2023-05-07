@@ -26,7 +26,7 @@
     @apply font-quicksand font-medium text-gray-400 text-base;
   }
   input, textarea{
-    @apply border-solid border-2 w-full border-purple-100 px-7 py-3 font-quicksand font-medium text-sm text-gray-400;
+    @apply border-solid border-2 w-full border-transparent shadow-md px-7 py-3 font-quicksand font-medium text-sm text-gray-400 focus:border-pink-500 focus:outline-none;
   }
   input{
     @apply rounded-full;
@@ -44,7 +44,7 @@
 
 @layer components {
   .padding{
-    @apply py-20;
+    @apply py-24;
   }
 
   .card{
@@ -83,9 +83,38 @@
   .gradient-border-3 {
     border: 3px solid transparent;
   }
+  
+  .card{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 170px);
+    grid-auto-rows: 7px;
+    justify-content: center;
+  }
+  .c{
+    grid-row-end: span 20;
+    grid-row-start: 2;
+  }
+
+  .buttonCircle{
+    @apply bg-white p-4 w-fit h-fit rounded-full shadow-pop;
+  }
+  .iconRetangle{
+    @apply h-fit bg-purple-pink rounded-xl p-2;
+  }
 
   header.scroll {
-    @apply bg-white shadow-sm border-solid border-[1px] border-gray-100 px-4;
+    @apply bg-white shadow-sm border-b-[1px] border-b-gray-100 px-4;
   }
   
+  .scroller::-webkit-scrollbar {
+    @apply w-1 p-5 h-1;
+  }
+  
+  .scroller::-webkit-scrollbar-track {
+    @apply bg-gray-50 rounded-full;
+  }
+  
+  .scroller::-webkit-scrollbar-thumb {
+    @apply bg-gray-100 rounded-full border-solid border-2 border-transparent;
+  }
 }

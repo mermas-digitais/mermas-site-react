@@ -12,6 +12,21 @@ module.exports = {
       'poppins': ['Poppins', 'sans-serif']
     },
     extend: {
+      gridRowEnd: {
+        '20': 'span 20',
+        '8': 'span 8',
+        '10': 'span 10',
+      },
+      gridSpan: {
+        '20': 'span 20',
+        '8': 'span 8',
+        '10': 'span 10',
+      },
+      
+      gridTemplateColumns: {
+        'auto': 'repeat(auto-fill, minmax(140px, 1fr))',
+        '250': 'repeat(auto-fill, minmax(250px, 1fr))',
+      },
       boxShadow: {
         'card': '0px 0px 9px rgba(0, 0, 0, 0.15), inset 0px 0px 4px rgba(0, 0, 0, 0.05);',
         'pop' : '0px 0px 8px rgba(0, 0, 0, 0.10)'
@@ -36,7 +51,8 @@ module.exports = {
         },
         "gray": {
           100: '#D4D4D8',
-          200: '#9CA3AF',
+          200: '#BDBDBD',
+          300: '#9E9E9E',
           400: '#545454',
           500: '#333333',
         },

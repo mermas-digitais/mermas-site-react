@@ -1,56 +1,43 @@
-import React, { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
-import { About } from '../../components/about';
-import { Activity } from '../../components/activity';
-import Course from '../../components/course';
-import { Footer } from '../../components/footer';
-import { Form } from '../../components/form';
+import { About } from '../../components/home/about';
+import Course from '../../components/home/course';
+import { Form } from '../../components/home/form';
 import Gallery from '../../components/gallery';
-import { Navbar } from '../../components/header';
-import { Home } from '../../components/home';
-import { Patronize } from '../../components/patronize';
-import { Register } from '../../components/register';
+import { Home } from '../../components/home/attention';
+import { Patronize } from '../../components/home/patronize';
+import { Register } from '../../components/home/register';
+import { Questions } from '../../components/home/questions';
 
-import './styles.css';
 
 export const HomeScreen = () => {
-  const [showGallery] = useState(true);
 
   return (
-    <div className="body_complete">
-      <Navbar showGallery={showGallery} showGalleryEllipse={true} />
+    <div className="flex flex-col items-center justify-center">
+      <Fade triggerOnce direction="up" delay={100}>
+        <Home />
+      </Fade>
+      <Fade triggerOnce direction="up" delay={100}>
+        <About />
+      </Fade>
+      <Fade triggerOnce direction="up" delay={100}>
+        <Patronize />
+      </Fade>
+      <Fade triggerOnce direction="up" delay={100}>
+        <Course />
+      </Fade>
+      <Fade triggerOnce direction="up" delay={100}>
+        <Register />
+      </Fade>
+      <Fade triggerOnce direction="up" delay={100}>
+        <Form />
+      </Fade>
+      {/* <Fade triggerOnce direction="up" delay={100}>
+        <Questions/>
+      </Fade> */}
 
-      <>
-        <Fade triggerOnce direction="up" delay={100}>
-          <Home />
-        </Fade>
-        <Fade triggerOnce direction="up" delay={100}>
-          <About />
-        </Fade>
-        <Fade triggerOnce direction="up" delay={100}>
-          <Patronize />
-        </Fade>
-        <Fade triggerOnce direction="up" delay={100}>
-          <Course />
-        </Fade>
-        {/* <Fade triggerOnce direction="up" delay={100}>
-          <Activity />
-        </Fade> */}
-        <Fade triggerOnce direction="up" delay={100}>
-          <Register />
-        </Fade>
-        <Fade triggerOnce direction="up" delay={100}>
-          <Form />
-        </Fade>
-        
-
-        {/* <Fade triggerOnce direction="up" delay={100}>
+      {/* <Fade triggerOnce direction="up" delay={100}>
           <Gallery />
         </Fade> */}
-      </>
-      <div className="containerFooter z-10">
-        <Footer />
-      </div>
     </div>
   );
 };

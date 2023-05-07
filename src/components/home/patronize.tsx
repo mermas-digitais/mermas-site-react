@@ -1,3 +1,7 @@
+import imgIfma from '../../../public/assets/ifma.svg';
+import imgMd from '../../../public/assets/md.png';
+import imgSbc from '../../../public/assets/sbclogo.png';
+
 export const Patronize = () => {
   return (
     <section className="delay w-[100vw] flex justify-center">
@@ -5,21 +9,21 @@ export const Patronize = () => {
         <li>
           <img
             className="h-12"
-            src="image/ifma.svg"
+            src={imgIfma}
             alt="Logo do Instituto Federal do Maranhão, Campus Imperatriz"
           />
         </li>
         <li>
           <img
             className="h-12"
-            src="image/md.png"
+            src={imgMd}
             alt="Logo do Programa Meninas Digitais"
           />
         </li>
         <li>
           <img
             className="h-16"
-            src="image/sbclogo.png"
+            src={imgSbc}
             alt="Logo da Sociedade Brasileira de Computação"
           />
         </li>

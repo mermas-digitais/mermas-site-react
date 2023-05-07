@@ -2,17 +2,6 @@
 
 
 
-@media (max-width: 1025px) {
-  .elipse1 {
-    width: 503.92px;
-    height: 532.94px;
-  }
-  .elipse2 {
-    width: 503.92px;
-    height: 532.94px;
-  }
-}
-
 @media (max-width: 915px) {
   .elipse2 {
     top: 40.06px;

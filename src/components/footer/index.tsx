@@ -2,6 +2,7 @@ import { AiOutlineInstagram } from 'react-icons/ai';
 import { FaFacebookF } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Envelope, LinkedinLogo } from '@phosphor-icons/react';
+import imgLogo from '../../../public/assets/logo.png';
 
 const menu = [
   {
@@ -42,7 +43,7 @@ export const Footer = () => {
             <div className="flex items-center gap-4">
               <img
                 className="w-20"
-                src="../../../public/image/logo.png"
+                src={imgLogo}
                 alt="Logo do projeto Mermãs Digitais: quatro meninas com características diferentes"
               />
               <h3 className="leading-8 mb-0">
