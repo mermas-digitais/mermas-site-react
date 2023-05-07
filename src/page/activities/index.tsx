@@ -1,5 +1,5 @@
 import { CardActivitys } from '../../components/cardActivitys';
-import './ind ex.css';
+import './index.css';
 import { Fade } from 'react-awesome-reveal';
 import ButtonPrimary from '../../components/buttons/primary';
 
