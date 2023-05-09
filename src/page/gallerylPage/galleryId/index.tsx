@@ -3,7 +3,7 @@ import { AiOutlineCalendar, AiOutlineClose } from 'react-icons/ai';
 import { BsShare } from 'react-icons/bs';
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
 import { Footer } from '../../../components/footer';
-import { Navbar } from '../../../components/header';
+import { Navbar } from '../../../components/menu/header';
 import './styles.css';
 export default function GalerryId() {
   const [showPopup, setShowPopup] = React.useState(false);

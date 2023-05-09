@@ -39,6 +39,25 @@
     @apply text-gray-200;
   }
 
+  table{
+    @apply w-full bg-white rounded-xl overflow-hidden shadow-md;
+  }
+  thead{
+    @apply border-b-[1px] border-b-slate-200;
+  }
+
+  tbody tr{
+    @apply even:bg-pink-50 ;
+  }
+  th{
+    @apply font-poppins font-semibold;
+  }
+  td{
+    @apply font-quicksand font-medium;
+  }
+  th, td{
+    @apply px-8 py-3 text-xs text-start text-gray-400;
+  }
 
 }
 

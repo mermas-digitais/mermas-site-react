@@ -1,5 +1,5 @@
 import { Medal } from "@phosphor-icons/react"
-import imgCertificado from '../../../public/assets/certificado.png';
+import imgCertificado from '../../../public/assets/certificado.png'
 
 export const Certificate = () => {
     return (

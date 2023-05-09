@@ -1,42 +1,37 @@
-import React from 'react';
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
 } from 'react-router-dom';
-import ActivitiesPage from '../page/activities';
+import ActivitiesPage from '../page/public/activitiesPage';
 import GalleryPage from '../page/gallerylPage';
 import GalerryId from '../page/gallerylPage/galleryId';
-import { HomeScreen } from '../page/HomeScreen';
-import TeamPage from '../page/teamPage';
+import { HomePage } from '../page/public/homePage';
+import TeamPage from '../page/public/teamPage';
 import { PublicPage } from '../page/publicPage';
-import Team from '../components/Team';
+import Team from '../components/team';
+import { LoginPage } from '../page/admin/login';
+import { AdminPage } from '../page/adminPage';
+import { AddTime } from '../page/admin/addTime';
+import { AddPost } from '../page/admin/addPost';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route element={<PublicPage/>}>
-        <Route path="/" element={<HomeScreen />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/programa" element={<ActivitiesPage />} />
         <Route path="/equipe" element={<TeamPage />} />
         <Route path="/galeria" element={<GalleryPage />} />
         <Route path="/galeria/:id" element={<GalerryId />} />
-        <Route path="*" element={<HomeScreen />} />
+        <Route path="*" element={<HomePage />} />
       </Route>
-      <Route path="/admin" element={<Team/>}>
-      {/* Rotas de admin 
-      -gerenciar equipe
-      criar membro
-      editar membro
-      deletar membro
+
+      <Route path="/login" element={<LoginPage/>} />
       
-      -gerenciar galeria
-      criar galeria
-      editar galeria
-      deletar galeria
-
-      */}
-
+      <Route path="/admin" element={<AdminPage/>}>
+        <Route path="/admin/membros" element={<AddTime/>} />
+        <Route path="/admin/" element={<AddPost/>} />
       </Route>
     </Route>
   ),

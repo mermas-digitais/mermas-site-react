@@ -9,7 +9,7 @@ import { Register } from '../../components/home/register';
 import { Questions } from '../../components/home/questions';
 
 
-export const HomeScreen = () => {
+export const HomePage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">

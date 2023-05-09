@@ -4,15 +4,11 @@ import imgMapa from '../../../public/assets/mapa.svg';
 import imgPerson1 from '../../../public/assets/person1.png';
 import imgPerson2 from '../../../public/assets/person2.png';
 
-
-
 export const Home = () => {
   return (
     <>
-      <section
-        className="w-[100vw] flex justify-center mb-12"
-      >
-        <div className='flex flex-row container items-center justify-between gap-8'>
+      <section className="w-[100vw] flex justify-center mb-12">
+        <div className="flex flex-row container items-center justify-between gap-8">
           <div className="w-full">
             <h1>
               Ei mermã, <br />
@@ -22,7 +18,9 @@ export const Home = () => {
               Incentivamos meninas a mergulharem no universo tecnologico e se
               tornarem mestres do seu conhecimento
             </p>
-            <ButtonPrimary to='/programa' name="Participar agora!" />
+            <div className='w-fit'>
+              <ButtonPrimary to="/programa" name="Participar agora!" />
+            </div>
           </div>
 
           <div className="w-full">

@@ -1,6 +1,7 @@
 import { SealCheck } from '@phosphor-icons/react';
 import ButtonPrimary from '../buttons/primary';
 import imgMenina from '../../../public/assets/menina.svg';
+import ButtonSecond from '../buttons/second';
 
 export function Register() {
   return (
@@ -32,7 +33,9 @@ export function Register() {
               <p>Ser Estudante da Rede Estadual</p>
             </li>
           </ul>
-          <ButtonPrimary to="/" name="Acessar edital" />
+          <div className='w-fit'>
+            <ButtonSecond to="/" name="Acessar edital" />
+          </div>
         </div>
       </div>
     </section>

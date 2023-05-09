@@ -5,7 +5,7 @@ import {
 
 import { Footer } from '../components/footer';
 
-import { Navbar } from '../components/header';
+import { Navbar } from '../components/menu/header';
 
 
 export const PublicPage = () => {

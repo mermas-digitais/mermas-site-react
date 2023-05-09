@@ -32,7 +32,7 @@ module.exports = {
         'pop' : '0px 0px 8px rgba(0, 0, 0, 0.10)'
       },
       backgroundImage: {
-        star :  "url('/public/image/star.png')",
+        star :  "url('/public/assets/star.png')",
       },
       colors: {
         "yellow": '#ffcd34',
