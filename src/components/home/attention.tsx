@@ -25,10 +25,10 @@ export const Home = () => {
 
           <div className="w-full">
             <div className="min-w-[35rem] relative">
-              <div className="flex h-[26rem] justify-center items-center ml-8 bg-[url('./assets/circulo.svg')] bg-center bg-contain bg-no-repeat w-full ">
+              <div className="flex h-[26rem] justify-center items-center ml-8 bg-[url('../../../public/assets/circulo.svg')] bg-center bg-contain bg-no-repeat w-full ">
                 <img
                   className="h-[24rem]"
-                  src='../../../public/assets/mapa.svg'
+                  src={imgMapa}
                   alt="Mapa do Maranhão apontando para a cidade de Imperatriz"
                 />
               </div>
