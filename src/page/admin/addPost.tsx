@@ -1,15 +1,10 @@
 import { PencilSimple, TrashSimple } from '@phosphor-icons/react';
+import { ModelPost } from '../../components/modal/modalPost';
 
 export const AddPost = () => {
   return (
-    <section>
-      {/* <form action="" className="flex flex-col gap-4">
-                <input type="text" placeholder="Title" />
-                <textarea placeholder="Description" />
-                <input type="file" placeholder="Image" />
-                <input type="date" placeholder="Date" />
-                <input type="text" placeholder="Tags" />
-            </form> */}
+    <section className="relative w-full h-full p-16 flex flex-col gap-8">
+     <ModelPost/>
 
       <div>
         <div className="bg-white rounded-xl w-72 h-28 flex">

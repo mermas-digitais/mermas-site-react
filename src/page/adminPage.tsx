@@ -8,10 +8,10 @@ export const AdminPage = () => {
   const outlet = useOutlet();
 
   return (
-    <div className='flex'>
+    <div className='flex w-[100vw] h-[100vh]'>
     
       <MenuAdmin/>
-      <main className="flex bg-slate-100 overflow-hidden w-full 
+      <main className="flex bg-slate-100 overflow-y-auto w-full 
       justify-center items-center">
         {outlet}
       </main>

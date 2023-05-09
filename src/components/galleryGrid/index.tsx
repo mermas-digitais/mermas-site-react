@@ -24,7 +24,7 @@ export default function GalleryGrid() {
             <input
               type="text"
               placeholder="Buscar evento"
-              className="border-none shadow-md rounded-l-full h-12 pr-20"
+              className="border-none shadow-md bg-white rounded-l-full h-12 pr-20"
             />
             <button
               className="bg-pink-500 hover:bg-pink-600 transition-all duration-300 rounded-r-full p-2 w-16 h-12 flex items-center justify-center 

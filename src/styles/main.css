@@ -26,7 +26,7 @@
     @apply font-quicksand font-medium text-gray-400 text-base;
   }
   input, textarea{
-    @apply border-solid border-2 w-full border-transparent shadow-md px-7 py-3 font-quicksand font-medium text-sm text-gray-400 focus:border-pink-500 focus:outline-none;
+    @apply border-solid border-2 w-full bg-[#F6F6F6] border-transparent px-6 py-3 font-quicksand font-medium text-sm text-gray-400 focus:border-pink-500 focus:outline-none;
   }
   input{
     @apply rounded-full;
@@ -36,7 +36,7 @@
   }
 
   input::placeholder, textarea::placeholder{
-    @apply text-gray-200;
+    @apply text-gray-300 text-xs font-medium;
   }
 
   table{
