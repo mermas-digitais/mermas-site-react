@@ -1,6 +1,7 @@
 import { Fade } from 'react-awesome-reveal';
 import ButtonPrimary from '../buttons/primary';
 import imgMapa from '../../../public/assets/mapa.svg';
+import imgCirculo from '../../../public/assets/circulo.svg';
 import imgPerson1 from '../../../public/assets/person1.png';
 import imgPerson2 from '../../../public/assets/person2.png';
 
@@ -25,12 +26,15 @@ export const Home = () => {
 
           <div className="w-full">
             <div className="min-w-[35rem] relative">
-              <div className="flex h-[26rem] justify-center items-center ml-8 bg-[url('../../../public/assets/circulo.svg')] bg-center bg-contain bg-no-repeat w-full ">
+              <div className="flex retative justify-center items-center w-full ml-8">
                 <img
                   className="h-[24rem]"
                   src={imgMapa}
                   alt="Mapa do Maranhão apontando para a cidade de Imperatriz"
                 />
+                <img
+                  className='h-[26rem] -z-40 absolute' 
+                  src={imgCirculo} alt="" />
               </div>
 
               <Fade cascade damping={0.1} delay={100}>
