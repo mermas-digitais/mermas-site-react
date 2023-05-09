@@ -28,7 +28,7 @@ export const Home = () => {
               <div className="flex h-[26rem] justify-center items-center ml-8 bg-[url('./assets/circulo.svg')] bg-center bg-contain bg-no-repeat w-full ">
                 <img
                   className="h-[24rem]"
-                  src={imgMapa}
+                  src='../../../public/assets/mapa.svg'
                   alt="Mapa do Maranhão apontando para a cidade de Imperatriz"
                 />
               </div>
