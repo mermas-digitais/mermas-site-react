@@ -7,21 +7,25 @@ export const About = () => {
   return (
     <>
       <section
-        className="relative w-[100vw] z-10 flex justify-center "
+        className="relative w-[100vw] z-10 flex justify-center 
+        "
       >
         <div className="w-full absolute z-[-1]">
           <img className="object-cover w-full" src={imgBackground} alt="Astronauta" />
         </div>
 
-        <div className="w-full h-full padding flex container flex-row items-center justify-between">
-          <div className="w-full max-w-[30rem]">
+        <div className="w-full h-full padding flex container flex-row items-center justify-between gap-12 
+        max-md:gap-12 max-md:flex-col">
+          <div className="w-full 
+          max-md:max-w-[20rem]">
             <img
               src={imgLogo}
               alt="Logo do Projeto: Uma menina mergulada na tecnologia"
             />
           </div>
-          <div className="ml-20">
-            <div className="w-[36rem] ml-auto text-left">
+          <div>
+            <div className="w-[30rem] ml-auto text-left
+            max-md:w-full">
               <h3>Éguas, ainda não conhece?</h3>
               <p className="pb-6">
                 O Mermãs Digitais é um projeto de extensão do IFMA - Campus

@@ -9,36 +9,47 @@ export const Home = () => {
   return (
     <>
       <section className="w-[100vw] flex justify-center mb-12">
-        <div className="flex flex-row container items-center justify-between gap-8">
-          <div className="w-full">
+        <div
+          className="flex flex-col  container items-center justify-between gap-16 
+        max-sm:flex-col-reverse sm:flex-row"
+        >
+          <div className="w-full flex flex-col">
             <h1>
               Ei mermã, <br />
               Vem ser digital!
             </h1>
-            <p className="mt-4 mb-4 max-w-[28.5rem] text-base">
+            <p className="max-w-[28.5rem] pt-4 pb-8">
               Incentivamos meninas a mergulharem no universo tecnologico e se
               tornarem mestres do seu conhecimento
             </p>
-            <div className='w-fit'>
+            <div className="w-fit">
               <ButtonPrimary to="/programa" name="Participar agora!" />
             </div>
           </div>
 
-          <div className="w-full">
-            <div className="min-w-[35rem] relative">
-              <div className="flex retative justify-center items-center w-full ml-8">
+          <div className="w-full h-full items-center flex justify-center">
+            <div
+              className="relative 
+            max-md:w-[20rem]"
+            >
+              <div
+                className="flex retative justify-center items-center 
+              max-lg:ml-8 max-lg:h-80"
+              >
                 <img
-                  className="h-[24rem]"
+                  className="h-full"
                   src={imgMapa}
                   alt="Mapa do Maranhão apontando para a cidade de Imperatriz"
                 />
                 <img
-                  className='h-[26rem] -z-40 absolute' 
-                  src={imgCirculo} alt="" />
+                  className="h-full -z-40 absolute"
+                  src={imgCirculo}
+                  alt=""
+                />
               </div>
 
               <Fade cascade damping={0.1} delay={100}>
-                <div className="absolute top-12 left-2 bg-white rounded-full shadow-pop p-2 flex flex-row items-center gap-2">
+                <div className="max-md:-top-10 absolute top-12 left-2 bg-white rounded-full shadow-pop p-2 flex flex-row items-center gap-2">
                   <img
                     className="w-10 h-10 object-cover rounded-full"
                     src={imgPerson1}
@@ -51,7 +62,7 @@ export const Home = () => {
                   </div>
                 </div>
 
-                <div className="absolute bottom-12 right-2 bg-white rounded-full shadow-pop p-2 flex flex-row items-center gap-2">
+                <div className="max-md:bottom-0 absolute bottom-12 right-2 bg-white rounded-full shadow-pop p-2 flex flex-row items-center gap-2">
                   <img
                     className="w-10 h-10 rounded-full object-cover"
                     src={imgPerson2}

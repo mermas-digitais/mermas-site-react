@@ -40,7 +40,8 @@ export default function Course() {
           Não vai perder ein?
         </h3>
       </div>
-      <div className="course-grid grid gap-12 grid-rows-2 grid-flow-col">
+      <div className="course-grid grid gap-12 grid-rows-2 grid-flow-col
+      max-sm:grid-rows-4 max-md:gap-6">
         {card.map((item, key) => {
           return (
             <div className="easing_card cursor-pointer card hover:border-purple-100 hover:-translate-y-1 shadow-pop flex flex-col">
