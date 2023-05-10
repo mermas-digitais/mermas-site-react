@@ -4,6 +4,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import imgLogo from '../../../public/assets/logo.png';
+import { List, X } from '@phosphor-icons/react';
 interface NavbarProps {
   showGallery?: boolean;
   showGalleryEllipse?: boolean;
@@ -35,8 +36,13 @@ const menuItens = [
     to: '/sobre',
   },
 ];
-export const Navbar = ({ }: NavbarProps) => {
+
+export const Navbar = ({}: NavbarProps) => {
   const [show, setShow] = React.useState(false);
+  const showMenu = () => {
+    setShow(!show);
+  };
+
   const navRef = useRef<
     HTMLDivElement & {
       style: {
@@ -46,9 +52,6 @@ export const Navbar = ({ }: NavbarProps) => {
   >(null);
   const headerRef = useRef<HTMLHeadElement>(null);
 
-  const showMenu = () => {
-    setShow(!show);
-  };
   const showNav = () => {
     show
       ? navRef?.current?.classList.add('show')
@@ -84,7 +87,7 @@ export const Navbar = ({ }: NavbarProps) => {
         ref={headerRef}
       >
         <nav
-          className="flex container justify-between items-center bg-transparent"
+          className="flex container justify-between items-center bg-transparent bg-slate-400 relative"
           ref={navRef}
         >
           <div className="flex flex-row gap-3 justify-center items-center">
@@ -102,13 +105,18 @@ export const Navbar = ({ }: NavbarProps) => {
             </Link>
           </div>
 
-          <div className="max-md:invisible max-md:opacity-0 max-md:transition-all max-md:duration-500 ease-linear">
-            <ul className="flex flex-row gap-12  ">
+          <div className="transition-all duration-500 ease-linear">
+            <ul
+              className={` flex flex-row gap-12 
+            max-md:header-menu ${
+              show ? 'visible opacity-100' : 'max-md:invisible max-md:opacity-0'
+            }`}
+            >
               {menuItens.map((item) => {
                 return (
-                  <li className="max-md:hidden">
+                  <li>
                     <Link
-                      className={`py-2 cursor-pointer font-quicksand text-xs  
+                      className={`py-2 cursor-pointer font-quicksand text-xs whitespace-nowrap 
                         ${
                           pathname === item.path
                             ? 'text-gray-400 font-semibold transition-all duration-300 ease-in-out'
@@ -124,33 +132,9 @@ export const Navbar = ({ }: NavbarProps) => {
             </ul>
           </div>
 
-          {!show ? (
-            <div
-              className="hidden cursor-pointer max-md:inline-block max-md:text-purple-900 max-md:text-[1.875rem] icon-menu"
-              onClick={() => showMenu()}
-            >
-              <AiOutlineMenu
-                size={40}
-                style={{
-                  color: '#A688FF',
-                  cursor: 'pointer',
-                }}
-              />
-            </div>
-          ) : (
-            <div
-              className="hidden cursor-pointer max-md:inline-block icon-menu"
-              onClick={() => showMenu()}
-            >
-              <AiOutlineClose
-                size={40}
-                style={{
-                  color: '#A688FF',
-                  cursor: 'pointer',
-                }}
-              />
-            </div>
-          )}
+          <div onClick={showMenu} className="md:hidden transition-all duration-300 hover:text-purple-900 p-1 text-3xl text-gray-400 h-full items-center justify-center cursor-pointer rounded-md">
+            {!show ? <List weight="bold"/> : <X weight="bold"/> }
+          </div>
         </nav>
       </header>
     </>

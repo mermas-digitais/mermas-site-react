@@ -14,11 +14,12 @@ export const About = () => {
           <img className="object-cover w-full" src={imgBackground} alt="Astronauta" />
         </div>
 
-        <div className="w-full h-full padding flex container flex-row items-center justify-between gap-12 
-        max-md:gap-12 max-md:flex-col">
-          <div className="w-full 
-          max-md:max-w-[20rem]">
+        <div className="padding flex container flex-row items-center justify-between gap-12 
+        max-md:flex-col">
+          <div className="sm:w-[30rem]
+          max-md:max-w-96">
             <img
+            className="object-contain w-full"
               src={imgLogo}
               alt="Logo do Projeto: Uma menina mergulada na tecnologia"
             />

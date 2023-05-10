@@ -2,20 +2,7 @@
 
 
 
-@media (max-width: 915px) {
-  .elipse2 {
-    top: 40.06px;
-  }
-}
 
-@media (max-width: 1290px) {
-  .elipse1 {
-    left: 0px;
-  }
-  .elipse2 {
-    right: 0px;
-  }
-}
 @media (max-width: 1200px) {
   .header nav.show .menu ul {
     gap: 0.25rem;

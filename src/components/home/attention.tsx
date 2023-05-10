@@ -34,7 +34,8 @@ export const Home = () => {
             >
               <div
                 className="flex retative justify-center items-center 
-              max-lg:ml-8 max-lg:h-80"
+              max-lg:ml-8 max-lg:h-80 
+              lg:h-[26rem] lg:w-[32rem]"
               >
                 <img
                   className="h-full"
