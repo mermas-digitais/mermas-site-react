@@ -6,21 +6,22 @@ const iterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 export default function GalleryGrid() {
   return (
     <section className="container flex flex-col items-center justify-center gap-[6rem]">
-      <div className="bg-pink-100 rounded-3xl w-full relative">
-        <div className="p-12 text-center w-full">
+      <div className="bg-pink-100 rounded-3xl w-full relative ">
+        <div className="p-12 text-center w-full flex flex-col items-center justify-center">
           <h3 className="mb-4">
             Galeria das{' '}
             <i className="not-italic text-pink-500">Mermãs Digitais</i>
           </h3>
-          <span>
-            Diga Xis! E vem pra galeria das Mermãs
-            <br />
-            Veja o que nás anda aprontando ;D
-          </span>
+          <div className="sm:w-72">
+            <span>
+              Diga Xis! E vem pra galeria das Mermãs! Veja o que nás anda
+              aprontando ;D
+            </span>
+          </div>
         </div>
 
         <div className="absolute w-full -bottom-6 flex justify-center">
-          <div className="relative w-[50%]">
+          <div className="relative sm:w-[50%] w-full">
             <input
               type="text"
               placeholder="Buscar evento"
@@ -58,11 +59,7 @@ export default function GalleryGrid() {
               </div>
 
               <div className="absolute bottom-0 flex justify-end align-bottom items-end p-2 rounded-3xl opacity-0 hover:opacity-100 w-full h-full transition-all duration-300">
-                <img
-                  className="w-28"
-                  src={imgEtiqueta}
-                  alt=""
-                />
+                <img className="w-28" src={imgEtiqueta} alt="" />
               </div>
             </div>
           );

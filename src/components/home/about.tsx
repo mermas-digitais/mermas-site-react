@@ -37,10 +37,10 @@ export const About = () => {
               </p>
               <Link 
                 to="/sobre"
-                className="flex items-center gap-1 active:bg-transparent pb-6 w-80 border-b-[1px] border-purple-100 font-poppins font-semibold text-pink-500"
+                className="flex items-center text-sm md:text-base gap-1 active:bg-transparent pb-6 w-80 border-b-[1px] border-purple-100 font-poppins font-semibold text-pink-500"
               >
                 Conheça nossa história
-                <CaretRight size={20} weight="bold"/>
+                <CaretRight weight="bold"/>
               </Link>
             </div>
           </div>

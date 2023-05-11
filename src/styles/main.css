@@ -18,7 +18,7 @@
   }
   h4{
     @apply font-poppins font-semibold uppercase text-pink-500 
-    text-lg md:text-xl xl:text-2xl;
+    text-base md:text-lg;
   }
   h5{
     @apply font-poppins font-bold text-purple-900 
@@ -26,15 +26,15 @@
   }
   h6{
     @apply font-poppins font-bold text-purple-900 
-    text-xs md:text-xs xl:text-sm;
+    text-xs md:text-xs;
   }
   p {
     @apply font-quicksand font-normal text-gray-400 
-    text-sm md:text-base xl:text-lg; 
+    text-sm md:text-base; 
   }
   span{
     @apply font-quicksand font-medium text-gray-400 
-    text-sm md:text-base xl:text-lg;
+    text-sm md:text-base;
   }
   input, textarea{
     @apply border-solid border-2 w-full bg-[#F6F6F6] border-transparent px-6 py-3 font-quicksand font-medium text-sm text-gray-400 focus:border-pink-500 focus:outline-none;
