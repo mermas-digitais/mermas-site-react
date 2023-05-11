@@ -15,7 +15,7 @@ export const About = () => {
         </div>
 
         <div className="padding flex container flex-row items-center justify-between gap-12 
-        max-md:flex-col">
+        max-lg:flex-col">
           <div className="sm:w-[30rem]
           max-md:max-w-96">
             <img
@@ -26,7 +26,7 @@ export const About = () => {
           </div>
           <div>
             <div className="w-[30rem] ml-auto text-left
-            max-md:w-full">
+            max-lg:w-full">
               <h3>Éguas, ainda não conhece?</h3>
               <p className="pb-6">
                 O Mermãs Digitais é um projeto de extensão do IFMA - Campus
@@ -37,7 +37,7 @@ export const About = () => {
               </p>
               <Link 
                 to="/sobre"
-                className="flex items-center gap-1 pb-6 w-80 border-b-[1px] border-purple-100 font-poppins font-semibold text-base text-pink-500"
+                className="flex items-center gap-1 active:bg-transparent pb-6 w-80 border-b-[1px] border-purple-100 font-poppins font-semibold text-pink-500"
               >
                 Conheça nossa história
                 <CaretRight size={20} weight="bold"/>

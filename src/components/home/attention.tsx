@@ -30,7 +30,7 @@ export const Home = () => {
           <div className="w-full h-full items-center flex justify-center">
             <div
               className="relative 
-            max-md:w-[20rem]"
+            max-lg:w-[20rem]"
             >
               <div
                 className="flex retative justify-center items-center 
@@ -56,7 +56,7 @@ export const Home = () => {
                     src={imgPerson1}
                   />
                   <div className="flex flex-col mr-2">
-                    <h5>Ana Clara</h5>
+                    <h6>Ana Clara</h6>
                     <span className="text-xs">
                       Foi uma experiência incrivel!
                     </span>
@@ -69,7 +69,7 @@ export const Home = () => {
                     src={imgPerson2}
                   />
                   <div className="flex flex-col mr-2">
-                    <h5>Ana Clara</h5>
+                    <h6>Ana Clara</h6>
                     <span className="text-xs">Ameii, sou digital!!</span>
                   </div>
                 </div>

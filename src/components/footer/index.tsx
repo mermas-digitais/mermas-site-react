@@ -37,7 +37,7 @@ export const Footer = () => {
       <footer className="bg-purple-100 flex flex-col items-center">
         <div
           id="help"
-          className="container py-12 flex flex-wrap gap-8 justify-between w-full"
+          className="container py-12 flex flex-wrap gap-8 justify-between"
         >
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-4">

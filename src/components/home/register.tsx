@@ -6,15 +6,15 @@ export function Register() {
   return (
     <section className="delay_distance w-[100vw]">
       <div className="flex container items-center justify-center gap-16 padding
-      max-sm:flex-col">
+      max-lg:flex-col">
         <div>
           <img
-            className="w-[32rem]"
+            className="w-[28rem]"
             src={imgMenina}
             alt="Menina anunciando os requisitos"
           />
         </div>
-        <div className="w-[50%] max-md:w-full">
+        <div className="w-[50%] max-lg:w-full">
           <h4>Perde tempo não, miga!</h4>
           <h3>Se você gostou, confira os requisitos para participar:</h3>
 

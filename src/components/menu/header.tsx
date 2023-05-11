@@ -108,8 +108,8 @@ export const Navbar = ({}: NavbarProps) => {
           <div className="transition-all duration-500 ease-linear">
             <ul
               className={` flex flex-row gap-12 
-            max-md:header-menu ${
-              show ? 'visible opacity-100' : 'max-md:invisible max-md:opacity-0'
+            max-lg:header-menu ${
+              show ? 'visible opacity-100' : 'max-lg:invisible max-lg:opacity-0'
             }`}
             >
               {menuItens.map((item) => {
@@ -132,9 +132,10 @@ export const Navbar = ({}: NavbarProps) => {
             </ul>
           </div>
 
-          <div onClick={showMenu} className="md:hidden transition-all duration-300 hover:text-purple-900 p-1 text-3xl text-gray-400 h-full items-center justify-center cursor-pointer rounded-md">
-            {!show ? <List weight="bold"/> : <X weight="bold"/> }
-          </div>
+          <button onClick={showMenu} className="lg:hidden hover:text-purple-900 p-1 text-3xl text-gray-400 h-full items-center justify-center cursor-pointer rounded-md">
+            {!show ? <div className='transition-all duration-300 active:scale-75'><List weight="bold"/></div> : 
+            <div className='transition-all duration-300 active:scale-75 '><X weight="bold"/></div> }
+          </button>
         </nav>
       </header>
     </>

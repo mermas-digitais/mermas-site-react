@@ -4,10 +4,10 @@ type AttentionProps = {
 }
 export const Attention = ({clickScroll}:AttentionProps) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center text-center">
       <h4>Tecnologia & Inovação</h4>
       <h2>Desenvolvimento Web</h2>
-      <p className="w-[32rem] text-center">
+      <p className="md:w-[32rem] text-center">
         Vem conhecer na prática o universo tecnologico! Você vai estudar,
         praticar e se aventurar com as Mermãs DIgitais.
       </p>

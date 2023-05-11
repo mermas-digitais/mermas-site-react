@@ -10,13 +10,13 @@ export const Course = ({refName}:CourseProps) => {
         <div ref={refName}  className=" flex flex-col justify-center items-center gap-8 py-16">
           <div className="text-center">
             <h3>O que vocẽ aprenderá</h3>
-            <p className=' w-[48rem]'>
+            <p className='md:w-[32rem]'>
               Lorem inpsum Lorem inpsumLorem inpsumLorem inpsumLorem inpsumLorem
               inpsumLorem inpsumLorem inpsumLorem inpsum
             </p>
           </div>
 
-          <div className="flex flex-col px-16 gap-4">
+          <div className="flex flex-col md:px-16 max-md:pr-6 gap-4">
             <CardActivitys
               title="Introdução a computação"
               description="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "

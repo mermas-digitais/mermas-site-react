@@ -5,10 +5,10 @@ export const Form = () => {
     <>
       <section className="w-[100vw]">
         <div className="container relative 
-        max-md:flex max-md:flex-col max-md:gap-4 max-md:justify-center max-md:items-center 
-        md:mb-48">
-          <div className="bg-pink-100 h-full rounded-3xl p-8 w-full md:p-14">
-            <div className="md:w-96">
+        max-lg:flex max-lg:flex-col max-lg:gap-4 max-lg:justify-center max-lg:items-center 
+        lg:mb-48">
+          <div className="bg-pink-100 h-full rounded-3xl p-8 w-full lg:p-14">
+            <div className="lg:w-96">
               <h3 className="text-center md:text-start">
                 Não é estudante, mas gostaria de fazer parte dessa iniciativa?
               </h3>
@@ -20,7 +20,7 @@ export const Form = () => {
           </div>
 
           <form className="delay_distance flex flex-col gap-4 justify-center card items-center 
-          md:absolute md:top-20 md:right-32 max-sm:w-full"
+          lg:absolute lg:top-20 lg:right-32 max-sm:w-full"
             action="https://formsubmit.co/mermasdigitaisifma@gmail.com"
             method="POST"
           >
