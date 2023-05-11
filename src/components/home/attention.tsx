@@ -10,8 +10,8 @@ export const Home = () => {
     <>
       <section className="w-[100vw] flex justify-center mb-12">
         <div
-          className="flex flex-col  container items-center justify-between gap-16 
-        max-sm:flex-col-reverse sm:flex-row"
+          className="flex flex-col  container items-center justify-between gap-12 
+        max-md:flex-col-reverse md:flex-row"
         >
           <div className="w-full flex flex-col">
             <h1>
@@ -34,8 +34,8 @@ export const Home = () => {
             >
               <div
                 className="flex retative justify-center items-center 
-              max-lg:ml-8 max-lg:h-80 
-              lg:h-[26rem] lg:w-[32rem]"
+              max-lg:h-80 
+              lg:h-[24rem] lg:w-[28rem]"
               >
                 <img
                   className="h-full"
@@ -50,7 +50,7 @@ export const Home = () => {
               </div>
 
               <Fade cascade damping={0.1} delay={100}>
-                <div className="max-md:-top-10 absolute top-12 left-2 bg-white rounded-full shadow-pop p-2 flex flex-row items-center gap-2">
+                <div className="max-md:-top-10 absolute top-12 md:left-2 bg-white rounded-full shadow-pop p-2 flex flex-row items-center gap-2">
                   <img
                     className="w-10 h-10 object-cover rounded-full"
                     src={imgPerson1}
