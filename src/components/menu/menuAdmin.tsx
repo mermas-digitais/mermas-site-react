@@ -34,17 +34,18 @@ export const MenuAdmin = () => {
   
   return (
     <nav
-      className="w-full md:p-4 h-fit bg-white border-gray-50 shadow-lg
-    max-md:border-t-[1px] max-md:fixed 
+      className="w-full md:p-4 h-fit bg-white border-gray-50 shadow-2xl
+    max-md:border-t-[1px] max-md:px-2
     md:h-[100vh] md:w-80 md:border-r-[1px]"
     >
       <div className="md:flex flex-col justify-between">
-        <div className="flex flex-col gap-8 max-md:flex-row max-md:justify-center">
+        <div className="flex flex-col gap-8 max-md:flex-row max-md:justify-center max-md:items-center">
           
-          <div className="flex gap-4 items-center justify-start py-4 md:border-b-[1px] border-gray-100">
-            <div>
+          <div className="flex gap-4 items-center justify-start py-4 
+          md:border-b-[1px]  border-gray-100 ">
+            <div className='w-12 h-12'>
               <img
-                className="object-cover bg-black rounded-full w-12 h-12"
+                className="object-cover bg-black rounded-full w-full h-full"
                 src="./assets/person1.png"
                 alt=""
               />
@@ -57,13 +58,13 @@ export const MenuAdmin = () => {
             </div>
           </div>
           
-          <ul className="flex md:flex-col gap-2 max-md:items-center">
+          <ul className="flex md:flex-col max-md:justify-around max-md:w-full sm:w-[50%] lg:w-full gap-2 max-md:items-center bg">
             {menu.map((item) => {
               return (
                 <li>
                   <Link
                     to={item.to}
-                    className={`text-gray-300 p-4 flex gap-4 rounded-lg 
+                    className={`text-gray-300 md:p-4 flex gap-4 rounded-lg 
                 hover:md:bg-purple-500 hover:md:text-white hover:md:shadow-pop cursor-pointer
                 text-xs items-center font-medium font-poppins transition-all duration-300
                 ${
@@ -73,7 +74,7 @@ export const MenuAdmin = () => {
                 }
                 `}
                   >
-                    <i className="text-3xl">{item.icon}</i>
+                    <i className="text-4xl">{item.icon}</i>
                     <div className="max-md:hidden">{item.name}</div>
                   </Link>
                 </li>
