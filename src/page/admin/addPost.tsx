@@ -3,11 +3,10 @@ import { ModelPost } from '../../components/modal/modalPost';
 
 export const AddPost = () => {
   return (
-    <section className="relative w-full h-full p-16 flex flex-col gap-8">
+    <section className="relative w-full h-full flex p-8 flex-col gap-8">
      <ModelPost/>
-
       <div>
-        <div className="bg-white rounded-xl w-72 h-28 flex">
+        <div className="bg-white rounded-xl w-72 h-28 flex ">
           <div className="w-[50%] h-full">
             <img
               className="object-cover rounded-l-xl w-full h-full"

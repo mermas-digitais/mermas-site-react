@@ -4,9 +4,9 @@ import ButtonSecond from '../buttons/second';
 
 export function Register() {
   return (
-    <section className="delay_distance w-[100vw]">
-      <div className="flex container items-center justify-center gap-16 padding
-      max-lg:flex-col">
+    <section className="delay_distance w-[100vw]  flex items-center justify-center">
+      <div className="flex container gap-16 padding
+      max-lg:flex-col items-center">
         <div>
           <img
             className="w-[28rem]"

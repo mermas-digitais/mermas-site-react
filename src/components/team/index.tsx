@@ -193,7 +193,7 @@ export default function Team() {
           <div className="flex flex-col gap-4 w-full">
             <div className="flex justify-start w-full cursor-pointer hover:-translate-y-1 transition-all duration-300">
               <div
-                className="lg:w-[80%] sm:w-[50%] bg-pink-100 py-3 px-5 rounded-r-2xl rounded-t-2xl relative
+                className="max-sm:w-[80%] lg:w-[80%] sm:w-[50%] bg-pink-100 py-3 px-5 rounded-r-2xl rounded-t-2xl relative
             before:w-2 before:h-4 before:absolute before:bottom-[-18px] before:left-0 
             before:border-r-[30px] before:border-r-transparent
             before:border-t-pink-100 before:border-t-[20px]
@@ -218,7 +218,7 @@ export default function Team() {
 
             <div className="w-full flex justify-end cursor-pointer hover:-translate-y-1 transition-all duration-300">
               <div
-                className="lg:w-[80%] sm:w-[50%] bg-pink-100 py-3 px-5 rounded-l-2xl rounded-t-2xl relative
+                className="max-sm:w-[80%] lg:w-[80%] sm:w-[50%] bg-pink-100 py-3 px-5 rounded-l-2xl rounded-t-2xl relative
             before:w-2 before:h-4 before:absolute before:bottom-[-18px] before:right-0 
             before:border-l-[30px] before:border-l-transparent
             before:border-t-pink-100 before:border-t-[20px]

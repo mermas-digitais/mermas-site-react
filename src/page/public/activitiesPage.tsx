@@ -12,7 +12,7 @@ export default function ActivitiesPage() {
   };
 
   return (
-    <section className="w-[100vw]">
+    <section className="w-[100vw] flex justify-center items-center">
       <div className="container">
         <Fade triggerOnce direction="up" delay={100}>
           <Attention clickScroll={handleScroll} />

@@ -38,9 +38,13 @@ export default function GalleryGrid() {
       </div>
 
       <div
-        className="grid w-full auto-rows-[0.8rem] grid-cols-250 gap-4
-      [&>*:nth-child(odd)]:row-[span_10_/_span_10]
-      [&>*:nth-child(even)]:row-[span_12_/_span_12]
+        className="grid w-full auto-rows-[0.8rem]  gap-4
+      grid-cols-2 [&>*:nth-child(odd)]:row-[span_6_/_span_6] [&>*:nth-child(even)]:row-[span_8_/_span_8]
+      sm:grid-cols-3 sm:[&>*:nth-child(odd)]:row-[span_8_/_span_8] sm:[&>*:nth-child(even)]:row-[span_10_/_span_10]
+      
+      lg:grid-cols-250
+      lg:[&>*:nth-child(odd)]:row-[span_10_/_span_10]
+      lg:[&>*:nth-child(even)]:row-[span_12_/_span_12]
      "
       >
         {iterable.map((item) => {

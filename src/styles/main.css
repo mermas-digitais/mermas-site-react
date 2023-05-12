@@ -51,7 +51,7 @@
   }
 
   table{
-    @apply w-full bg-white rounded-xl overflow-hidden shadow-md;
+    @apply w-full bg-white rounded-xl shadow-md;
   }
   thead{
     @apply border-b-[1px] border-b-slate-200;
