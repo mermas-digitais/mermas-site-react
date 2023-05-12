@@ -35,7 +35,7 @@ export const MenuAdmin = () => {
   return (
     <nav
       className="w-full md:p-4 h-fit bg-white border-gray-50 shadow-lg
-    max-md:border-t-[1px] 
+    max-md:border-t-[1px] max-md:fixed 
     md:h-[100vh] md:w-80 md:border-r-[1px]"
     >
       <div className="md:flex flex-col justify-between">
