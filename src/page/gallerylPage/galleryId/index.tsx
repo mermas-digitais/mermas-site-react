@@ -46,7 +46,7 @@ export default function GalerryId() {
   return (
     <>
       <div className="containerAllGallery">
-        <Navbar showGallery={false} showGalleryEllipse={true} />
+        
 
         <div className="containerRowGalleryId">
           <div className="containerColumnContentL">
