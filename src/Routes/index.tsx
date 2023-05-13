@@ -14,11 +14,14 @@ import { LoginPage } from '../page/admin/login';
 import { AdminPage } from '../page/adminPage';
 import { AddTime } from '../page/admin/addTime';
 import { AddPost } from '../page/admin/addPost';
+import { useRef } from 'react';
+
+
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route element={<PublicPage/>}>
+      <Route element={<PublicPage />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/programa" element={<ActivitiesPage />} />
         <Route path="/equipe" element={<TeamPage />} />

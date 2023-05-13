@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import ButtonSecondQuery from '../buttons/secondQuery';
 import { X } from '@phosphor-icons/react';
+import api from '../../services/api';
 
 export const ModelPost = () => {
   const [modal, setModal] = useState(false);
@@ -13,6 +14,43 @@ export const ModelPost = () => {
     document.body.style.overflow = 'hidden';
   } else {
     document.body.style.overflow = 'unset';
+  }
+
+  function handleAddSignLeader(event: FormEvent) {
+    event.preventDefault();
+
+    const formData = new FormData(event.target as HTMLFormElement);
+    
+    const imageFormData = new FormData();
+
+    const fileInput = document.querySelector(
+      'input[type="file"]'
+    ) as HTMLInputElement;
+    if (fileInput && fileInput.files) {
+      const file = fileInput.files[0];
+      imageFormData.append("imagem", file);
+    }
+    const TitlePost = String(formData.get('titlePost'));
+    const DescriptionPost = String(formData.get('descriptionPost'));
+    // const createPost = String(formData.get('createPost'));
+  
+    try {
+      api.post("/createPost", {
+        PicturePost: imageFormData,
+        TitlePost: TitlePost,
+        DescriptionPost: DescriptionPost,
+        // createPost: createPost,
+        
+      },{
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      alert('Cadastrado com sucesso!');
+    } catch (err) {
+      console.log(err);
+      alert('Erro no cadastro, tente novamente');
+    }
   }
 
   return (
@@ -42,9 +80,13 @@ export const ModelPost = () => {
             </div>
 
             <div>
-              <form action="" className="flex gap-4">
+              <form
+                onSubmit={handleAddSignLeader}
+                className="flex gap-4"
+                encType="multipart/form-data"
+              >
                 <div className="flex flex-col gap-4 w-64 items-center">
-                  <div className=''>
+                  <div className="">
                     <img
                       src="../../../public/assets/person1.png"
                       className="object-cover rounded-md w-64 h-72"
@@ -52,6 +94,7 @@ export const ModelPost = () => {
                     />
                   </div>
                   <input
+                  name='imagem'
                     type="file"
                     className="bg-white p-0 rounded-none
                   block w-full text-sm text-slate-500
@@ -67,9 +110,9 @@ export const ModelPost = () => {
                 </div>
 
                 <div className="flex flex-col gap-4 items-start">
-                  <input type="text" placeholder="Title" />
-                  <textarea placeholder="Description" />
-                  <input type="date" placeholder="Date" />
+                  <input name='titulo' type="text" placeholder="Title" />
+                  <textarea name="descriptionPost" placeholder="Description" />
+                  <input name="createPost" type="date" placeholder="Date" />
                   <ButtonSecondQuery name="Cadastrar" />
                 </div>
               </form>

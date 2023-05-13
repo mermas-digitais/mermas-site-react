@@ -9,7 +9,7 @@ export const Course = ({refName}:CourseProps) => {
     return (
         <div ref={refName}  className=" flex flex-col justify-center items-center gap-8 py-16">
           <div className="text-center">
-            <h3>O que vocẽ aprenderá</h3>
+            <h3>O que você aprenderá</h3>
             <p className='md:w-[32rem]'>
               Lorem inpsum Lorem inpsumLorem inpsumLorem inpsumLorem inpsumLorem
               inpsumLorem inpsumLorem inpsumLorem inpsum

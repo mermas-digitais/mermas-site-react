@@ -1,5 +1,6 @@
 import { SortAscending } from '@phosphor-icons/react';
 import { useRef } from 'react';
+import { MemberCard } from './memberCard';
 
 export default function Team() {
   const scrollDown = useRef<HTMLDivElement>(null);
@@ -191,7 +192,7 @@ export default function Team() {
           </div>
 
           <div className="flex flex-col gap-4 w-full">
-            <div className="flex justify-start w-full cursor-pointer hover:-translate-y-1 transition-all duration-300">
+            <a href="mailto:webmaster@example.com" className="flex justify-start w-full cursor-pointer hover:-translate-y-1 transition-all duration-300">
               <div
                 className="max-sm:w-[80%] lg:w-[80%] sm:w-[50%] bg-pink-100 py-3 px-5 rounded-r-2xl rounded-t-2xl relative
             before:w-2 before:h-4 before:absolute before:bottom-[-18px] before:left-0 
@@ -214,9 +215,9 @@ export default function Team() {
                   </span>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div className="w-full flex justify-end cursor-pointer hover:-translate-y-1 transition-all duration-300">
+            <a href="mailto:webmaster@example.com" className="w-full flex justify-end cursor-pointer hover:-translate-y-1 transition-all duration-300">
               <div
                 className="max-sm:w-[80%] lg:w-[80%] sm:w-[50%] bg-pink-100 py-3 px-5 rounded-l-2xl rounded-t-2xl relative
             before:w-2 before:h-4 before:absolute before:bottom-[-18px] before:right-0 
@@ -238,7 +239,7 @@ export default function Team() {
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -260,33 +261,13 @@ export default function Team() {
               md:[&>*:nth-child(-n+4):nth-child(2n)]:row-start-1"
             >
               {members.map((member, index) => (
-                <div
+                <MemberCard
+                  name={member.name}
+                  image={member.image}
+                  email={member.email}
+                  role={member.role}
                   key={index}
-                  className="row-end-20
-            relative border-solid border-4 rounded-2xl 
-            border-transparent hover:border-purple-500 transform duration-300 cursor-pointer"
-                >
-                  <img
-                    className="object-cover w-full h-full rounded-xl"
-                    src={member.image}
-                    alt="Ímagem de um membro da equipe"
-                  />
-                  <address
-                    className="flex flex-col z-10
-              absolute bottom-0 m-2 leading-3
-              text-xs font-poppins not-italic text-white"
-                  >
-                    <b>{member.name}</b>
-                    <strong className="font-normal">{member.role}</strong>
-                    <a href="mailto:webmaster@example.com" className="text-xs w-full break-all">
-                      {member.email}
-                    </a>
-                  </address>
-                  <div
-                    className="rounded-xl absolute top-0 w-full h-full 
-                bg-gradient-to-b from-transparent to-[#22012c]"
-                  ></div>
-                </div>
+                />
               ))}
             </div>
             <div ref={scrollDown} className="opacity-0"></div>

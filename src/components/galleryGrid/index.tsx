@@ -1,9 +1,14 @@
 import { ArrowLineDown, MagnifyingGlass } from '@phosphor-icons/react';
 import ButtonSecondQuery from '../buttons/secondQuery';
 import imgEtiqueta from '../../../public/assets/etiqueta.png';
+import useGet from '../../hooks/useGet';
+import { PostType } from '../../services/types';
 
 const iterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 export default function GalleryGrid() {
+
+  const postData = useGet<PostType>("getPost");
+
   return (
     <section className="container flex flex-col items-center justify-center gap-[6rem]">
       <div className="bg-pink-100 rounded-3xl w-full relative ">
@@ -47,7 +52,7 @@ export default function GalleryGrid() {
       lg:[&>*:nth-child(even)]:row-[span_12_/_span_12]
      "
       >
-        {iterable.map((item) => {
+        {postData.map((item) => {
           return (
             <div
               className="w-full h-full relative flex flex-col cursor-pointer transition-all duration-300
@@ -55,7 +60,7 @@ export default function GalleryGrid() {
             >
               <div className="w-full h-full">
                 <img
-                  src="https://midia.gruposinos.com.br/_midias/jpg/2022/07/02/img_0934-20400876.jpg"
+                  src={item.PicturePost[0]}
                   alt="Ícone de foguete"
                   className=" relative object-cover rounded-3xl w-full h-full 
                   "

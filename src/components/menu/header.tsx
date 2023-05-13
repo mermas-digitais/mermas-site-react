@@ -8,6 +8,7 @@ import { List, X } from '@phosphor-icons/react';
 interface NavbarProps {
   showGallery?: boolean;
   showGalleryEllipse?: boolean;
+  clickScroll: () => void;
 }
 const menuItens = [
   {
@@ -37,7 +38,10 @@ const menuItens = [
   },
 ];
 
-export const Navbar = ({}: NavbarProps) => {
+
+export const Navbar = ({clickScroll}: NavbarProps) => {
+  
+
   const [show, setShow] = React.useState(false);
   const showMenu = () => {
     setShow(!show);
@@ -116,6 +120,7 @@ export const Navbar = ({}: NavbarProps) => {
                 return (
                   <li>
                     <Link
+                      onClick={clickScroll}
                       className={`py-2 cursor-pointer font-quicksand text-xs whitespace-nowrap 
                         ${
                           pathname === item.path
@@ -132,9 +137,19 @@ export const Navbar = ({}: NavbarProps) => {
             </ul>
           </div>
 
-          <button onClick={showMenu} className="lg:hidden hover:text-purple-900 p-1 text-3xl text-gray-400 h-full items-center justify-center cursor-pointer rounded-md">
-            {!show ? <div className='transition-all duration-300 active:scale-75'><List weight="bold"/></div> : 
-            <div className='transition-all duration-300 active:scale-75 '><X weight="bold"/></div> }
+          <button
+            onClick={showMenu}
+            className="lg:hidden hover:text-purple-900 p-1 text-3xl text-gray-400 h-full items-center justify-center cursor-pointer rounded-md"
+          >
+            {!show ? (
+              <div className="transition-all duration-300 active:scale-75">
+                <List weight="bold" />
+              </div>
+            ) : (
+              <div className="transition-all duration-300 active:scale-75 ">
+                <X weight="bold" />
+              </div>
+            )}
           </button>
         </nav>
       </header>
