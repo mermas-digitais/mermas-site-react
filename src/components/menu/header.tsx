@@ -1,13 +1,10 @@
 import React, { useCallback, useRef } from 'react';
-import { AiOutlineMenu } from 'react-icons/ai';
-import { AiOutlineClose } from 'react-icons/ai';
+
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import imgLogo from '../../../public/assets/logo.png';
 import { List, X } from '@phosphor-icons/react';
 interface NavbarProps {
-  showGallery?: boolean;
-  showGalleryEllipse?: boolean;
   clickScroll: () => void;
 }
 const menuItens = [
