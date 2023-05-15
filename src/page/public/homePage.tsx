@@ -2,7 +2,6 @@ import { Fade } from 'react-awesome-reveal';
 import { About } from '../../components/home/about';
 import Course from '../../components/home/course';
 import { Form } from '../../components/home/form';
-import Gallery from '../../components/gallery';
 import { Home } from '../../components/home/attention';
 import { Patronize } from '../../components/home/patronize';
 import { Register } from '../../components/home/register';
