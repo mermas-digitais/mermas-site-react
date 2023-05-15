@@ -75,7 +75,7 @@ export default function GalleryGrid() {
             >
               <div className="w-full h-full">
                 <img
-                  src="../../../public/assets/person1.png"
+                  src="../../../public/assets/person2.png"
                   alt="Ícone de foguete"
                   className=" relative object-cover rounded-3xl w-full h-full 
                   "
