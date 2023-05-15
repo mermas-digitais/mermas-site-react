@@ -1,7 +1,6 @@
 import { ArrowLineDown, MagnifyingGlass } from '@phosphor-icons/react';
 import ButtonSecondQuery from '../buttons/secondQuery';
 import imgEtiqueta from '../../../public/assets/etiqueta.png';
-import useGet from '../../hooks/useGet';
 import { PostType } from '../../services/types';
 import { useEffect, useState } from 'react';
 import api from '../../services/api';

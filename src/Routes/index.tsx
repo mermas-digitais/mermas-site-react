@@ -4,8 +4,7 @@ import {
   Route,
 } from 'react-router-dom';
 import ActivitiesPage from '../page/public/activitiesPage';
-import GalleryPage from '../page/gallerylPage';
-import GalerryId from '../page/gallerylPage/galleryId';
+import GalleryPage from '../page/gallerylPage/gallery';
 import { HomePage } from '../page/public/homePage';
 import TeamPage from '../page/public/teamPage';
 import { PublicPage } from '../page/publicPage';
@@ -26,7 +25,6 @@ export const router = createBrowserRouter(
         <Route path="/programa" element={<ActivitiesPage />} />
         <Route path="/equipe" element={<TeamPage />} />
         <Route path="/galeria" element={<GalleryPage />} />
-        <Route path="/galeria/:id" element={<GalerryId />} />
         <Route path="*" element={<HomePage />} />
       </Route>
 

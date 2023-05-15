@@ -5,7 +5,7 @@ import { Form } from '../../components/home/form';
 import { Home } from '../../components/home/attention';
 import { Patronize } from '../../components/home/patronize';
 import { Register } from '../../components/home/register';
-import { Questions } from '../../components/home/questions';
+
 
 
 export const HomePage = () => {
@@ -30,13 +30,6 @@ export const HomePage = () => {
       <Fade triggerOnce direction="up" delay={100}>
         <Form />
       </Fade>
-      {/* <Fade triggerOnce direction="up" delay={100}>
-        <Questions/>
-      </Fade> */}
-
-      {/* <Fade triggerOnce direction="up" delay={100}>
-          <Gallery />
-        </Fade> */}
     </div>
   );
 };
