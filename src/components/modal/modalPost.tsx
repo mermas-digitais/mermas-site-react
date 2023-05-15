@@ -16,42 +16,42 @@ export const ModelPost = () => {
     document.body.style.overflow = 'unset';
   }
 
-  function handleAddSignLeader(event: FormEvent) {
-    event.preventDefault();
+  // function handleAddSignLeader(event: FormEvent) {
+  //   event.preventDefault();
 
-    const formData = new FormData(event.target as HTMLFormElement);
+  //   const formData = new FormData(event.target as HTMLFormElement);
     
-    const imageFormData = new FormData();
+  //   const imageFormData = new FormData();
 
-    const fileInput = document.querySelector(
-      'input[type="file"]'
-    ) as HTMLInputElement;
-    if (fileInput && fileInput.files) {
-      const file = fileInput.files[0];
-      imageFormData.append("imagem", file);
-    }
-    const TitlePost = String(formData.get('titlePost'));
-    const DescriptionPost = String(formData.get('descriptionPost'));
-    // const createPost = String(formData.get('createPost'));
+  //   const fileInput = document.querySelector(
+  //     'input[type="file"]'
+  //   ) as HTMLInputElement;
+  //   if (fileInput && fileInput.files) {
+  //     const file = fileInput.files[0];
+  //     imageFormData.append("imagem", file);
+  //   }
+  //   const TitlePost = String(formData.get('titlePost'));
+  //   const DescriptionPost = String(formData.get('descriptionPost'));
+  //   // const createPost = String(formData.get('createPost'));
   
-    try {
-      api.post("/createPost", {
-        PicturePost: imageFormData,
-        TitlePost: TitlePost,
-        DescriptionPost: DescriptionPost,
-        // createPost: createPost,
+  //   try {
+  //     api.post("/createPost", {
+  //       PicturePost: imageFormData,
+  //       TitlePost: TitlePost,
+  //       DescriptionPost: DescriptionPost,
+  //       // createPost: createPost,
         
-      },{
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-      alert('Cadastrado com sucesso!');
-    } catch (err) {
-      console.log(err);
-      alert('Erro no cadastro, tente novamente');
-    }
-  }
+  //     },{
+  //       headers: {
+  //         "Content-Type": "multipart/form-data",
+  //       },
+  //     });
+  //     alert('Cadastrado com sucesso!');
+  //   } catch (err) {
+  //     console.log(err);
+  //     alert('Erro no cadastro, tente novamente');
+  //   }
+  // }
 
   return (
     <>
@@ -81,7 +81,7 @@ export const ModelPost = () => {
 
             <div>
               <form
-                onSubmit={handleAddSignLeader}
+                // onSubmit={handleAddSignLeader}
                 className="flex gap-4"
                 encType="multipart/form-data"
               >
