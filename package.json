@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://localhost:3000/dist/",
   "scripts": {
     "dev": "vite",
     "start": "vite preview",

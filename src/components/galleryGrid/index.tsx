@@ -5,23 +5,24 @@ import { PostType } from '../../services/types';
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
 
+const iterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 export default function GalleryGrid() {
 
   // const postData = useGet<PostType>("getPost");
 
-  const [dateAll, setDateAll] = useState<PostType[]>([]);
+  // const [dateAll, setDateAll] = useState<PostType[]>([]);
 
-  useEffect(() => {
-    api.get(`/getPost/`)
-      .then(response => {
-        console.log(response.data);
-        setDateAll(response.data);
+  // useEffect(() => {
+  //   api.get(`/getPost/`)
+  //     .then(response => {
+  //       console.log(response.data);
+  //       setDateAll(response.data);
         
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }, []);
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //     });
+  // }, []);
 
   return (
     <section className="container flex flex-col items-center justify-center gap-[6rem]">
@@ -66,7 +67,8 @@ export default function GalleryGrid() {
       lg:[&>*:nth-child(even)]:row-[span_12_/_span_12]
      "
       >
-        { Array.isArray(dateAll) && dateAll.length > 0 && dateAll.map((item) => {
+        {/* { Array.isArray(dateAll) && dateAll.length > 0 && dateAll.map((item) => { */}
+        {iterable.map((item) => {
           return (
             <div
               className="w-full h-full relative flex flex-col cursor-pointer transition-all duration-300
@@ -74,7 +76,7 @@ export default function GalleryGrid() {
             >
               <div className="w-full h-full">
                 <img
-                  src={item.PicturePost[0]}
+                  src="../../../public/assets/person2.png"
                   alt="Ícone de foguete"
                   className=" relative object-cover rounded-3xl w-full h-full 
                   "
