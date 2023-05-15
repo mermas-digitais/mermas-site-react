@@ -5,7 +5,6 @@ import { PostType } from '../../services/types';
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
 
-const iterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 export default function GalleryGrid() {
 
   // const postData = useGet<PostType>("getPost");
@@ -67,7 +66,7 @@ export default function GalleryGrid() {
       lg:[&>*:nth-child(even)]:row-[span_12_/_span_12]
      "
       >
-        { Array.isArray(dateAll) && dateAll && dateAll.length && dateAll.map((item) => {
+        { Array.isArray(dateAll) && dateAll.length > 0 && dateAll.map((item) => {
           return (
             <div
               className="w-full h-full relative flex flex-col cursor-pointer transition-all duration-300
