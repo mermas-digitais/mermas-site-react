@@ -10,12 +10,14 @@ export default function GalleryGrid() {
 
   // const postData = useGet<PostType>("getPost");
 
-  const [dateAll, setDateAll] = useState<PostType[]>([]);
+  const [dateAll, setDateAll] = useState([]);
+
+
 
   useEffect(() => {
-    api.get(`/getPost/`)
+    api.get(`/laillagaleno`)
       .then(response => {
-        console.log(response);
+        console.log(response.data);
         setDateAll(response.data) ;
       })
       .catch(error => {
@@ -74,7 +76,7 @@ export default function GalleryGrid() {
             >
               <div className="w-full h-full">
                 <img
-                  src={item.PicturePost[0]}
+                  src={item}
                   alt="Ícone de foguete"
                   className=" relative object-cover rounded-3xl w-full h-full 
                   "
