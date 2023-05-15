@@ -67,7 +67,7 @@ export default function GalleryGrid() {
       lg:[&>*:nth-child(even)]:row-[span_12_/_span_12]
      "
       >
-        {dateAll.map((item) => {
+        {dateAll && dateAll.length && dateAll.map((item) => {
           return (
             <div
               className="w-full h-full relative flex flex-col cursor-pointer transition-all duration-300
