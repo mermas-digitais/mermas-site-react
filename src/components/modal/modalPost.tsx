@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react';
 import ButtonSecondQuery from '../buttons/secondQuery';
 import { X } from '@phosphor-icons/react';
-import api from '../../services/api';
+// import api from '../../services/api';
 
 export const ModelPost = () => {
   const [modal, setModal] = useState(false);

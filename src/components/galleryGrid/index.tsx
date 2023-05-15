@@ -1,17 +1,28 @@
 import { ArrowLineDown, MagnifyingGlass } from '@phosphor-icons/react';
 import ButtonSecondQuery from '../buttons/secondQuery';
 import imgEtiqueta from '../../../public/assets/etiqueta.png';
-import useGet from '../../hooks/useGet';
-import { PostType } from '../../services/types';
-import { useEffect, useState } from 'react';
-import api from '../../services/api';
+// import useGet from '../../hooks/useGet';
+// import { PostType } from '../../services/types';
+// import { useEffect, useState } from 'react';
+// import api from '../../services/api';
 
 const iterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 export default function GalleryGrid() {
 
   // const postData = useGet<PostType>("getPost");
 
-  const [dateAll, setDateAll] = useState();
+  // const [dateAll, setDateAll] = useState<PostType[]>([]);
+
+  // useEffect(() => {
+  //   api.get(`/getPost`)
+  //     .then(response => {
+  //       setDateAll(response.data);
+  //       console.log(response.data);
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //     });
+  // }, []);
 
   return (
     <section className="container flex flex-col items-center justify-center gap-[6rem]">
@@ -56,15 +67,15 @@ export default function GalleryGrid() {
       lg:[&>*:nth-child(even)]:row-[span_12_/_span_12]
      "
       >
-      
-         
+        {iterable.map((item) => {
+          return (
             <div
               className="w-full h-full relative flex flex-col cursor-pointer transition-all duration-300
               hover:shadow-pop transform hover:scale-105 rounded-3xl"
             >
               <div className="w-full h-full">
                 <img
-                  src={imgEtiqueta}
+                  src="../../../public/assets/person1.png"
                   alt="Ícone de foguete"
                   className=" relative object-cover rounded-3xl w-full h-full 
                   "
@@ -75,7 +86,8 @@ export default function GalleryGrid() {
                 <img className="w-28" src={imgEtiqueta} alt="" />
               </div>
             </div>
-
+          );
+        })}
       </div>
 
       <div>
