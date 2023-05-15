@@ -8,12 +8,11 @@ import GalleryPage from '../page/gallerylPage/gallery';
 import { HomePage } from '../page/public/homePage';
 import TeamPage from '../page/public/teamPage';
 import { PublicPage } from '../page/publicPage';
-import Team from '../components/team';
 import { LoginPage } from '../page/admin/login';
 import { AdminPage } from '../page/adminPage';
 import { AddTime } from '../page/admin/addTime';
 import { AddPost } from '../page/admin/addPost';
-import { useRef } from 'react';
+
 
 
 

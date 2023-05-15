@@ -15,8 +15,9 @@ export default function GalleryGrid() {
   useEffect(() => {
     api.get(`/getPost/`)
       .then(response => {
-        setDateAll(response.data);
         console.log(response.data);
+        setDateAll(response.data);
+        
       })
       .catch(error => {
         console.error(error);
@@ -66,7 +67,7 @@ export default function GalleryGrid() {
       lg:[&>*:nth-child(even)]:row-[span_12_/_span_12]
      "
       >
-        {dateAll && dateAll.length && dateAll.map((item) => {
+        { Array.isArray(dateAll) && dateAll && dateAll.length && dateAll.map((item) => {
           return (
             <div
               className="w-full h-full relative flex flex-col cursor-pointer transition-all duration-300
