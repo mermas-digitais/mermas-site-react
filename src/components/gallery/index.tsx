@@ -95,6 +95,7 @@ export default function GalleryGrid() {
           <ArrowLineDown size={20} weight="bold" color="white" />
         </ButtonSecondQuery>
       </div>
+
     </section>
   );
 }
