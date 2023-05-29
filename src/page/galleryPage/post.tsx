@@ -1,3 +1,9 @@
+import {
+  CalendarBlank,
+  CaretLeft,
+  CaretRight,
+  ShareNetwork,
+} from '@phosphor-icons/react';
 import React from 'react';
 import { AiOutlineCalendar, AiOutlineClose } from 'react-icons/ai';
 import { BsShare } from 'react-icons/bs';
@@ -43,21 +49,18 @@ export default function PostId() {
 
   return (
     <>
-      <div className="containerAllGallery">
-        
-
-        <div className="containerRowGalleryId">
-          <div className="containerColumnContentL">
-            <div className="dateGallery">
-              <AiOutlineCalendar />
-              <p>12/12/2021</p>
+      <section className="container flex items-center justify-center">
+        <div className="flex gap-12">
+          <div className="flex-1 gap-4 flex flex-col">
+            <div className="flex flex-row items-center gap-2 text-gray-400">
+              <CalendarBlank size={20} />
+              <p className=" text-sm">12/12/2021</p>
             </div>
-            <h1 className="titleGallery">
-              Titulo da Galeria Titulo da Galeria Titulo da Galeria
-            </h1>
-            <div className="line" />
-
-            <p className="textDescriptionGalery">
+            <div>
+              <h3 className='mb-4'>Titulo da Galeria Titulo da Galeria</h3>
+              <hr className='w-72 border-purple-100'/>              
+            </div>
+            <p className="">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               condimentum, nisl ut ultricies lacinia, nisl nisl aliquam nisl,
               nec lacinia nisl nisl sit amet nisl. Sed euismod, nisl ut
@@ -80,42 +83,48 @@ export default function PostId() {
             </p>
 
             <div
-              className="containerButtonGallery"
+              className="flex items-center justify-start gap-4 cursor-pointer"
               onClick={() => console.log('oi')}
             >
-              <div className="backgroundButtonGallery">
-                <GrFormPrevious size={25} />
+              <div className="buttonCircle">
+                <CaretLeft size={24} weight="bold" />
               </div>
-              <p className="textButtonGallery">Voltar</p>
+              <h6>Voltar</h6>
             </div>
           </div>
-          <div className="containerColumnContentR">
-            <div className="buttonShareGallery">
-              <BsShare size={15} />
+
+          <div className="flex-1 gap-4 flex flex-col items-end">
+            <div className="buttonCircle p-2 cursor-pointer">
+              <ShareNetwork size={18} />
             </div>
-            <div className="containerImageGallery">
+            <div className="w-full h-80">
               <img
                 src={images[currentImage].url}
                 alt="Imagem da Galeria"
-                className="imageGallery"
-                onClick={() => setShowPopup(true)}
+                className="w-full h-full object-cover  rounded-2xl"
+                // onClick={() => setShowPopup(true)}
               />
             </div>
-            <div className="boxRowButtons">
-              <div className="buttonBorder" onClick={() => prevImage()}>
-                <GrFormPrevious size={35} />
+            <div className="flex gap-2 flex-end">
+              <div
+                className="buttonCircle p-2 cursor-pointer"
+                onClick={() => prevImage()}
+              >
+                <CaretLeft size={18} weight="bold" />
               </div>
-              <div className="buttonBorder" onClick={() => nextImage()}>
-                <GrFormNext size={35} />
+              <div
+                className="buttonCircle p-2 cursor-pointer"
+                onClick={() => nextImage()}
+              >
+                <CaretRight size={18} weight="bold" />
               </div>
             </div>
           </div>
         </div>
-  
-  
+
         {showPopup && (
           <>
-            <div className="popupContainer">
+            <div className="absolute w-screen h-screen bg-white flex items-center justify-center">
               <div className="popupClose">
                 <AiOutlineClose
                   size={35}
@@ -139,7 +148,7 @@ export default function PostId() {
             </div>
           </>
         )}
-      </div>
+      </section>
     </>
   );
 }
