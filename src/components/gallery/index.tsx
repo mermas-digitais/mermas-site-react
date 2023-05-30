@@ -1,6 +1,7 @@
 import { ArrowLineDown, MagnifyingGlass } from '@phosphor-icons/react';
 import ButtonSecondQuery from '../buttons/secondQuery';
 import imgEtiqueta from '../../../public/assets/etiqueta.png';
+import { Link } from 'react-router-dom';
 // import useGet from '../../hooks/useGet';
 // import { PostType } from '../../services/types';
 // import { useEffect, useState } from 'react';
@@ -69,7 +70,7 @@ export default function GalleryGrid() {
       >
         {iterable.map((item) => {
           return (
-            <div
+            <Link to="1" key={item}
               className="w-full h-full relative flex flex-col cursor-pointer transition-all duration-300
               hover:shadow-pop transform hover:scale-105 rounded-3xl"
             >
@@ -85,7 +86,7 @@ export default function GalleryGrid() {
               <div className="absolute bottom-0 flex justify-end align-bottom items-end p-2 rounded-3xl opacity-0 hover:opacity-100 w-full h-full transition-all duration-300">
                 <img className="w-28" src={imgEtiqueta} alt="" />
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
