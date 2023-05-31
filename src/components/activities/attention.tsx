@@ -8,8 +8,8 @@ export const Attention = ({clickScroll}:AttentionProps) => {
       <h4>Tecnologia & Inovação</h4>
       <h2>Desenvolvimento Web</h2>
       <p className="md:w-[32rem] text-center">
-        Vem conhecer na prática o universo tecnologico! Você vai estudar,
-        praticar e se aventurar com as Mermãs DIgitais.
+        Venha conhecer na prática o universo do desenvolvimento web! 
+        Você terá a oportunidade de estudar, praticar e se aventurar com as Mermãs Digitais.
       </p>
       <div
         onClick={clickScroll}
