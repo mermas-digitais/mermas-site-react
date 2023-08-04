@@ -1,12 +1,11 @@
 import React, { useCallback, useRef } from 'react';
-import { AiOutlineMenu } from 'react-icons/ai';
-import { AiOutlineClose } from 'react-icons/ai';
+
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import imgLogo from '../../../public/assets/logo.png';
+import { List, X } from '@phosphor-icons/react';
 interface NavbarProps {
-  showGallery?: boolean;
-  showGalleryEllipse?: boolean;
+  clickScroll: () => void;
 }
 const menuItens = [
   {
@@ -19,24 +18,32 @@ const menuItens = [
     path: '/programa',
     to: '/programa',
   },
+  // {
+  //   name: 'Equipe',
+  //   path: '/equipe',
+  //   to: '/equipe',
+  // },
+  // {
+  //   name: 'Galeria',
+  //   path: '/galeria',
+  //   to: '/galeria',
+  // },
   {
-    name: 'Equipe',
-    path: '/equipe',
-    to: '/equipe',
-  },
-  {
-    name: 'Galeria',
-    path: '/galeria',
-    to: '/galeria',
-  },
-  {
-    name: 'Sobre',
-    path: '/sobre',
-    to: '/sobre',
+    name: 'Artigos',
+    path: '/artigos',
+    to: '/artigos',
   },
 ];
-export const Navbar = ({ }: NavbarProps) => {
+
+
+export const Navbar = ({clickScroll}: NavbarProps) => {
+  
+
   const [show, setShow] = React.useState(false);
+  const showMenu = () => {
+    setShow(!show);
+  };
+
   const navRef = useRef<
     HTMLDivElement & {
       style: {
@@ -46,9 +53,6 @@ export const Navbar = ({ }: NavbarProps) => {
   >(null);
   const headerRef = useRef<HTMLHeadElement>(null);
 
-  const showMenu = () => {
-    setShow(!show);
-  };
   const showNav = () => {
     show
       ? navRef?.current?.classList.add('show')
@@ -84,7 +88,7 @@ export const Navbar = ({ }: NavbarProps) => {
         ref={headerRef}
       >
         <nav
-          className="flex container justify-between items-center bg-transparent"
+          className="flex container justify-between items-center bg-transparent bg-slate-400 relative"
           ref={navRef}
         >
           <div className="flex flex-row gap-3 justify-center items-center">
@@ -102,13 +106,19 @@ export const Navbar = ({ }: NavbarProps) => {
             </Link>
           </div>
 
-          <div className="max-md:invisible max-md:opacity-0 max-md:transition-all max-md:duration-500 ease-linear">
-            <ul className="flex flex-row gap-12  ">
-              {menuItens.map((item) => {
+          <div className="transition-all duration-500 ease-linear">
+            <ul
+              className={` flex flex-row gap-12 
+            max-lg:header-menu ${
+              show ? 'visible opacity-100' : 'max-lg:invisible max-lg:opacity-0'
+            }`}
+            >
+              {menuItens.map((item, key) => {
                 return (
-                  <li className="max-md:hidden">
+                  <li key={key}>
                     <Link
-                      className={`py-2 cursor-pointer font-quicksand text-xs  
+                      onClick={clickScroll}
+                      className={`py-2 cursor-pointer font-quicksand text-xs whitespace-nowrap 
                         ${
                           pathname === item.path
                             ? 'text-gray-400 font-semibold transition-all duration-300 ease-in-out'
@@ -124,33 +134,20 @@ export const Navbar = ({ }: NavbarProps) => {
             </ul>
           </div>
 
-          {!show ? (
-            <div
-              className="hidden cursor-pointer max-md:inline-block max-md:text-purple-900 max-md:text-[1.875rem] icon-menu"
-              onClick={() => showMenu()}
-            >
-              <AiOutlineMenu
-                size={40}
-                style={{
-                  color: '#A688FF',
-                  cursor: 'pointer',
-                }}
-              />
-            </div>
-          ) : (
-            <div
-              className="hidden cursor-pointer max-md:inline-block icon-menu"
-              onClick={() => showMenu()}
-            >
-              <AiOutlineClose
-                size={40}
-                style={{
-                  color: '#A688FF',
-                  cursor: 'pointer',
-                }}
-              />
-            </div>
-          )}
+          <button
+            onClick={showMenu}
+            className="lg:hidden hover:text-purple-900 p-1 text-3xl text-gray-400 h-full items-center justify-center cursor-pointer rounded-md"
+          >
+            {!show ? (
+              <div className="transition-all duration-300 active:scale-75">
+                <List weight="bold" />
+              </div>
+            ) : (
+              <div className="transition-all duration-300 active:scale-75 ">
+                <X weight="bold" />
+              </div>
+            )}
+          </button>
         </nav>
       </header>
     </>

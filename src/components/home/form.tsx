@@ -3,14 +3,16 @@ import ButtonSecondQuery from '../buttons/secondQuery';
 export const Form = () => {
   return (
     <>
-      <section className="w-[100vw]">
-        <div className="container relative mb-48">
-          <div className="bg-pink-100 h-full rounded-3xl p-14">
-            <div className="w-96">
-              <h3 className="text-start">
+      <section id='contact'  className="w-[100vw] flex items-center justify-center">
+        <div className="container relative 
+        max-lg:flex max-lg:flex-col max-lg:gap-4 max-lg:justify-center max-lg:items-center 
+        lg:mb-48">
+          <div className="bg-pink-100 h-full rounded-3xl p-8 w-full lg:p-14">
+            <div className="lg:w-96">
+              <h3 className="text-center md:text-start">
                 Não é estudante, mas gostaria de fazer parte dessa iniciativa?
               </h3>
-              <p className="text-start">
+              <p className="text-center md:text-start">
                 Siacalma, tem lugar para você também! <br/>Nós envie uma mensagem e
                 vamos bater um papa!
               </p>
@@ -18,11 +20,11 @@ export const Form = () => {
           </div>
 
           <form className="delay_distance flex flex-col gap-4 justify-center card items-center 
-          absolute top-20 right-32"
+          lg:absolute lg:top-20 lg:right-32 max-sm:w-full"
             action="https://formsubmit.co/mermasdigitaisifma@gmail.com"
             method="POST"
           >
-            <div className="flex gap-4 flex-col">
+            <div className="flex gap-4 flex-col max-sm:w-full">
               <input
                 type="text"
                 name="subject"
@@ -32,7 +34,7 @@ export const Form = () => {
               <input type="text" name="name" placeholder="Nome:" required />
               <input type="email" name="email" placeholder="E-mail:" required />
               <textarea
-                className="w-80 h-40"
+                className="sm:w-80 h-40"
                 name="message"
                 placeholder="Escreva sua mensagem aqui"
                 required
