@@ -4,6 +4,7 @@ import { Informations } from '../../components/activities/informations';
 import { Course } from '../../components/activities/course';
 import { Certificate } from '../../components/activities/certificate';
 import { Fade } from 'react-awesome-reveal';
+import { Register } from '../../components/home/register';
 
 export default function ActivitiesPage() {
   const scrollDown = useRef<HTMLDivElement>(null);
@@ -25,6 +26,9 @@ export default function ActivitiesPage() {
         </Fade>
         <Fade triggerOnce direction="up" delay={100}>
           <Certificate />
+        </Fade>
+        <Fade triggerOnce direction="up" delay={100}>
+          <Register />
         </Fade>
       </div>
     </section>

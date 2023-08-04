@@ -13,6 +13,7 @@ import { AdminPage } from '../page/adminPage';
 import { AddTime } from '../page/admin/addTime';
 import { AddPost } from '../page/admin/addPost';
 import PostId from '../page/galleryPage/post';
+import ArticlePage from '../page/public/articlePage';
 
 
 
@@ -26,6 +27,7 @@ export const router = createBrowserRouter(
         <Route path="/equipe" element={<TeamPage />} />
         <Route path="/galeria" element={<GalleryPage />} />
         <Route path="/galeria/:id" element={<PostId />} />
+        <Route path="/artigos" element={<ArticlePage />} />
         <Route path="*" element={<HomePage />} />
       </Route>
 

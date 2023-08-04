@@ -59,9 +59,9 @@ export const MenuAdmin = () => {
           </div>
           
           <ul className="flex md:flex-col max-md:justify-around max-md:w-full sm:w-[50%] lg:w-full gap-2 max-md:items-center bg">
-            {menu.map((item) => {
+            {menu.map((item, key) => {
               return (
-                <li>
+                <li key={key}>
                   <Link
                     to={item.to}
                     className={`text-gray-300 md:p-4 flex gap-4 rounded-lg 

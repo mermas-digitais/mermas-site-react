@@ -2,28 +2,32 @@ import { ArrowLineDown, MagnifyingGlass } from '@phosphor-icons/react';
 import ButtonSecondQuery from '../buttons/secondQuery';
 import imgEtiqueta from '../../../public/assets/etiqueta.png';
 import { Link } from 'react-router-dom';
-// import useGet from '../../hooks/useGet';
-// import { PostType } from '../../services/types';
-// import { useEffect, useState } from 'react';
-// import api from '../../services/api';
+import { PostType } from '../../services/types';
+import { useEffect, useState } from 'react';
+import api from '../../services/api';
 
-const iterable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 export default function GalleryGrid() {
 
-  // const postData = useGet<PostType>("getPost");
+  const [dateAll, setDateAll] = useState<PostType[]>([]);
 
-  // const [dateAll, setDateAll] = useState<PostType[]>([]);
-
-  // useEffect(() => {
-  //   api.get(`/getPost`)
-  //     .then(response => {
-  //       setDateAll(response.data);
-  //       console.log(response.data);
-  //     })
-  //     .catch(error => {
-  //       console.error(error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    api.get('/getPost',{
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+      .then(response => {
+        setDateAll(response.data);
+        console.log(response.data);
+      })
+      .catch(error => {
+        if (error.code === 'ERR_NETWORK') {
+          console.error('Erro de rede. Verifique sua conexão ou o URL da solicitação.');
+        } else {
+          console.error('Erro desconhecido:', error.message);
+        }
+      });
+  }, []);
 
   return (
     <section className="container flex flex-col items-center justify-center gap-[6rem]">
@@ -68,17 +72,18 @@ export default function GalleryGrid() {
       lg:[&>*:nth-child(even)]:row-[span_12_/_span_12]
      "
       >
-        {iterable.map((item) => {
+        {dateAll.map((item, key) => {
           return (
-            <Link to="1" key={item}
+            <Link to={item._id} key={key}
               className="w-full h-full relative flex flex-col cursor-pointer transition-all duration-300
               hover:shadow-pop transform hover:scale-105 rounded-3xl"
             >
               <div className="w-full h-full">
+                
                 <img
-                  src="../../../public/assets/person2.png"
-                  alt="Ícone de foguete"
-                  className=" relative object-cover rounded-3xl w-full h-full 
+                  src={item.PicturePost[0].url}
+                  alt={item.TitlePost}
+                  className=" relative object-contain rounded-3xl w-full h-full 
                   "
                 />
               </div>

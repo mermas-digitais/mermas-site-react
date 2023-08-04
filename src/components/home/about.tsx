@@ -35,13 +35,14 @@ export const About = () => {
                 meninas do ensino médio da rede pública à despertar o interesse
                 nos cursos de Computação e tecnologias relacionadas.
               </p>
-              <Link 
-                to="/sobre"
-                className="flex items-center text-sm md:text-base gap-1 active:bg-transparent pb-6 w-80 border-b-[1px] border-purple-100 font-poppins font-semibold text-pink-500"
+              <a 
+                target="_blank"
+                href="https://sites.google.com/view/adalovelaceday-ifma/merm%C3%A3s-digitais"
+                className="flex items-center text-sm md:text-base gap-1 active:bg-transparent pb-6 w-80 border-b-[1px] border-purple-100 font-poppins font-semibold text-pink-500" rel="noreferrer"
               >
                 Conheça nossa história
                 <CaretRight weight="bold"/>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

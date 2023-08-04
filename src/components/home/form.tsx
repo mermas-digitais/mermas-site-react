@@ -3,7 +3,7 @@ import ButtonSecondQuery from '../buttons/secondQuery';
 export const Form = () => {
   return (
     <>
-      <section className="w-[100vw] flex items-center justify-center">
+      <section id='contact'  className="w-[100vw] flex items-center justify-center">
         <div className="container relative 
         max-lg:flex max-lg:flex-col max-lg:gap-4 max-lg:justify-center max-lg:items-center 
         lg:mb-48">

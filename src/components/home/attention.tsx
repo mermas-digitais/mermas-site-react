@@ -69,7 +69,7 @@ export const Home = () => {
                     src={imgPerson2}
                   />
                   <div className="flex flex-col mr-2">
-                    <h6>Ana Clara</h6>
+                    <h6>Vitória Maria</h6>
                     <span className="text-xs">Ameii, sou digital!!</span>
                   </div>
                 </div>

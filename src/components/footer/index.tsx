@@ -1,5 +1,5 @@
 import { AiOutlineInstagram } from 'react-icons/ai';
-import { FaFacebookF } from 'react-icons/fa';
+import { FaFacebookF, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Envelope, LinkedinLogo } from '@phosphor-icons/react';
 import imgLogo from '../../../public/assets/logo.png';
@@ -10,25 +10,21 @@ const menu = [
     to: '/',
   },
   {
-    name: 'Sobre',
-    to: '/sobre',
+    name: 'Programa',
+    to: '/programa',
   },
-  {
-    name: 'Atividades',
-    to: '/activity',
-  },
-  {
-    name: 'Equipe',
-    to: '/time',
-  },
-  {
-    name: 'Galeria',
-    to: '/galeria',
-  },
+  // {
+  //   name: 'Equipe',
+  //   to: '/equipe',
+  // },
+  // {
+  //   name: 'Galeria',
+  //   to: '/galeria',
+  // },
   {
     name: 'Artigos',
-    to: '/',
-  },
+    to: '/artigos',
+  }
 ];
 
 export const Footer = () => {
@@ -68,6 +64,7 @@ export const Footer = () => {
                     <Link
                       className="font-quicksand font-normal text-gray-400 text-sm"
                       to={item.to}
+                      
                     >
                       {item.name}
                     </Link>
@@ -97,15 +94,15 @@ export const Footer = () => {
                 <li>
                   <a
                     className="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow-pop"
-                    href="https://www.facebook.com/mermasdigitais"
+                    href="https://www.youtube.com/@mermasdigitais8008"
                   >
-                    <FaFacebookF size={18} color="#9854cb" />
+                    <FaYoutube size={18} color="#9854cb" />
                   </a>
                 </li>
                 <li>
                   <a
                     className="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow-pop"
-                    href="https://www.instagram.com/mermas.digitais/"
+                    href="https://www.instagram.com/mermasdigitais/"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -115,7 +112,7 @@ export const Footer = () => {
                 <li>
                   <a
                     className="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow-pop"
-                    href="#"
+                    href="https://www.linkedin.com/company/mermasdigitais/about/"
                   >
                     <LinkedinLogo size={22} color="#9854cb" />
                   </a>

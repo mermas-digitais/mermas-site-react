@@ -12,7 +12,7 @@ export const Certificate = () => {
           <div className="max-lg:w-64 lg:w-[28rem] max-sm:w-full">
             <h3>Certificado de Conclusão</h3>
             <p>
-              No final do programa vocẽ receberar um certificado de conclusão
+              No final do programa você receberar um certificado de conclusão
             </p>
           </div>
         </div>

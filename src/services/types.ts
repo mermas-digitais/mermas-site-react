@@ -1,11 +1,14 @@
 
-
+export interface PictureType {
+  url: string;
+  public_id: string;
+}
 
 export interface PostType {
-    id: number;
+    _id: string;
     TitlePost: string;
     DescriptionPost: string;
-    PicturePost: Array<string>;
+    PicturePost: PictureType[];
     createPost: string;
 
   }

@@ -44,7 +44,7 @@ export default function Course() {
       max-md:grid-rows-4 max-md:gap-6">
         {card.map((item, key) => {
           return (
-            <div className="easing_card cursor-pointer card hover:border-purple-100 hover:-translate-y-1 shadow-pop flex flex-col">
+            <div key={key} className="easing_card cursor-pointer card hover:border-purple-100 hover:-translate-y-1 shadow-pop flex flex-col">
               <div className='flex gap-4 items-center'>
                 <div className="iconRetangle">
                   {item.icon}

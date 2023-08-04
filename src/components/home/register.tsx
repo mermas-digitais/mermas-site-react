@@ -4,7 +4,7 @@ import ButtonSecond from '../buttons/second';
 
 export function Register() {
   return (
-    <section className="delay_distance w-[100vw]  flex items-center justify-center">
+    <section className="delay_distance   flex items-center justify-center">
       <div className="flex container gap-16 padding
       max-lg:flex-col items-center">
         <div>
@@ -34,7 +34,7 @@ export function Register() {
             </li>
           </ul>
           <div className='w-fit'>
-            <ButtonSecond to="/" name="Acessar edital" />
+            <ButtonSecond to="/programa" name="Acessar edital" />
           </div>
         </div>
       </div>

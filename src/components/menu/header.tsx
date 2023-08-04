@@ -18,20 +18,20 @@ const menuItens = [
     path: '/programa',
     to: '/programa',
   },
+  // {
+  //   name: 'Equipe',
+  //   path: '/equipe',
+  //   to: '/equipe',
+  // },
+  // {
+  //   name: 'Galeria',
+  //   path: '/galeria',
+  //   to: '/galeria',
+  // },
   {
-    name: 'Equipe',
-    path: '/equipe',
-    to: '/equipe',
-  },
-  {
-    name: 'Galeria',
-    path: '/galeria',
-    to: '/galeria',
-  },
-  {
-    name: 'Sobre',
-    path: '/sobre',
-    to: '/sobre',
+    name: 'Artigos',
+    path: '/artigos',
+    to: '/artigos',
   },
 ];
 
@@ -113,9 +113,9 @@ export const Navbar = ({clickScroll}: NavbarProps) => {
               show ? 'visible opacity-100' : 'max-lg:invisible max-lg:opacity-0'
             }`}
             >
-              {menuItens.map((item) => {
+              {menuItens.map((item, key) => {
                 return (
-                  <li>
+                  <li key={key}>
                     <Link
                       onClick={clickScroll}
                       className={`py-2 cursor-pointer font-quicksand text-xs whitespace-nowrap 
