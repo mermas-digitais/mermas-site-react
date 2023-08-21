@@ -8,7 +8,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export default function ButtonSecond({ name, to, ...props }: ButtonProps) {
   return (
-    <Link to={to}>
+    <Link target='black' to={to}>
       <button
         className="inline-flex w-full items-center px-8 py-4 border-gradient 
         hover:border-gradient-hover border-transparent 

@@ -34,7 +34,7 @@ export function Register() {
             </li>
           </ul>
           <div className='w-fit'>
-            <ButtonSecond to="/programa" name="Acessar edital" />
+            <ButtonSecond to="https://portal.ifma.edu.br/concursos-e-seletivos/?id=17541" name="Acessar edital" />
           </div>
         </div>
       </div>
