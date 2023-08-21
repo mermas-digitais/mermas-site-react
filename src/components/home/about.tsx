@@ -7,21 +7,26 @@ export const About = () => {
   return (
     <>
       <section
-        className="relative w-[100vw] z-10 flex justify-center "
+        className="relative w-[100vw] z-10 flex justify-center 
+        "
       >
         <div className="w-full absolute z-[-1]">
           <img className="object-cover w-full" src={imgBackground} alt="Astronauta" />
         </div>
 
-        <div className="w-full h-full padding flex container flex-row items-center justify-between">
-          <div className="w-full max-w-[30rem]">
+        <div className="padding flex container flex-row items-center justify-between gap-12 
+        max-lg:flex-col">
+          <div className="sm:w-[30rem]
+          max-md:max-w-96">
             <img
+            className="object-contain w-full"
               src={imgLogo}
               alt="Logo do Projeto: Uma menina mergulada na tecnologia"
             />
           </div>
-          <div className="ml-20">
-            <div className="w-[36rem] ml-auto text-left">
+          <div>
+            <div className="w-[30rem] ml-auto text-left
+            max-lg:w-full">
               <h3>Éguas, ainda não conhece?</h3>
               <p className="pb-6">
                 O Mermãs Digitais é um projeto de extensão do IFMA - Campus
@@ -30,13 +35,14 @@ export const About = () => {
                 meninas do ensino médio da rede pública à despertar o interesse
                 nos cursos de Computação e tecnologias relacionadas.
               </p>
-              <Link 
-                to="/sobre"
-                className="flex items-center gap-1 pb-6 w-80 border-b-[1px] border-purple-100 font-poppins font-semibold text-base text-pink-500"
+              <a 
+                target="_blank"
+                href="https://sites.google.com/view/adalovelaceday-ifma/merm%C3%A3s-digitais"
+                className="flex items-center text-sm md:text-base gap-1 active:bg-transparent pb-6 w-80 border-b-[1px] border-purple-100 font-poppins font-semibold text-pink-500" rel="noreferrer"
               >
                 Conheça nossa história
-                <CaretRight size={20} weight="bold"/>
-              </Link>
+                <CaretRight weight="bold"/>
+              </a>
             </div>
           </div>
         </div>

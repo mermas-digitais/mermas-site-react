@@ -1,28 +1,29 @@
-import { Medal } from "@phosphor-icons/react"
+import { Medal } from '@phosphor-icons/react';
 import imgCertificado from '../../../public/assets/certificado.png';
 
 export const Certificate = () => {
-    return (
-        <div className="relative bg-pink-100 p-16 rounded-3xl flex justify-between">
+  return (
+    <div className='relative flex flex-col'>
+      <div className="bg-pink-100 md:p-16 p-8 rounded-3xl">
         <div className="flex flex-col gap-4">
           <div className="buttonCircle">
             <Medal size={32} color="#ff4a97" />
           </div>
-          <div>
-            <h2 className="text-3xl mb-2">Certificado de Conclusão</h2>
+          <div className="max-lg:w-64 lg:w-[28rem] max-sm:w-full">
+            <h3>Certificado de Conclusão</h3>
             <p>
-              No final do programa vocẽ receberar um certificado de conclusão
+              No final do programa você receberar um certificado de conclusão
             </p>
           </div>
         </div>
-
-        <div className="w-80 absolute right-20">
+      </div>
+      <div className="w-80 absolute max-md:invisible right-20 bottom-0">
           <img
             src={imgCertificado}
             className="object-cover"
             alt="Imagem de um Certificado"
           />
-        </div>
       </div>
-    )
-}
+    </div>
+  );
+};

@@ -15,21 +15,21 @@ export const CardActivitys = ({
 }: CardActivitysProps) => {
   return (
     <div
-      className=" py-4 flex justify-center items-center gap-16
+      className=" py-4 flex justify-between items-center gap-16 relative
     hover:-translate-y-2 transition-all duration-300 cursor-pointer card"
     >
-      <div className="flex flex-col justify-start">
+      <div className="flex flex-col items-start justify-start max-md:gap-4">
         <div className="flex w-full gap-4 items-center">
           <div className="iconRetangle">{props.children}</div>
           <p className="pb-2 text-pink-500 font-semibold font-poppins w-full">
             {title}
           </p>
         </div>
-        <div className='ml-16'>
+        <div className='md:ml-16'>
           <span className="text-sm">{description}</span>
         </div>
       </div>
-      <div className="buttonCircle">
+      <div className="buttonCircle max-md:absolute max-md:-right-8">
         <Plus size={24} color="#ff4a97" />
       </div>
     </div>
