@@ -8,10 +8,10 @@ import GalleryPage from '../page/galleryPage/gallery';
 import { HomePage } from '../page/public/homePage';
 import TeamPage from '../page/public/teamPage';
 import { PublicPage } from '../page/publicPage';
-import { LoginPage } from '../page/admin/login';
-import { AdminPage } from '../page/adminPage';
-import { AddTime } from '../page/admin/addTime';
-import { AddPost } from '../page/admin/addPost';
+// import { LoginPage } from '../page/admin/login';
+// import { AdminPage } from '../page/adminPage';
+// import { AddTime } from '../page/admin/addTime';
+// import { AddPost } from '../page/admin/addPost';
 import PostId from '../page/galleryPage/post';
 import ArticlePage from '../page/public/articlePage';
 
@@ -31,12 +31,12 @@ export const router = createBrowserRouter(
         <Route path="*" element={<HomePage />} />
       </Route>
 
-      <Route path="/login" element={<LoginPage/>} />
+      {/* <Route path="/login" element={<LoginPage/>} /> */}
       
-      <Route path="/admin" element={<AdminPage/>}>
+      {/* <Route path="/admin" element={<AdminPage/>}>
         <Route path="/admin/membros" element={<AddTime/>} />
         <Route path="/admin/" element={<AddPost/>} />
-      </Route>
+      </Route> */}
     </Route>
   ),
 );
