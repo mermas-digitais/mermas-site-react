@@ -21,7 +21,7 @@ export const Form = () => {
 
           <form className="delay_distance flex flex-col gap-4 justify-center card items-center 
           lg:absolute lg:top-20 lg:right-32 max-sm:w-full"
-            action="https://formsubmit.co/mermasdigitaisifma@gmail.com"
+            action="https://formsubmit.co/contato@mermasdigitais.com.br"
             method="POST"
           >
             <div className="flex gap-4 flex-col max-sm:w-full">
@@ -51,7 +51,7 @@ export const Form = () => {
             <input
               type="hidden"
               name="_next"
-              value="https://mermasdigitais.netlify.app/message"
+              value="https://mermasdigitais.vercel.app/message"
             />
             <input type="hidden" name="_template" value="table" />
           </form>
