@@ -24,7 +24,7 @@ const menu = [
   {
     name: 'Artigos',
     to: '/artigos',
-  }
+  },
 ];
 
 export const Footer = () => {
@@ -64,7 +64,6 @@ export const Footer = () => {
                     <Link
                       className="font-quicksand font-normal text-gray-400 text-sm"
                       to={item.to}
-                      
                     >
                       {item.name}
                     </Link>
@@ -122,7 +121,11 @@ export const Footer = () => {
           </div>
         </div>
         <div className="flex justify-center items-center text-center h-auto w-full py-4 bg-purple-900 text-white font-normal text-xs font-quicksand">
+<<<<<<< Updated upstream
           ©{new Date().getFullYear()} MERMÃS DIGITAIS | Desenvolvido por Mermãs Digitais
+=======
+          ©2024 MERMÃS DIGITAIS | Desenvolvido por Mermãs Digitais
+>>>>>>> Stashed changes
         </div>
       </footer>
     </>
