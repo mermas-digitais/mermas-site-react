@@ -2,7 +2,7 @@ import React, { useCallback, useRef } from 'react';
 
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import imgLogo from '../../../public/assets/logo.png';
+import imgLogo from '../../../public/assets/logo.svg';
 import { List, X } from '@phosphor-icons/react';
 interface NavbarProps {
   clickScroll: () => void;
