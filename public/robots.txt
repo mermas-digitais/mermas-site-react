@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin
+
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mermasdigitais.com.br/
+
+Sitemap: https://mermasdigitais.com.br/sitemap.xml
