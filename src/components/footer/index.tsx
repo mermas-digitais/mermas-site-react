@@ -80,10 +80,10 @@ export const Footer = () => {
                 <li>
                   <a
                     className="flex items-center gap-x-4 font-quicksand font-normal text-gray-400 text-sm"
-                    href="mailto:mermasdigitaisifma@gmail.com"
+                    href="mailto:contato@mermasdigitais.com.br"
                   >
                     <Envelope size={28} color="#9854cb" />
-                    mermasdigitaisifma@gmail.com
+                    contato@mermasdigitais.com.br
                   </a>
                 </li>
               </ul>
@@ -122,7 +122,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="flex justify-center items-center text-center h-auto w-full py-4 bg-purple-900 text-white font-normal text-xs font-quicksand">
-          ©2023 MERMÃS DIGITAIS | Desenvolvido por Mermãs Digitais
+          ©{new Date().getFullYear()} MERMÃS DIGITAIS | Desenvolvido por Mermãs Digitais
         </div>
       </footer>
     </>
