@@ -2,7 +2,7 @@ import { AiOutlineInstagram } from 'react-icons/ai';
 import { FaFacebookF, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Envelope, LinkedinLogo } from '@phosphor-icons/react';
-import imgLogo from '../../../public/assets/logo.png';
+import imgLogo from '../../../public/assets/logo.svg';
 
 const menu = [
   {
