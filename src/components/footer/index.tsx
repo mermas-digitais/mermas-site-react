@@ -24,7 +24,7 @@ const menu = [
   {
     name: 'Artigos',
     to: '/artigos',
-  }
+  },
 ];
 
 export const Footer = () => {
@@ -64,7 +64,6 @@ export const Footer = () => {
                     <Link
                       className="font-quicksand font-normal text-gray-400 text-sm"
                       to={item.to}
-                      
                     >
                       {item.name}
                     </Link>
