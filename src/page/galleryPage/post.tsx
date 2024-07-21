@@ -12,40 +12,38 @@ import api from '../../services/api';
 import { Routes, Route, useParams } from 'react-router-dom';
 import { PostType } from '../../services/types';
 
-
 export default function PostId() {
   const [showPopup, setShowPopup] = React.useState(false);
   const [currentImage, setCurrentImage] = useState(0);
   const [dateAll, setDateAll] = useState<PostType>();
 
- 
   const { id } = useParams();
-
-  
 
   //api
   useEffect(() => {
-    api.get(`/getPostById/${id}`,{
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    })
-      .then(response => {
+    api
+      .get(`/getPostById/${id}`, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      .then((response) => {
         setDateAll(response.data);
         console.log(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         if (error.code === 'ERR_NETWORK') {
-          console.error('Erro de rede. Verifique sua conexão ou o URL da solicitação.');
+          console.error(
+            'Erro de rede. Verifique sua conexão ou o URL da solicitação.',
+          );
         } else {
           console.error('Erro desconhecido:', error.message);
         }
       });
   }, []);
 
-
   if (!dateAll) {
-    return <p>Carregando...</p>
+    return <p>Carregando...</p>;
   }
 
   const nextImage = () => {
@@ -74,12 +72,10 @@ export default function PostId() {
               <p className=" text-sm">{dateAll?.createPost}</p>
             </div>
             <div>
-              <h3 className='mb-4'>{dateAll?.TitlePost}</h3>
-              <hr className='w-72 border-purple-100'/>              
+              <h3 className="mb-4">{dateAll?.TitlePost}</h3>
+              <hr className="w-72 border-purple-100" />
             </div>
-            <p className="">
-            {dateAll?.DescriptionPost} 
-            </p>
+            <p className="">{dateAll?.DescriptionPost}</p>
 
             <div
               className="flex items-center justify-start gap-4 cursor-pointer"

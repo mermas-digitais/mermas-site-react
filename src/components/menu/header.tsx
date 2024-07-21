@@ -35,10 +35,7 @@ const menuItens = [
   },
 ];
 
-
-export const Navbar = ({clickScroll}: NavbarProps) => {
-  
-
+export const Navbar = ({ clickScroll }: NavbarProps) => {
   const [show, setShow] = React.useState(false);
   const showMenu = () => {
     setShow(!show);

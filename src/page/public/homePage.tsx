@@ -6,10 +6,7 @@ import { Home } from '../../components/home/attention';
 import { Patronize } from '../../components/home/patronize';
 import { Register } from '../../components/home/register';
 
-
-
 export const HomePage = () => {
-
   return (
     <div className="flex flex-col items-center justify-center">
       <Fade triggerOnce direction="up" delay={100}>
